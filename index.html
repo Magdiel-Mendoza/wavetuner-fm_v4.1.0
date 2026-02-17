@@ -226,7 +226,6 @@ select.fi{appearance:auto;-webkit-appearance:auto}
 .ftr{text-align:center;padding:8px 20px 22px}
 .ftr p{font-size:11px;color:var(--tx3);letter-spacing:1px}
 .ftr a{color:var(--pri);text-decoration:none;opacity:.6}
-/* EDITOR DE TEMAS */
 .thm-tabs{display:flex;gap:4px;margin-bottom:16px}
 .thm-tab{flex:1;padding:11px 4px;border-radius:10px;border:1px solid var(--bd);background:var(--gl);color:var(--tx3);font-size:13px;font-weight:600;cursor:pointer;text-align:center;font-family:inherit;transition:all .2s}
 .thm-tab:active{transform:scale(.96)}
@@ -256,12 +255,14 @@ select.fi{appearance:auto;-webkit-appearance:auto}
 <audio id="audio" preload="auto" crossorigin="anonymous"></audio>
 <div class="bgx"><i></i><i></i></div>
 <div class="app">
+
+<!-- ✅ HEADER SIN BOTÓN DE TEMA -->
 <header class="hdr">
 <div class="hdr-l"><div class="hdr-ico">📻</div><div class="hdr-t"><h1>WaveTuner FM</h1><p>Internet Radio</p></div></div>
 <div class="hdr-r"><div class="hdr-dot" id="hDot"></div><span class="hdr-st" id="hSt">Offline</span>
-<button class="hbtn" id="btnThm" onclick="toggleTheme();vib(30)">🌙</button>
 <button class="hbtn" onclick="openMdl('stgMdl');vib(30)">⚙️</button></div>
 </header>
+
 <section class="ply">
 <div class="ply-empty" id="plyE"><i>📻</i>Selecciona una emisora para escuchar</div>
 <div id="plyC" style="display:none">
@@ -276,14 +277,18 @@ select.fi{appearance:auto;-webkit-appearance:auto}
 <div class="rec-bar" id="recBar"><div class="rec-dot"></div><div class="rec-info"><div class="rec-tm"><span id="recTm">00:00</span><span class="rec-fmt" id="recFmt">MP3</span></div><div class="rec-sz" id="recSz">0 KB</div></div><button class="rec-stop" onclick="stopRec();vib(45)">⏹ Guardar</button></div>
 </div>
 </section>
+
 <div class="srch"><span class="srch-i">🔍</span><input type="text" id="srchIn" placeholder="Buscar emisoras..."><button class="srch-x" id="srchX" onclick="clrSearch()">✕</button></div>
+
+<!-- ✅ TABS REORDENADOS: Popular, Favoritos, Países, Géneros, Mis Emisoras -->
 <div class="tabs">
 <button class="tab on" data-t="top" onclick="swTab('top');vib(30)">🔥 Popular</button>
+<button class="tab" data-t="favs" onclick="swTab('favs');vib(30)">⭐ Favoritos</button>
 <button class="tab" data-t="country" onclick="swTab('country');vib(30)">🌎 Países</button>
 <button class="tab" data-t="genre" onclick="swTab('genre');vib(30)">🎵 Géneros</button>
-<button class="tab" data-t="favs" onclick="swTab('favs');vib(30)">⭐ Favoritos</button>
 <button class="tab" data-t="custom" onclick="swTab('custom');vib(30)">📌 Mis Emisoras</button>
 </div>
+
 <div class="scats" id="scats"></div>
 <div class="linf" id="linf"><span id="lLab"></span><span><strong id="lCnt">0</strong> resultados</span></div>
 <div id="sBox"></div>
@@ -326,12 +331,13 @@ select.fi{appearance:auto;-webkit-appearance:auto}
 <div class="sg-info" id="pwaI">Desde servidor HTTPS se puede instalar como app. GitHub Pages es gratis.</div>
 </div></div></div>
 
+<!-- ✅ FECHA CORREGIDA: 17 de Febrero de 2026 -->
 <div class="acc" id="accAbout"><div class="acc-h" onclick="togAcc(this);vib(25)"><span class="acc-ar">▶</span> ℹ️ Acerca de</div><div class="acc-c"><div class="acc-ci">
 <div class="sg-info" style="padding:16px">
 <div style="text-align:center;margin-bottom:12px"><span style="font-size:36px">📻</span><br><strong style="font-family:Orbitron,monospace;font-size:18px;color:var(--pri)">WaveTuner FM</strong></div>
 <table class="about-tbl">
-<tr><td>Versión:</td><td><strong>4.4.0</strong></td></tr>
-<tr><td>Fecha:</td><td>16 de Febrero de 2026</td></tr>
+<tr><td>Versión:</td><td><strong>4.4.1</strong></td></tr>
+<tr><td>Fecha:</td><td>17 de Febrero de 2026</td></tr>
 <tr><td>Desarrollador:</td><td>Magdiel Mendoza</td></tr>
 <tr><td>Asistente IA:</td><td>Claude (Anthropic)</td></tr>
 <tr><td>Motor audio:</td><td>HTML5 Audio + Web Audio API</td></tr>
@@ -346,7 +352,6 @@ select.fi{appearance:auto;-webkit-appearance:auto}
 </div></div></div>
 
 </div></div></div>
-
 <!-- ADD STATION -->
 <div class="mbg" id="addMdl" onclick="maybeClose(event,'addMdl')"><div class="mdl">
 <div class="mdl-h"><h2>📌 Agregar Emisora</h2><button class="mdl-x" onclick="closeMdl('addMdl')">✕</button></div>
@@ -472,7 +477,7 @@ select.fi{appearance:auto;-webkit-appearance:auto}
 <input type="file" id="fileIn" accept=".json" style="display:none" onchange="handleImp(event)">
 <input type="file" id="thmFileIn" accept=".json" style="display:none" onchange="handleThmImp(event)">
 <div class="toast" id="toast"></div>
-<footer class="ftr"><p>WaveTuner FM v4.4.0 — <a href="https://www.radio-browser.info" target="_blank">Radio Browser API</a></p></footer>
+<footer class="ftr"><p>WaveTuner FM v4.4.1 — <a href="https://www.radio-browser.info" target="_blank">Radio Browser API</a></p></footer>
 <script>
 // ═══════════════════════════════════════════════════════════════
 // CONSTANTES Y CONFIGURACIÓN
@@ -533,7 +538,7 @@ const S={
   quality:parseInt(localStorage.getItem('wtfm_q'))||128,
   prefFormat:localStorage.getItem('wtfm_fmt')||'mp3',
   recActive:false,recReader:null,recChunks:[],recStart:0,recTimer:null,recMime:'',recMethod:null,recMR:null,recAutoStop:null,recAbort:null,
-  recTotalSec:0,recSchId:null,recFormat:'mp3',
+  recTotalSec:0,recSchId:null,recFormat:'mp3',recFallbackTimer:null,
   nL:0,nR:0,vL:0,vR:0,gaugeReady:false,af:null,
   schedules:JP('wtfm_sch',[]),
   wheels:{wH1:{v:8,min:0,max:23},wM1:{v:0,min:0,max:59},wH1e:{v:9,min:0,max:23},wM1e:{v:0,min:0,max:59},wH2:{v:8,min:0,max:23},wM2:{v:0,min:0,max:59},wH2e:{v:9,min:0,max:23},wM2e:{v:0,min:0,max:59}},
@@ -719,8 +724,9 @@ function loadLastStation(){
     toast('📻 '+S.lastStation.name+' lista');
   }
 }
+
 // ═══════════════════════════════════════════════════════════════
-// SISTEMA DE GRABACIÓN MEJORADO v4.4.0
+// SISTEMA DE GRABACIÓN MEJORADO v4.4.1 (TIMEOUT 5 SEGUNDOS)
 // ═══════════════════════════════════════════════════════════════
 async function toggleRec(){
   if(S.recActive){stopRec();return}
@@ -743,7 +749,7 @@ async function startRecording(totalSec,schId){
   const url=S.cur.url_resolved||S.cur.url;
   const preferMp3=S.prefFormat==='mp3';
   
-  // MÉTODO 1: Fetch directo (produce MP3/AAC nativo)
+  // ✅ MÉTODO 1: Fetch directo (produce MP3/AAC nativo)
   const tryFetchDirect=async()=>{
     try{
       const resp=await fetch(url);
@@ -755,11 +761,13 @@ async function startRecording(totalSec,schId){
       updRecFmt();
       toast(`🔴 Grabando (${S.recFormat.toUpperCase()})`);
       readStream();
+      // ✅ NUEVO: Timer de 5 segundos para verificar datos
+      startFallbackTimer();
       return true;
     }catch{return false}
   };
   
-  // MÉTODO 2: Fetch con proxies CORS
+  // ✅ MÉTODO 2: Fetch con proxies CORS
   const tryFetchProxy=async()=>{
     for(const proxy of CORS_PROXIES){
       try{
@@ -774,13 +782,15 @@ async function startRecording(totalSec,schId){
         updRecFmt();
         toast(`🔴 Grabando (${S.recFormat.toUpperCase()} vía proxy)`);
         readStream();
+        // ✅ NUEVO: Timer de 5 segundos para verificar datos
+        startFallbackTimer();
         return true;
       }catch{}
     }
     return false;
   };
   
-  // MÉTODO 3: MediaRecorder (produce WebM)
+  // ✅ MÉTODO 3: MediaRecorder (produce WebM)
   const tryMediaRecorder=async()=>{
     try{
       let stream;
@@ -819,6 +829,58 @@ async function startRecording(totalSec,schId){
   toast('⚠️ Grabación no disponible');vib([60,50,60,50,60]);
 }
 
+// ✅ NUEVO: Timer de 5 segundos - si no hay datos, cambia a WebM
+function startFallbackTimer(){
+  if(S.recFallbackTimer)clearTimeout(S.recFallbackTimer);
+  S.recFallbackTimer=setTimeout(()=>{
+    if(!S.recActive)return;
+    // Calcular bytes recibidos
+    let bytes=0;
+    S.recChunks.forEach(c=>bytes+=(c.byteLength||c.size||0));
+    console.log(`⏱ 5 segundos: ${bytes} bytes recibidos`);
+    
+    if(bytes===0){
+      console.log('⚠️ Sin datos MP3, cambiando a WebM...');
+      // Detener fetch actual
+      if(S.recReader)try{S.recReader.cancel()}catch{}
+      if(S.recAbort)try{S.recAbort.abort()}catch{}
+      S.recReader=null;S.recAbort=null;S.recMethod=null;
+      S.recChunks=[];
+      
+      // Intentar MediaRecorder (WebM)
+      switchToWebM();
+    }
+  },5000);
+}
+
+async function switchToWebM(){
+  try{
+    let stream;
+    if(audio.captureStream)stream=audio.captureStream();
+    else if(audio.mozCaptureStream)stream=audio.mozCaptureStream();
+    
+    if(!stream||stream.getAudioTracks().length===0){
+      toast('⚠️ WebM no disponible');
+      stopRec();
+      return;
+    }
+    
+    const mime=MediaRecorder.isTypeSupported('audio/webm;codecs=opus')?'audio/webm;codecs=opus':'audio/webm';
+    S.recMR=new MediaRecorder(stream,{mimeType:mime,audioBitsPerSecond:S.quality*1000});
+    S.recMethod='capture';S.recMime=mime;S.recFormat='webm';
+    S.recMR.ondataavailable=e=>{if(e.data&&e.data.size>0)S.recChunks.push(e.data)};
+    S.recMR.onerror=()=>{console.warn('MediaRecorder error')};
+    S.recMR.start(1000);
+    updRecFmt();
+    toast('🔄 Cambiado a WebM');
+    vib(30);
+  }catch(e){
+    console.error('Error WebM:',e);
+    toast('⚠️ Error al cambiar formato');
+    stopRec();
+  }
+}
+
 function readStream(){
   (async()=>{
     try{
@@ -834,6 +896,7 @@ function readStream(){
 
 function stopRec(){
   S.recActive=false;clearInterval(S.recTimer);
+  if(S.recFallbackTimer){clearTimeout(S.recFallbackTimer);S.recFallbackTimer=null}
   if(S.recAutoStop){clearTimeout(S.recAutoStop);S.recAutoStop=null}
   
   if(S.recMethod==='fetch'){
@@ -915,7 +978,6 @@ function setQuality(q){S.quality=q;localStorage.setItem('wtfm_q',q);updQualUI();
 function setFormat(f){S.prefFormat=f;localStorage.setItem('wtfm_fmt',f);updFmtUI();vib(30);toast(`📀 Formato: ${f.toUpperCase()}`)}
 function updQualUI(){[128,192,320].forEach(q=>{const b=$('sq'+q);if(b)b.classList.toggle('on',S.quality===q)})}
 function updFmtUI(){$('sfMp3').classList.toggle('on',S.prefFormat==='mp3');$('sfWebm').classList.toggle('on',S.prefFormat==='webm')}
-
 // ═══════════════════════════════════════════════════════════════
 // INTERFAZ DE USUARIO - REPRODUCTOR
 // ═══════════════════════════════════════════════════════════════
@@ -964,10 +1026,8 @@ function updHdr(){
   
   if(S.pb==='playing'){
     if(S.recActive){
-      // Grabando: LED rojo pulsante
       d.className='hdr-dot rec';
     }else{
-      // En vivo: LED verde pulsante
       d.className='hdr-dot on';
     }
     t.textContent='En vivo';
@@ -1110,6 +1170,7 @@ function rr(ctx,x,y,w,h,r){
   ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);
   ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y);
 }
+
 // ═══════════════════════════════════════════════════════════════
 // RENDERIZADO DE LISTAS
 // ═══════════════════════════════════════════════════════════════
@@ -1289,14 +1350,12 @@ function retryLoad(){
 // TEMA
 // ═══════════════════════════════════════════════════════════════
 function setTheme(t){S.theme=t;localStorage.setItem('wtfm_theme',t);applyTheme();updThUI()}
-function toggleTheme(){setTheme(S.theme==='dark'?'light':S.theme==='light'?'dark':'dark')}
 
 function applyTheme(){
   let th=S.theme;
   if(th==='auto')th=matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';
   document.documentElement.dataset.theme=th;
   $('metaTheme').content=th==='dark'?'#060910':'#d8dfe8';
-  $('btnThm').textContent=th==='dark'?'🌙':'☀️';
   applyCustomColors();
 }
 
@@ -1391,7 +1450,7 @@ function resetTheme(){
 }
 
 function expTheme(){
-  const d={version:'4.4.0',type:'theme',date:new Date().toISOString(),colors:S.customColors};
+  const d={version:'4.4.1',type:'theme',date:new Date().toISOString(),colors:S.customColors};
   const a=document.createElement('a');
   a.href=URL.createObjectURL(new Blob([JSON.stringify(d,null,2)],{type:'application/json'}));
   a.download=`WaveTuner_Tema_${tsNow()}.json`;
@@ -1647,7 +1706,7 @@ function triggerSch(sch){
 // ═══════════════════════════════════════════════════════════════
 function expData(){
   const d={
-    version:'4.4.0',date:new Date().toISOString(),
+    version:'4.4.1',date:new Date().toISOString(),
     favorites:S.favs,customStations:S.custom,schedules:S.schedules,
     theme:S.theme,quality:S.quality,prefFormat:S.prefFormat,
     lastStation:S.lastStation,customColors:S.customColors
@@ -1713,59 +1772,129 @@ function closeMdl(id){$(id).classList.remove('on')}
 function maybeClose(e,id){if(e.target.id===id)closeMdl(id)}
 
 // ═══════════════════════════════════════════════════════════════
-// PWA
+// PWA CORREGIDA v4.4.1
 // ═══════════════════════════════════════════════════════════════
 function setupPWA(){
-  const sizes=[192,512];const icons=[];
+  // Crear iconos dinámicos
+  const sizes=[192,512];
+  const icons=[];
+  
   sizes.forEach(s=>{
-    const cv=document.createElement('canvas');cv.width=cv.height=s;
+    const cv=document.createElement('canvas');
+    cv.width=cv.height=s;
     const x=cv.getContext('2d');
+    
+    // Fondo con gradiente
     const g=x.createLinearGradient(0,0,s,s);
-    g.addColorStop(0,'#00e5ff');g.addColorStop(1,'#0091ea');
-    x.fillStyle=g;x.beginPath();x.roundRect(0,0,s,s,s*.2);x.fill();
-    x.font=`${s*.45}px serif`;x.textAlign='center';x.textBaseline='middle';
+    g.addColorStop(0,'#00e5ff');
+    g.addColorStop(1,'#0091ea');
+    x.fillStyle=g;
+    
+    // Rectángulo redondeado
+    const radius=s*.2;
+    x.beginPath();
+    x.moveTo(radius,0);
+    x.lineTo(s-radius,0);
+    x.quadraticCurveTo(s,0,s,radius);
+    x.lineTo(s,s-radius);
+    x.quadraticCurveTo(s,s,s-radius,s);
+    x.lineTo(radius,s);
+    x.quadraticCurveTo(0,s,0,s-radius);
+    x.lineTo(0,radius);
+    x.quadraticCurveTo(0,0,radius,0);
+    x.closePath();
+    x.fill();
+    
+    // Emoji de radio
+    x.font=`${s*.45}px serif`;
+    x.textAlign='center';
+    x.textBaseline='middle';
     x.fillText('📻',s/2,s/2);
+    
     const url=cv.toDataURL('image/png');
-    icons.push({src:url,sizes:`${s}x${s}`,type:'image/png',purpose:'any maskable'});
-    if(s===192){$('favIco').href=url;$('applIco').href=url}
+    icons.push({src:url,sizes:`${s}x${s}`,type:'image/png',purpose:'any'});
+    
+    if(s===192){
+      $('favIco').href=url;
+      $('applIco').href=url;
+    }
   });
   
-  const mf={
-    name:'WaveTuner FM',short_name:'WaveTuner',
-    description:'Internet Radio Player',id:'wavetuner-fm',
-    start_url:'.',scope:'.',display:'standalone',
-    background_color:'#060910',theme_color:'#060910',
-    orientation:'portrait',categories:['music','entertainment'],icons
+  // Manifest con configuración correcta
+  const manifest={
+    name:'WaveTuner FM',
+    short_name:'WaveTuner',
+    description:'Reproductor de Radio por Internet',
+    start_url:location.href.split('?')[0],
+    scope:location.href.substring(0,location.href.lastIndexOf('/')+1),
+    display:'standalone',
+    background_color:'#060910',
+    theme_color:'#00e5ff',
+    orientation:'portrait',
+    categories:['music','entertainment'],
+    icons:icons
   };
   
-  const lnk=document.createElement('link');lnk.rel='manifest';
-  lnk.href=URL.createObjectURL(new Blob([JSON.stringify(mf)],{type:'application/json'}));
-  document.head.appendChild(lnk);
+  // Crear y añadir manifest
+  const manifestBlob=new Blob([JSON.stringify(manifest)],{type:'application/json'});
+  const manifestUrl=URL.createObjectURL(manifestBlob);
+  const link=document.createElement('link');
+  link.rel='manifest';
+  link.href=manifestUrl;
+  document.head.appendChild(link);
   
+  // Evento de instalación
   window.addEventListener('beforeinstallprompt',e=>{
-    e.preventDefault();S.deferredPrompt=e;
-    $('pwaI').textContent='¡Disponible para instalar!';
-    $('btnInst').classList.add('on');
+    e.preventDefault();
+    S.deferredPrompt=e;
+    $('pwaI').textContent='¡La app está lista para instalar!';
+    $('btnInst').textContent='📲 Instalar ahora';
   });
   
+  // Service Worker simplificado
   if('serviceWorker'in navigator&&location.protocol==='https:'){
-    const sw=`const CN='wtfm-v44';
-self.addEventListener('install',e=>{e.waitUntil(caches.open(CN).then(c=>c.addAll(['./',])));self.skipWaiting()});
-self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CN).map(k=>caches.delete(k)))));self.clients.claim()});
-self.addEventListener('fetch',e=>{e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)))});`;
-    navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw],{type:'application/javascript'}))).catch(()=>{});
+    const swCode=`
+      const CACHE='wtfm-v441';
+      self.addEventListener('install',e=>{
+        self.skipWaiting();
+      });
+      self.addEventListener('activate',e=>{
+        e.waitUntil(
+          caches.keys().then(keys=>
+            Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))
+          ).then(()=>self.clients.claim())
+        );
+      });
+      self.addEventListener('fetch',e=>{
+        if(e.request.method!=='GET')return;
+        e.respondWith(
+          fetch(e.request).catch(()=>caches.match(e.request))
+        );
+      });
+    `;
+    const swBlob=new Blob([swCode],{type:'application/javascript'});
+    const swUrl=URL.createObjectURL(swBlob);
+    navigator.serviceWorker.register(swUrl).then(reg=>{
+      console.log('✅ Service Worker registrado');
+    }).catch(err=>{
+      console.log('⚠️ SW no registrado:',err);
+    });
   }
 }
 
 function installPWA(){
   if(S.deferredPrompt){
     S.deferredPrompt.prompt();
-    S.deferredPrompt.userChoice.then(r=>{
-      toast(r.outcome==='accepted'?'📲 App instalada':'Instalación cancelada');
+    S.deferredPrompt.userChoice.then(result=>{
+      if(result.outcome==='accepted'){
+        toast('📲 ¡App instalada correctamente!');
+      }else{
+        toast('Instalación cancelada');
+      }
       S.deferredPrompt=null;
     });
   }else{
-    toast('ℹ️ Requiere servidor HTTPS (GitHub Pages)');
+    toast('ℹ️ Abre desde HTTPS para instalar (ej: GitHub Pages)');
   }
 }
 
@@ -1775,7 +1904,9 @@ function installPWA(){
 function updMedia(){
   if(!('mediaSession'in navigator)||!S.cur)return;
   navigator.mediaSession.metadata=new MediaMetadata({
-    title:S.cur.name,artist:S.cur.country||'Radio',album:'WaveTuner FM',
+    title:S.cur.name,
+    artist:S.cur.country||'Radio',
+    album:'WaveTuner FM',
     artwork:S.cur.favicon?[{src:S.cur.favicon,sizes:'512x512',type:'image/png'}]:[]
   });
   navigator.mediaSession.setActionHandler('play',togglePlay);
@@ -1819,7 +1950,7 @@ $('volR').addEventListener('input',e=>setVol(parseInt(e.target.value)));
   setInterval(checkSchedules,30000);
   $('schSchedDate').value=new Date().toISOString().slice(0,10);
   updDurDisp();
-  console.log('📻 WaveTuner FM v4.4.0 - 16 de Febrero de 2026');
+  console.log('📻 WaveTuner FM v4.4.1 - 17 de Febrero de 2026');
 })();
 </script>
 </body>
