@@ -51,3032 +51,643 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--tx);min-hei
 .app{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:12px}
 .hdr{display:flex;align-items:center;justify-content:space-between;padding:8px 4px 14px;gap:6px}
 .hdr-l{display:flex;align-items:center;gap:10px;min-width:0}
-.hdr-ico{width:42px;height:42px;background:linear-gradient(135deg,var(--pri),var(--prid));border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 3px 12px rgba(0,229,255,.2);flex-shrink:0}
-.hdr-t h1{font-family:'Orbitron',monospace;font-size:20px;font-weight:700;background:linear-gradient(90deg,var(--pri),var(--tx));-webkit-background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap}
-.hdr-t p{font-size:10px;color:var(--tx3);letter-spacing:3px;text-transform:uppercase;margin-top:1px}
+.hdr-ico{width:40px;height:40px;background:linear-gradient(135deg,var(--pri),var(--prid));border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 3px 12px rgba(0,229,255,.2);flex-shrink:0}
+.hdr-t h1{font-family:'Orbitron',monospace;font-size:18px;font-weight:700;background:linear-gradient(90deg,var(--pri),var(--tx));-webkit-background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap}
+.hdr-t p{font-size:8px;color:var(--tx3);letter-spacing:3px;text-transform:uppercase;margin-top:1px}
 .hdr-r{display:flex;align-items:center;gap:5px;flex-shrink:0}
-.hdr-dot{width:8px;height:8px;border-radius:50%;background:var(--tx3);transition:.3s;flex-shrink:0}
+.hdr-dot{width:7px;height:7px;border-radius:50%;background:var(--tx3);transition:.3s;flex-shrink:0}
 .hdr-dot.on{background:var(--ok);box-shadow:0 0 8px rgba(0,230,118,.6);animation:pls 1.5s infinite}
-.hdr-dot.rec{background:var(--err);box-shadow:0 0 8px rgba(255,23,68,.6);animation:pls 1s infinite}
-.hdr-dot.wrn{background:var(--wrn);box-shadow:0 0 8px rgba(255,214,0,.5)}
 @keyframes pls{0%,100%{opacity:1}50%{opacity:.35}}
-.hdr-st{font-size:12px;color:var(--tx3);white-space:nowrap;margin-right:2px}
-.hbtn{width:36px;height:36px;border-radius:10px;border:1px solid var(--bd);background:var(--gl);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .2s;color:var(--tx2);flex-shrink:0}
+.hdr-st{font-size:10px;color:var(--tx3);white-space:nowrap;margin-right:2px}
+.hbtn{width:34px;height:34px;border-radius:10px;border:1px solid var(--bd);background:var(--gl);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:15px;transition:all .2s;color:var(--tx2);flex-shrink:0}
 .hbtn:hover{background:var(--gl2);border-color:var(--bd2);color:var(--tx)}
 .hbtn:active{transform:scale(.93)}
 .ply{background:var(--card);border-radius:20px;border:1px solid var(--cardb);overflow:hidden;margin-bottom:12px;box-shadow:var(--card-sh);transition:background .4s,border-color .4s}
-.ply-empty{text-align:center;padding:28px 20px;color:var(--tx3);font-size:15px}
-.ply-empty i{font-size:36px;display:block;margin-bottom:8px;font-style:normal}
+.ply-empty{text-align:center;padding:28px 20px;color:var(--tx3);font-size:13px}
+.ply-empty i{font-size:34px;display:block;margin-bottom:8px;font-style:normal}
 .ply-top{display:flex;gap:12px;padding:14px 14px 0}
-.ply-art{width:68px;height:68px;border-radius:14px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:30px;flex-shrink:0;overflow:hidden;border:1px solid var(--bd)}
+.ply-art{width:64px;height:64px;border-radius:13px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;overflow:hidden;border:1px solid var(--bd)}
 .ply-art img{width:100%;height:100%;object-fit:cover}
 .ply-inf{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
-.ply-nm{font-size:18px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ply-mt{font-size:13px;color:var(--tx3);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ply-st{font-size:12px;margin-top:5px;display:flex;align-items:center;gap:5px;font-weight:600}
+.ply-nm{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ply-mt{font-size:11px;color:var(--tx3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ply-st{font-size:10px;margin-top:4px;display:flex;align-items:center;gap:5px;font-weight:600}
 .ply-st.ld{color:var(--wrn)}.ply-st.pl{color:var(--ok)}.ply-st.er{color:var(--err)}.ply-st.sp{color:var(--tx3)}
-.ply-st em{width:7px;height:7px;border-radius:50%;background:currentColor;flex-shrink:0;font-style:normal}
+.ply-st em{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;font-style:normal}
 .ply-st.ld em,.ply-st.pl em{animation:pls 1s infinite}
 .gauge-w{padding:8px 10px 2px;position:relative}
 .gauge-cv{width:100%;height:120px;display:block}
 .gauge-info{display:flex;justify-content:center;align-items:center;gap:8px;padding:2px 0 0}
-.gauge-bdg{font-family:'Orbitron',monospace;font-size:10px;padding:3px 8px;border-radius:4px;letter-spacing:1px;font-weight:600}
+.gauge-bdg{font-family:'Orbitron',monospace;font-size:8px;padding:2px 7px;border-radius:3px;letter-spacing:1px;font-weight:600}
 .gauge-bdg.st{background:rgba(0,230,118,.12);color:var(--ok);border:1px solid rgba(0,230,118,.25)}
 .gauge-bdg.mn{background:rgba(255,214,0,.1);color:var(--wrn);border:1px solid rgba(255,214,0,.2)}
-.gauge-kb{font-family:'Orbitron',monospace;font-size:10px;color:var(--tx3)}
+.gauge-kb{font-family:'Orbitron',monospace;font-size:8px;color:var(--tx3)}
 .ply-ct{display:flex;align-items:center;gap:8px;padding:10px 14px}
-.btn-p{width:50px;height:50px;border-radius:50%;border:2px solid var(--bd2);background:var(--gl);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;flex-shrink:0;color:var(--tx);font-size:22px}
+.btn-p{width:48px;height:48px;border-radius:50%;border:2px solid var(--bd2);background:var(--gl);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;flex-shrink:0;color:var(--tx);font-size:20px}
 .btn-p:hover{border-color:var(--pri);background:var(--prib);color:var(--pri)}
 .btn-p:active{transform:scale(.92)}
 .btn-p.on{border-color:var(--ok);background:rgba(0,230,118,.1);color:var(--ok);box-shadow:0 0 16px rgba(0,230,118,.15)}
 .vol-s{flex:1;display:flex;align-items:center;gap:7px}
-.vol-i{font-size:18px;cursor:pointer;flex-shrink:0;width:24px;text-align:center;user-select:none}
-.vol-r{-webkit-appearance:none;appearance:none;flex:1;height:5px;background:var(--bg4);border-radius:3px;outline:none}
-.vol-r::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;background:var(--tx);border-radius:50%;cursor:pointer;box-shadow:0 2px 6px var(--sh)}
-.vol-r::-moz-range-thumb{width:18px;height:18px;background:var(--tx);border-radius:50%;cursor:pointer;border:none}
-.vol-v{font-family:'Orbitron',monospace;font-size:12px;color:var(--tx3);width:28px;text-align:right;flex-shrink:0}
-.cbtn{width:40px;height:40px;border-radius:10px;border:1px solid var(--bd);background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;transition:all .2s;flex-shrink:0;color:var(--tx2)}
+.vol-i{font-size:16px;cursor:pointer;flex-shrink:0;width:22px;text-align:center;user-select:none}
+.vol-r{-webkit-appearance:none;appearance:none;flex:1;height:4px;background:var(--bg4);border-radius:2px;outline:none}
+.vol-r::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;background:var(--tx);border-radius:50%;cursor:pointer;box-shadow:0 2px 6px var(--sh)}
+.vol-r::-moz-range-thumb{width:16px;height:16px;background:var(--tx);border-radius:50%;cursor:pointer;border:none}
+.vol-v{font-family:'Orbitron',monospace;font-size:10px;color:var(--tx3);width:26px;text-align:right;flex-shrink:0}
+.cbtn{width:38px;height:38px;border-radius:10px;border:1px solid var(--bd);background:transparent;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:all .2s;flex-shrink:0;color:var(--tx2)}
 .cbtn:hover{background:var(--gl2)}
 .cbtn:active{transform:scale(.93)}
 .cbtn.fav-on{border-color:var(--accbd);background:var(--accb);color:var(--acc)}
 .cbtn.rec-on{border-color:rgba(255,23,68,.4);background:rgba(255,23,68,.1);color:var(--err);animation:pls 1s infinite}
-.rec-bar{display:none;align-items:center;gap:8px;padding:10px 14px 12px;background:rgba(255,23,68,.06);border-top:1px solid rgba(255,23,68,.15)}
+.rec-bar{display:none;align-items:center;gap:8px;padding:8px 14px 12px;background:rgba(255,23,68,.06);border-top:1px solid rgba(255,23,68,.15)}
 .rec-bar.on{display:flex}
-.rec-dot{width:12px;height:12px;border-radius:50%;background:var(--err);animation:pls .8s infinite;flex-shrink:0}
+.rec-dot{width:10px;height:10px;border-radius:50%;background:var(--err);animation:pls .8s infinite;flex-shrink:0}
 .rec-info{flex:1;min-width:0}
-.rec-tm{font-family:'Orbitron',monospace;font-size:15px;color:var(--err)}
-.rec-sz{font-size:12px;color:var(--tx3);margin-top:2px}
-.rec-fmt{display:inline-block;font-size:10px;color:var(--pri);background:var(--prib);padding:2px 6px;border-radius:4px;margin-left:6px;font-weight:600}
-.rec-stop{padding:8px 14px;border-radius:8px;border:1px solid rgba(255,23,68,.3);background:rgba(255,23,68,.1);color:var(--err);font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap}
+.rec-tm{font-family:'Orbitron',monospace;font-size:13px;color:var(--err)}
+.rec-sz{font-size:10px;color:var(--tx3);margin-top:1px}
+.rec-stop{padding:7px 12px;border-radius:8px;border:1px solid rgba(255,23,68,.3);background:rgba(255,23,68,.1);color:var(--err);font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap}
 .srch{position:relative;margin-bottom:10px}
-.srch input{width:100%;padding:13px 14px 13px 44px;background:var(--card);border:1px solid var(--bd);border-radius:13px;color:var(--tx);font-size:16px;outline:none;font-family:inherit;transition:border .2s,background .4s;box-shadow:var(--card-sh)}
+.srch input{width:100%;padding:11px 14px 11px 40px;background:var(--card);border:1px solid var(--bd);border-radius:13px;color:var(--tx);font-size:14px;outline:none;font-family:inherit;transition:border .2s,background .4s;box-shadow:var(--card-sh)}
 .srch input:focus{border-color:var(--pribd)}
 .srch input::placeholder{color:var(--tx3)}
-.srch-i{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--tx3);pointer-events:none}
-.srch-x{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;border:none;background:var(--gl2);color:var(--tx3);font-size:14px;cursor:pointer;display:none;align-items:center;justify-content:center}
+.srch-i{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-size:15px;color:var(--tx3);pointer-events:none}
+.srch-x{position:absolute;right:10px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;border:none;background:var(--gl2);color:var(--tx3);font-size:13px;cursor:pointer;display:none;align-items:center;justify-content:center}
 .srch-x.on{display:flex}
 .tabs{display:flex;gap:5px;margin-bottom:8px;overflow-x:auto;scrollbar-width:none;padding:2px 0;-webkit-overflow-scrolling:touch}
 .tabs::-webkit-scrollbar{display:none}
-.tab{padding:9px 15px;border-radius:10px;background:var(--card);border:1px solid var(--bd);font-size:13px;font-weight:600;color:var(--tx3);cursor:pointer;white-space:nowrap;transition:all .2s;flex-shrink:0;box-shadow:0 2px 8px var(--sh)}
+.tab{padding:7px 12px;border-radius:10px;background:var(--card);border:1px solid var(--bd);font-size:11px;font-weight:600;color:var(--tx3);cursor:pointer;white-space:nowrap;transition:all .2s;flex-shrink:0;box-shadow:0 2px 8px var(--sh)}
 .tab:active{transform:scale(.96)}
 .tab.on{background:var(--prib);border-color:var(--pribd);color:var(--pri)}
 .scats{display:none;gap:5px;margin-bottom:10px;overflow-x:auto;scrollbar-width:none;padding:2px 0;-webkit-overflow-scrolling:touch;flex-wrap:nowrap}
 .scats.on{display:flex}
 .scats::-webkit-scrollbar{display:none}
-.scat{padding:7px 13px;border-radius:18px;background:var(--gl);border:1px solid var(--bd);font-size:12px;color:var(--tx3);cursor:pointer;white-space:nowrap;transition:all .2s;flex-shrink:0}
+.scat{padding:5px 10px;border-radius:18px;background:var(--gl);border:1px solid var(--bd);font-size:10px;color:var(--tx3);cursor:pointer;white-space:nowrap;transition:all .2s;flex-shrink:0}
 .scat:active{transform:scale(.95)}
 .scat.on{background:var(--accb);border-color:var(--accbd);color:var(--acc)}
-.linf{display:none;justify-content:space-between;align-items:center;padding:2px 4px 8px;font-size:13px;color:var(--tx3)}.linf.on{display:flex}.linf strong{color:var(--tx)}
-.stns{display:flex;flex-direction:column;gap:6px;padding-bottom:18px}
-.stn{display:flex;align-items:center;gap:11px;padding:12px;background:var(--card);border:1px solid var(--bd);border-radius:14px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.linf{display:none;justify-content:space-between;align-items:center;padding:2px 4px 8px;font-size:11px;color:var(--tx3)}.linf.on{display:flex}.linf strong{color:var(--tx)}
+.stns{display:flex;flex-direction:column;gap:5px;padding-bottom:18px}
+.stn{display:flex;align-items:center;gap:11px;padding:11px;background:var(--card);border:1px solid var(--bd);border-radius:13px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08)}
 .stn::after{content:'';position:absolute;left:0;top:0;width:3px;height:100%;background:transparent;transition:.2s}
 .stn:active{transform:scale(.99)}
 .stn.on{background:var(--prib);border-color:var(--pribd)}
 .stn.on::after{background:var(--pri)}
-.stn-a{width:46px;height:46px;border-radius:10px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;overflow:hidden}
+.stn-a{width:42px;height:42px;border-radius:9px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;overflow:hidden}
 .stn-a img{width:100%;height:100%;object-fit:cover}
 .stn-i{flex:1;min-width:0}
-.stn-n{font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.stn-d{font-size:12px;color:var(--tx3);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.stn-bg{display:flex;gap:4px;margin-top:4px;flex-wrap:wrap}
-.stn-b{font-size:10px;padding:2px 7px;border-radius:4px;background:var(--gl2);color:var(--tx3)}
+.stn-n{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stn-d{font-size:10px;color:var(--tx3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stn-bg{display:flex;gap:3px;margin-top:3px;flex-wrap:wrap}
+.stn-b{font-size:8px;padding:1px 5px;border-radius:3px;background:var(--gl2);color:var(--tx3)}
 .stn-b.cd{color:var(--pri);background:var(--prib)}
-.stn-r{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0}
-.stn-f{width:32px;height:32px;border-radius:8px;border:none;background:transparent;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--tx3)}
+.stn-r{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex-shrink:0}
+.stn-f{width:30px;height:30px;border-radius:7px;border:none;background:transparent;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--tx3)}
 .stn-f.on{color:var(--acc)}
-.stn-pi{font-size:11px;color:var(--ok);animation:pls 1s infinite}
-.ldg{text-align:center;padding:40px 20px;color:var(--tx3)}
-.ldg-s{width:36px;height:36px;border:3px solid var(--bd);border-top-color:var(--pri);border-radius:50%;animation:spn .8s linear infinite;margin:0 auto 12px}
+.stn-pi{font-size:9px;color:var(--ok);animation:pls 1s infinite}
+.ldg{text-align:center;padding:36px 20px;color:var(--tx3)}
+.ldg-s{width:32px;height:32px;border:3px solid var(--bd);border-top-color:var(--pri);border-radius:50%;animation:spn .8s linear infinite;margin:0 auto 10px}
 @keyframes spn{to{transform:rotate(360deg)}}
-.emt{text-align:center;padding:40px 20px;color:var(--tx3)}
-.emt i{font-size:40px;display:block;margin-bottom:10px;font-style:normal}
-.emt p{font-size:14px;line-height:1.6}
-.btn-rt{padding:11px 24px;border-radius:10px;border:1px solid var(--pribd);background:var(--prib);color:var(--pri);font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:10px}
+.emt{text-align:center;padding:36px 20px;color:var(--tx3)}
+.emt i{font-size:36px;display:block;margin-bottom:8px;font-style:normal}
+.emt p{font-size:12px;line-height:1.6}
+.btn-rt{padding:9px 20px;border-radius:9px;border:1px solid var(--pribd);background:var(--prib);color:var(--pri);font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:8px}
 .mbg{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;display:flex;align-items:flex-end;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
 .mbg.on{opacity:1;pointer-events:all}
 [data-theme="light"] .mbg{background:rgba(0,0,0,.25)}
 .mdl{background:var(--card);border-radius:20px 20px 0 0;width:100%;max-width:560px;max-height:88vh;overflow-y:auto;transform:translateY(100%);transition:transform .35s cubic-bezier(.32,1,.5,1);border:1px solid var(--bd);border-bottom:none}
 .mbg.on .mdl{transform:translateY(0)}
 .mdl-h{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--bd);position:sticky;top:0;background:var(--card);z-index:2}
-.mdl-h h2{font-size:17px;font-weight:700;display:flex;align-items:center;gap:8px}
-.mdl-x{width:34px;height:34px;border-radius:50%;border:none;background:var(--gl2);color:var(--tx2);font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.mdl-h h2{font-size:15px;font-weight:700;display:flex;align-items:center;gap:8px}
+.mdl-x{width:32px;height:32px;border-radius:50%;border:none;background:var(--gl2);color:var(--tx2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .mdl-b{padding:16px 18px 24px}
-.acc{border:1px solid var(--bd);border-radius:12px;margin-bottom:8px;overflow:hidden;background:var(--bg2);transition:all .3s}
-.acc.open{border-color:var(--pribd);background:var(--prib)}
-.acc-h{display:flex;align-items:center;gap:8px;padding:14px 16px;cursor:pointer;font-weight:600;font-size:15px;user-select:none;transition:background .2s;position:relative}
+/* ACCORDION */
+.acc{border:1px solid var(--bd);border-radius:12px;margin-bottom:8px;overflow:hidden;background:var(--bg2);transition:background .4s}
+.acc-h{display:flex;align-items:center;gap:8px;padding:13px 16px;cursor:pointer;font-weight:600;font-size:13px;user-select:none;transition:background .2s}
 .acc-h:active{background:var(--gl2)}
-.acc-ar{font-size:10px;color:var(--tx3);transition:transform .3s,color .3s;flex-shrink:0;display:inline-block}
-.acc-h.op .acc-ar{transform:rotate(90deg);color:var(--pri)}
-.acc.open .acc-h{border-left:3px solid var(--pri);padding-left:13px}
+.acc-ar{font-size:8px;color:var(--tx3);transition:transform .3s;flex-shrink:0;display:inline-block}
+.acc-h.op .acc-ar{transform:rotate(90deg)}
 .acc-c{max-height:0;overflow:hidden;transition:max-height .35s ease}
 .acc-c.op{max-height:900px}
 .acc-ci{padding:2px 16px 16px}
 .sg-r{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
-.sg-btn{flex:1;min-width:0;padding:11px 6px;border-radius:10px;border:1px solid var(--bd);background:var(--gl);color:var(--tx2);font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px;transition:all .2s;font-family:inherit;white-space:nowrap}
+.sg-btn{flex:1;min-width:0;padding:10px 6px;border-radius:10px;border:1px solid var(--bd);background:var(--gl);color:var(--tx2);font-size:11px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px;transition:all .2s;font-family:inherit;white-space:nowrap}
 .sg-btn:active{transform:scale(.96)}
 .sg-btn.on{background:var(--prib);border-color:var(--pribd);color:var(--pri)}
-.sg-info{font-size:12px;color:var(--tx3);line-height:1.7;padding:12px;background:var(--gl);border-radius:10px;margin-top:8px;border:1px solid var(--bd)}
-.sg-label{font-size:11px;color:var(--tx3);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin:12px 0 6px;display:block}
-.about-tbl{width:100%}.about-tbl tr{border-bottom:1px solid var(--bd)}.about-tbl tr:last-child{border-bottom:none}.about-tbl td{padding:9px 4px;font-size:14px;vertical-align:top}.about-tbl td:first-child{color:var(--tx3);white-space:nowrap;width:100px;font-weight:600}.about-tbl td:last-child{color:var(--tx)}
+.sg-info{font-size:11px;color:var(--tx3);line-height:1.7;padding:12px;background:var(--gl);border-radius:10px;margin-top:8px;border:1px solid var(--bd)}
+.about-tbl{width:100%}.about-tbl tr{border-bottom:1px solid var(--bd)}.about-tbl tr:last-child{border-bottom:none}.about-tbl td{padding:7px 4px;font-size:12px;vertical-align:top}.about-tbl td:first-child{color:var(--tx3);white-space:nowrap;width:100px;font-weight:600}.about-tbl td:last-child{color:var(--tx)}
 .fg{margin-bottom:14px}
-.fl{display:block;font-size:12px;color:var(--tx3);margin-bottom:6px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
-.fi{width:100%;padding:12px 14px;background:var(--bg2);border:1px solid var(--bd);border-radius:10px;color:var(--tx);font-size:15px;font-family:inherit;outline:none;transition:border .2s}
+.fl{display:block;font-size:11px;color:var(--tx3);margin-bottom:5px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.fi{width:100%;padding:10px 12px;background:var(--bg2);border:1px solid var(--bd);border-radius:10px;color:var(--tx);font-size:13px;font-family:inherit;outline:none;transition:border .2s}
 .fi:focus{border-color:var(--pribd)}
 .fi::placeholder{color:var(--tx3)}
 select.fi{appearance:auto;-webkit-appearance:auto}
 .fact{display:flex;gap:8px;margin-top:16px}
-.fb{flex:1;padding:13px;border-radius:11px;border:none;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s}
+.fb{flex:1;padding:12px;border-radius:11px;border:none;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s}
 .fb.pri{background:linear-gradient(135deg,var(--pri),var(--prid));color:#fff;box-shadow:0 3px 12px rgba(0,145,234,.3)}
 .fb.sec{background:var(--gl2);border:1px solid var(--bd);color:var(--tx2)}
 .fb:active{transform:scale(.97)}
 .sch-tabs{display:flex;gap:4px;margin-bottom:16px}
-.sch-tab{flex:1;padding:11px 4px;border-radius:10px;border:1px solid var(--bd);background:var(--gl);color:var(--tx3);font-size:12px;font-weight:600;cursor:pointer;text-align:center;font-family:inherit}
+.sch-tab{flex:1;padding:9px 4px;border-radius:10px;border:1px solid var(--bd);background:var(--gl);color:var(--tx3);font-size:10px;font-weight:600;cursor:pointer;text-align:center;font-family:inherit}
 .sch-tab:active{transform:scale(.96)}
 .sch-tab.on{background:var(--prib);border-color:var(--pribd);color:var(--pri)}
 .sch-pane{display:none}.sch-pane.on{display:block}
-.sch-cur{display:flex;align-items:center;gap:10px;padding:10px;background:var(--prib);border:1px solid var(--pribd);border-radius:10px;margin-bottom:12px}
-.sch-cur-ico{font-size:20px}
-.sch-cur-info{flex:1;min-width:0}
-.sch-cur-nm{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sch-cur-lbl{font-size:10px;color:var(--pri);margin-top:2px}
-.sch-cur-chg{font-size:11px;color:var(--pri);cursor:pointer;text-decoration:underline;flex-shrink:0}
 .whl-grp{display:flex;gap:20px;justify-content:center;margin:10px 0}
 .whl-col{text-align:center}
-.whl-col-lab{font-size:11px;color:var(--tx3);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.whl-col-lab{font-size:10px;color:var(--tx3);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
 .whl-pair{display:flex;align-items:center;gap:4px;justify-content:center}
 .whl{display:flex;flex-direction:column;align-items:center;gap:3px;user-select:none;-webkit-user-select:none}
-.whl-btn{width:42px;height:30px;border-radius:8px;border:1px solid var(--bd);background:var(--gl);color:var(--tx2);font-size:14px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:700;transition:all .15s}
+.whl-btn{width:40px;height:28px;border-radius:7px;border:1px solid var(--bd);background:var(--gl);color:var(--tx2);font-size:13px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:700;transition:all .15s}
 .whl-btn:active{transform:scale(.9);background:var(--prib);color:var(--pri)}
-.whl-val{font-family:'Orbitron',monospace;font-size:26px;font-weight:700;color:var(--pri);min-width:46px;text-align:center;line-height:1;padding:4px 0;touch-action:none}
-.whl-sep{font-size:26px;color:var(--tx3);font-family:'Orbitron',monospace;font-weight:700;padding:0 2px;align-self:center}
-.sch-dur{text-align:center;font-size:14px;color:var(--pri);font-weight:600;margin:10px 0;font-family:'Orbitron',monospace}
+.whl-val{font-family:'Orbitron',monospace;font-size:24px;font-weight:700;color:var(--pri);min-width:44px;text-align:center;line-height:1;padding:3px 0;touch-action:none}
+.whl-sep{font-size:24px;color:var(--tx3);font-family:'Orbitron',monospace;font-weight:700;padding:0 2px;align-self:center}
+.sch-dur{text-align:center;font-size:12px;color:var(--pri);font-weight:600;margin:8px 0;font-family:'Orbitron',monospace}
 .days-row{display:flex;gap:5px;justify-content:center;margin:12px 0;flex-wrap:wrap}
-.day-btn{width:42px;height:40px;border-radius:10px;border:1px solid var(--bd);background:var(--gl);color:var(--tx3);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s}
+.day-btn{width:40px;height:38px;border-radius:10px;border:1px solid var(--bd);background:var(--gl);color:var(--tx3);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s}
 .day-btn:active{transform:scale(.9)}
 .day-btn.on{background:var(--prib);border-color:var(--pribd);color:var(--pri)}
 .sch-list{margin-top:16px;border-top:1px solid var(--bd);padding-top:12px}
-.sch-item{display:flex;align-items:center;gap:10px;padding:11px;background:var(--bg2);border-radius:10px;margin-bottom:6px;border:1px solid var(--bd)}
+.sch-item{display:flex;align-items:center;gap:10px;padding:10px;background:var(--bg2);border-radius:10px;margin-bottom:6px;border:1px solid var(--bd)}
 .sch-item-info{flex:1;min-width:0}
-.sch-item-t{font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sch-item-d{font-size:12px;color:var(--tx3);margin-top:2px}
-.sch-item-del{width:30px;height:30px;border-radius:50%;border:none;background:transparent;color:var(--tx3);font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sch-item-t{font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sch-item-d{font-size:10px;color:var(--tx3);margin-top:2px}
+.sch-item-del{width:28px;height:28px;border-radius:50%;border:none;background:transparent;color:var(--tx3);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .sch-item-del:hover{background:rgba(255,23,68,.1);color:var(--err)}
-.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--card);border:1px solid var(--pribd);border-radius:12px;padding:13px 24px;font-size:14px;z-index:200;transition:transform .4s cubic-bezier(.34,1.56,.64,1);box-shadow:0 8px 30px var(--sh);white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--card);border:1px solid var(--pribd);border-radius:12px;padding:11px 20px;font-size:12px;z-index:200;transition:transform .4s cubic-bezier(.34,1.56,.64,1);box-shadow:0 8px 30px var(--sh);white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
 .toast.on{transform:translateX(-50%) translateY(0)}
 .ftr{text-align:center;padding:8px 20px 22px}
-.ftr p{font-size:11px;color:var(--tx3);letter-spacing:1px}
+.ftr p{font-size:9px;color:var(--tx3);letter-spacing:1px}
 .ftr a{color:var(--pri);text-decoration:none;opacity:.6}
-/* EDITOR DE TEMAS */
-.thm-tabs{display:flex;gap:4px;margin-bottom:16px}
-.thm-tab{flex:1;padding:11px 4px;border-radius:10px;border:1px solid var(--bd);background:var(--gl);color:var(--tx3);font-size:13px;font-weight:600;cursor:pointer;text-align:center;font-family:inherit;transition:all .2s}
-.thm-tab:active{transform:scale(.96)}
-.thm-tab.on{background:var(--prib);border-color:var(--pribd);color:var(--pri)}
-.thm-pane{display:none}.thm-pane.on{display:block}
-.clr-row{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--bd)}
-.clr-row:last-child{border-bottom:none}
-.clr-icon{font-size:18px;width:26px;text-align:center;flex-shrink:0}
-.clr-label{flex:1;font-size:14px;font-weight:500;color:var(--tx)}
-.clr-preview{width:34px;height:34px;border-radius:8px;border:2px solid var(--bd2);cursor:pointer;transition:transform .2s,box-shadow .2s}
-.clr-preview:hover{transform:scale(1.1);box-shadow:0 2px 8px var(--sh)}
-.clr-input{position:absolute;opacity:0;width:0;height:0}
-.clr-hex{font-family:'Orbitron',monospace;font-size:11px;color:var(--tx3);width:65px;text-align:right}
-.thm-actions{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
-.thm-btn{flex:1;min-width:calc(50% - 4px);padding:11px 8px;border-radius:10px;border:1px solid var(--bd);background:var(--gl);color:var(--tx2);font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px;transition:all .2s;font-family:inherit}
-.thm-btn:active{transform:scale(.96)}
-.thm-btn.pri{background:var(--prib);border-color:var(--pribd);color:var(--pri)}
-.thm-btn.warn{background:var(--accb);border-color:var(--accbd);color:var(--acc)}
-.thm-info{font-size:12px;color:var(--tx3);text-align:center;margin-top:12px;padding:10px;background:var(--gl);border-radius:8px;line-height:1.6}
 ::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--bd2);border-radius:3px}
 @media(max-width:380px){
-.ply-top{gap:10px;padding:12px 12px 0}.ply-art{width:56px;height:56px}.ply-nm{font-size:16px}.ply-ct{padding:8px 12px;gap:6px}.btn-p{width:44px;height:44px;font-size:20px}.hdr-t h1{font-size:17px}.tab{padding:8px 11px;font-size:12px}.whl-val{font-size:22px}.stn-n{font-size:14px}
+.ply-top{gap:9px;padding:11px 11px 0}.ply-art{width:52px;height:52px}.ply-nm{font-size:13px}.ply-ct{padding:8px 11px;gap:6px}.btn-p{width:42px;height:42px;font-size:18px}.hdr-t h1{font-size:15px}.tab{padding:6px 9px;font-size:10px}.whl-val{font-size:20px}
 }
 </style>
 </head>
 <body>
-<audio id="audio" preload="auto" crossorigin="anonymous"></audio>
+<audio id="audio" preload="none"></audio>
 <div class="bgx"><i></i><i></i></div>
 <div class="app">
-
-<!-- HEADER SIN BOTÓN DE TEMA (eliminado en v4.4.1) -->
 <header class="hdr">
-  <div class="hdr-l">
-    <div class="hdr-ico">📻</div>
-    <div class="hdr-t">
-      <h1>WaveTuner FM</h1>
-      <p>Internet Radio</p>
-    </div>
-  </div>
-  <div class="hdr-r">
-    <div class="hdr-dot" id="hDot"></div>
-    <span class="hdr-st" id="hSt">Offline</span>
-    <button class="hbtn" onclick="openMdl('stgMdl');vib(30)">⚙️</button>
-  </div>
+<div class="hdr-l"><div class="hdr-ico">📻</div><div class="hdr-t"><h1>WaveTuner FM</h1><p>Internet Radio</p></div></div>
+<div class="hdr-r"><div class="hdr-dot" id="hDot"></div><span class="hdr-st" id="hSt">Offline</span>
+<button class="hbtn" id="btnThm" onclick="toggleTheme();vib(30)">🌙</button>
+<button class="hbtn" onclick="openMdl('stgMdl');vib(30)">⚙️</button></div>
 </header>
-
-<!-- REPRODUCTOR -->
 <section class="ply">
-  <div class="ply-empty" id="plyE">
-    <i>📻</i>Selecciona una emisora para escuchar
-  </div>
-  <div id="plyC" style="display:none">
-    <div class="ply-top">
-      <div class="ply-art" id="plyArt">📻</div>
-      <div class="ply-inf">
-        <div class="ply-nm" id="plyNm">—</div>
-        <div class="ply-mt" id="plyMt">—</div>
-        <div class="ply-st sp" id="plySt">
-          <em></em>
-          <span id="plyStT">Detenido</span>
-        </div>
-      </div>
-    </div>
-    <div class="gauge-w" id="gaugeW">
-      <canvas class="gauge-cv" id="gaugeCv"></canvas>
-      <div class="gauge-info">
-        <span class="gauge-bdg st" id="gBdg">STEREO</span>
-        <span class="gauge-kb" id="gKb"></span>
-      </div>
-    </div>
-    <div class="ply-ct">
-      <button class="btn-p" id="btnPl" onclick="togglePlay();vib(50)">▶</button>
-      <div class="vol-s">
-        <span class="vol-i" id="volI" onclick="toggleMute();vib(30)">🔊</span>
-        <input type="range" class="vol-r" id="volR" min="0" max="100" value="80">
-        <span class="vol-v" id="volV">80</span>
-      </div>
-      <button class="cbtn" id="btnFv" onclick="toggleFavCur();vib([40,60,40])">☆</button>
-      <button class="cbtn" id="btnRc" onclick="toggleRec();vib([50,30,50])">⏺</button>
-    </div>
-    <div class="rec-bar" id="recBar">
-      <div class="rec-dot"></div>
-      <div class="rec-info">
-        <div class="rec-tm">
-          <span id="recTm">00:00</span>
-          <span class="rec-fmt" id="recFmt">MP3</span>
-        </div>
-        <div class="rec-sz" id="recSz">0 KB</div>
-      </div>
-      <button class="rec-stop" onclick="stopRec();vib(45)">⏹ Guardar</button>
-    </div>
-  </div>
+<div class="ply-empty" id="plyE"><i>📻</i>Selecciona una emisora para escuchar</div>
+<div id="plyC" style="display:none">
+<div class="ply-top"><div class="ply-art" id="plyArt">📻</div><div class="ply-inf"><div class="ply-nm" id="plyNm">—</div><div class="ply-mt" id="plyMt">—</div><div class="ply-st sp" id="plySt"><em></em><span id="plyStT">Detenido</span></div></div></div>
+<div class="gauge-w" id="gaugeW"><canvas class="gauge-cv" id="gaugeCv"></canvas><div class="gauge-info"><span class="gauge-bdg st" id="gBdg">STEREO</span><span class="gauge-kb" id="gKb"></span></div></div>
+<div class="ply-ct">
+<button class="btn-p" id="btnPl" onclick="togglePlay();vib(50)">▶</button>
+<div class="vol-s"><span class="vol-i" id="volI" onclick="toggleMute();vib(30)">🔊</span><input type="range" class="vol-r" id="volR" min="0" max="100" value="80"><span class="vol-v" id="volV">80</span></div>
+<button class="cbtn" id="btnFv" onclick="toggleFavCur();vib([40,60,40])">☆</button>
+<button class="cbtn" id="btnRc" onclick="toggleRec();vib([50,30,50])">⏺</button>
+</div>
+<div class="rec-bar" id="recBar"><div class="rec-dot"></div><div class="rec-info"><div class="rec-tm" id="recTm">00:00</div><div class="rec-sz" id="recSz">0 KB</div></div><button class="rec-stop" onclick="stopRec();vib(45)">⏹ Guardar</button></div>
+</div>
 </section>
-
-<!-- BÚSQUEDA -->
-<div class="srch">
-  <span class="srch-i">🔍</span>
-  <input type="text" id="srchIn" placeholder="Buscar emisoras...">
-  <button class="srch-x" id="srchX" onclick="clrSearch()">✕</button>
-</div>
-
-<!-- TABS REORDENADOS: Popular, Favoritos, Países, Géneros, Mis Emisoras -->
+<div class="srch"><span class="srch-i">🔍</span><input type="text" id="srchIn" placeholder="Buscar emisoras..."><button class="srch-x" id="srchX" onclick="clrSearch()">✕</button></div>
 <div class="tabs">
-  <button class="tab on" data-t="top" onclick="swTab('top');vib(30)">🔥 Popular</button>
-  <button class="tab" data-t="favs" onclick="swTab('favs');vib(30)">⭐ Favoritos</button>
-  <button class="tab" data-t="country" onclick="swTab('country');vib(30)">🌎 Países</button>
-  <button class="tab" data-t="genre" onclick="swTab('genre');vib(30)">🎵 Géneros</button>
-  <button class="tab" data-t="custom" onclick="swTab('custom');vib(30)">📌 Mis Emisoras</button>
+<button class="tab on" data-t="top" onclick="swTab('top');vib(30)">🔥 Popular</button>
+<button class="tab" data-t="country" onclick="swTab('country');vib(30)">🌎 Países</button>
+<button class="tab" data-t="genre" onclick="swTab('genre');vib(30)">🎵 Géneros</button>
+<button class="tab" data-t="favs" onclick="swTab('favs');vib(30)">⭐ Favoritos</button>
+<button class="tab" data-t="custom" onclick="swTab('custom');vib(30)">📌 Mis Emisoras</button>
 </div>
-
 <div class="scats" id="scats"></div>
-<div class="linf" id="linf">
-  <span id="lLab"></span>
-  <span><strong id="lCnt">0</strong> resultados</span>
-</div>
+<div class="linf" id="linf"><span id="lLab"></span><span><strong id="lCnt">0</strong> resultados</span></div>
 <div id="sBox"></div>
 </div>
 
-<!-- MODAL SETTINGS -->
-<div class="mbg" id="stgMdl" onclick="maybeClose(event,'stgMdl')">
-<div class="mdl">
-<div class="mdl-h">
-  <h2>⚙️ Configuración</h2>
-  <button class="mdl-x" onclick="closeMdl('stgMdl')">✕</button>
-</div>
+<!-- SETTINGS -->
+<div class="mbg" id="stgMdl" onclick="maybeClose(event,'stgMdl')"><div class="mdl">
+<div class="mdl-h"><h2>⚙️ Configuración</h2><button class="mdl-x" onclick="closeMdl('stgMdl')">✕</button></div>
 <div class="mdl-b">
 
-<!-- Tema -->
-<div class="acc" id="accTheme">
-  <div class="acc-h op" onclick="togAcc(this);vib(25)">
-    <span class="acc-ar">▶</span> 🎨 Tema
-  </div>
-  <div class="acc-c op">
-    <div class="acc-ci">
-      <div class="sg-r">
-        <button class="sg-btn" id="sgDk" onclick="setTheme('dark');vib(30)">🌙 Oscuro</button>
-        <button class="sg-btn" id="sgLt" onclick="setTheme('light');vib(30)">☀️ Claro</button>
-        <button class="sg-btn" id="sgAt" onclick="setTheme('auto');vib(30)">🔄 Auto</button>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="acc"><div class="acc-h op" onclick="togAcc(this);vib(25)"><span class="acc-ar">▶</span> 🎨 Tema</div><div class="acc-c op"><div class="acc-ci">
+<div class="sg-r"><button class="sg-btn" id="sgDk" onclick="setTheme('dark');vib(30)">🌙 Oscuro</button><button class="sg-btn" id="sgLt" onclick="setTheme('light');vib(30)">☀️ Claro</button><button class="sg-btn" id="sgAt" onclick="setTheme('auto');vib(30)">🔄 Auto</button></div>
+</div></div></div>
 
-<!-- Personalizar Colores -->
-<div class="acc" id="accCustomTheme">
-  <div class="acc-h" onclick="togAcc(this);vib(25)">
-    <span class="acc-ar">▶</span> 🖌️ Personalizar Colores
-  </div>
-  <div class="acc-c">
-    <div class="acc-ci">
-      <div class="sg-r">
-        <button class="sg-btn" onclick="closeMdl('stgMdl');setTimeout(()=>openMdl('thmMdl'),300);vib(30)">🎨 Abrir Editor de Temas</button>
-      </div>
-      <div class="sg-info">Personaliza los colores del tema oscuro y claro de forma independiente.</div>
-    </div>
-  </div>
-</div>
+<div class="acc"><div class="acc-h" onclick="togAcc(this);vib(25)"><span class="acc-ar">▶</span> 🎚️ Calidad de Grabación</div><div class="acc-c"><div class="acc-ci">
+<div class="sg-r"><button class="sg-btn" id="sq128" onclick="setQuality(128)">128 kbps</button><button class="sg-btn" id="sq192" onclick="setQuality(192)">192 kbps</button><button class="sg-btn" id="sq320" onclick="setQuality(320)">320 kbps</button></div>
+<div class="sg-info">128kbps ≈ 1MB/min · 192kbps ≈ 1.5MB/min · 320kbps ≈ 2.5MB/min</div>
+</div></div></div>
 
-<!-- Calidad de Grabación -->
-<div class="acc" id="accQuality">
-  <div class="acc-h" onclick="togAcc(this);vib(25)">
-    <span class="acc-ar">▶</span> 🎚️ Calidad de Grabación
-  </div>
-  <div class="acc-c">
-    <div class="acc-ci">
-      <span class="sg-label">Bitrate</span>
-      <div class="sg-r">
-        <button class="sg-btn" id="sq128" onclick="setQuality(128)">128 kbps</button>
-        <button class="sg-btn" id="sq192" onclick="setQuality(192)">192 kbps</button>
-        <button class="sg-btn" id="sq320" onclick="setQuality(320)">320 kbps</button>
-      </div>
-      <span class="sg-label">Formato preferido</span>
-      <div class="sg-r">
-        <button class="sg-btn" id="sfMp3" onclick="setFormat('mp3');vib(30)">🎵 MP3</button>
-        <button class="sg-btn" id="sfWebm" onclick="setFormat('webm');vib(30)">📦 WebM</button>
-      </div>
-      <div class="sg-info">🎵 <strong>MP3:</strong> Más compatible. Requiere stream accesible (funciona mejor en local).<br>📦 <strong>WebM:</strong> Siempre disponible en HTTPS. Compatible con VLC, Chrome, Firefox.</div>
-    </div>
-  </div>
-</div>
+<div class="acc"><div class="acc-h" onclick="togAcc(this);vib(25)"><span class="acc-ar">▶</span> 📅 Grabación Programada</div><div class="acc-c"><div class="acc-ci">
+<div class="sg-r"><button class="sg-btn" onclick="closeMdl('stgMdl');setTimeout(()=>openMdl('schMdl'),300);vib(30)">📅 Abrir Programador</button></div>
+<div class="sg-info">⚠️ La app debe permanecer abierta para que las grabaciones programadas se ejecuten.</div>
+</div></div></div>
 
-<!-- Grabación Programada -->
-<div class="acc" id="accSchedule">
-  <div class="acc-h" onclick="togAcc(this);vib(25)">
-    <span class="acc-ar">▶</span> 📅 Grabación Programada
-  </div>
-  <div class="acc-c">
-    <div class="acc-ci">
-      <div class="sg-r">
-        <button class="sg-btn" onclick="closeMdl('stgMdl');setTimeout(()=>openMdl('schMdl'),300);vib(30)">📅 Abrir Programador</button>
-      </div>
-      <div class="sg-info">⚠️ La app debe permanecer abierta para que las grabaciones programadas se ejecuten.</div>
-    </div>
-  </div>
-</div>
+<div class="acc"><div class="acc-h" onclick="togAcc(this);vib(25)"><span class="acc-ar">▶</span> 💾 Datos</div><div class="acc-c"><div class="acc-ci">
+<div class="sg-r"><button class="sg-btn" onclick="expData();vib(30)">📤 Exportar</button><button class="sg-btn" onclick="impData();vib(30)">📥 Importar</button></div>
+<div class="sg-info">Exporta favoritos, emisoras personalizadas y programaciones. Importa en otro dispositivo.</div>
+</div></div></div>
 
-<!-- Datos -->
-<div class="acc" id="accData">
-  <div class="acc-h" onclick="togAcc(this);vib(25)">
-    <span class="acc-ar">▶</span> 💾 Datos
-  </div>
-  <div class="acc-c">
-    <div class="acc-ci">
-      <div class="sg-r">
-        <button class="sg-btn" onclick="expData();vib(30)">📤 Exportar</button>
-        <button class="sg-btn" onclick="impData();vib(30)">📥 Importar</button>
-      </div>
-      <div class="sg-info">Exporta favoritos, emisoras personalizadas y programaciones. Importa en otro dispositivo.</div>
-    </div>
-  </div>
-</div>
+<div class="acc"><div class="acc-h" onclick="togAcc(this);vib(25)"><span class="acc-ar">▶</span> 📲 Instalar App</div><div class="acc-c"><div class="acc-ci">
+<div class="sg-r"><button class="sg-btn" id="btnInst" onclick="installPWA();vib(30)">📲 Instalar WaveTuner FM</button></div>
+<div class="sg-info" id="pwaI">Desde servidor HTTPS se puede instalar como app. GitHub Pages es gratis.</div>
+</div></div></div>
 
-<!-- Instalar App -->
-<div class="acc" id="accInstall">
-  <div class="acc-h" onclick="togAcc(this);vib(25)">
-    <span class="acc-ar">▶</span> 📲 Instalar App
-  </div>
-  <div class="acc-c">
-    <div class="acc-ci">
-      <div class="sg-r">
-        <button class="sg-btn" id="btnInst" onclick="installPWA();vib(30)">📲 Instalar WaveTuner FM</button>
-      </div>
-      <div class="sg-info" id="pwaI">Desde servidor HTTPS se puede instalar como app. GitHub Pages es gratis.</div>
-    </div>
-  </div>
+<div class="acc"><div class="acc-h" onclick="togAcc(this);vib(25)"><span class="acc-ar">▶</span> ℹ️ Acerca de</div><div class="acc-c"><div class="acc-ci">
+<div class="sg-info" style="padding:16px">
+<div style="text-align:center;margin-bottom:12px"><span style="font-size:32px">📻</span><br><strong style="font-family:Orbitron,monospace;font-size:16px;color:var(--pri)">WaveTuner FM</strong></div>
+<table class="about-tbl">
+<tr><td>Versión:</td><td><strong>4.1.0</strong></td></tr>
+<tr><td>Fecha:</td><td>16 de Febrero de 2026</td></tr>
+<tr><td>Desarrollador:</td><td>Magdiel Mendoza</td></tr>
+<tr><td>Asistente IA:</td><td>Claude (Anthropic)</td></tr>
+<tr><td>Motor audio:</td><td>HTML5 Audio + Web Audio API</td></tr>
+<tr><td>Grabación:</td><td>Stream directo (MP3 nativo)</td></tr>
+<tr><td>Visualizador:</td><td>Galvanómetro analógico</td></tr>
+<tr><td>Fuente datos:</td><td>Radio Browser API</td></tr>
+<tr><td>Diseño:</td><td>Glassmorphism + Adaptive Theme</td></tr>
+</table>
+<div style="margin-top:10px;text-align:center;font-size:10px;color:var(--tx3)">Espacio=Play · ↑↓=Vol · M=Mute · F=Fav · R=Rec</div>
 </div>
+</div></div></div>
 
-<!-- Acerca de -->
-<div class="acc" id="accAbout">
-  <div class="acc-h" onclick="togAcc(this);vib(25)">
-    <span class="acc-ar">▶</span> ℹ️ Acerca de
-  </div>
-  <div class="acc-c">
-    <div class="acc-ci">
-      <div class="sg-info" style="padding:16px">
-        <div style="text-align:center;margin-bottom:12px">
-          <span style="font-size:36px">📻</span><br>
-          <strong style="font-family:Orbitron,monospace;font-size:18px;color:var(--pri)">WaveTuner FM</strong>
-        </div>
-        <table class="about-tbl">
-          <tr><td>Versión:</td><td><strong>4.4.3</strong></td></tr>
-          <tr><td>Fecha:</td><td>17 de Febrero de 2026</td></tr>
-          <tr><td>Desarrollador:</td><td>Magdiel Mendoza</td></tr>
-          <tr><td>Asistente IA:</td><td>Claude (Anthropic)</td></tr>
-          <tr><td>Motor audio:</td><td>HTML5 Audio + Web Audio API</td></tr>
-          <tr><td>Grabación:</td><td>MP3 directo / WebM fallback</td></tr>
-          <tr><td>Visualizador:</td><td>Galvanómetro analógico</td></tr>
-          <tr><td>Fuente datos:</td><td>Radio Browser API</td></tr>
-          <tr><td>Diseño:</td><td>Glassmorphism + Adaptive Theme</td></tr>
-          <tr><td>Soporte:</td><td>MP3, AAC, M3U, M3U8, PLS</td></tr>
-        </table>
-        <div style="margin-top:12px;text-align:center;font-size:11px;color:var(--tx3)">Espacio=Play · ↑↓=Vol · M=Mute · F=Fav · R=Rec</div>
-      </div>
-    </div>
-  </div>
-</div>
+</div></div></div>
 
-</div>
-</div>
-</div>
 <!-- ADD STATION -->
-<div class="mbg" id="addMdl" onclick="maybeClose(event,'addMdl')">
-<div class="mdl">
-<div class="mdl-h">
-  <h2>📌 Agregar Emisora</h2>
-  <button class="mdl-x" onclick="closeMdl('addMdl')">✕</button>
-</div>
+<div class="mbg" id="addMdl" onclick="maybeClose(event,'addMdl')"><div class="mdl">
+<div class="mdl-h"><h2>📌 Agregar Emisora</h2><button class="mdl-x" onclick="closeMdl('addMdl')">✕</button></div>
 <div class="mdl-b">
-  <div class="fg">
-    <label class="fl">Nombre *</label>
-    <input class="fi" id="fNm" placeholder="Mi Radio">
-  </div>
-  <div class="fg">
-    <label class="fl">URL del Stream *</label>
-    <input class="fi" id="fUrl" placeholder="https://stream.ejemplo.com/radio.mp3">
-  </div>
-  <div class="sg-info" style="margin:-8px 0 14px;font-size:11px">✅ Soporta: MP3, AAC, M3U, M3U8, PLS</div>
-  <div class="fg">
-    <label class="fl">País (opcional)</label>
-    <input class="fi" id="fPais" placeholder="Venezuela">
-  </div>
-  <div class="fg">
-    <label class="fl">Género (opcional)</label>
-    <input class="fi" id="fGen" placeholder="Pop, Rock">
-  </div>
-  <div class="fact">
-    <button class="fb sec" onclick="closeMdl('addMdl')">Cancelar</button>
-    <button class="fb pri" onclick="saveCustom();vib(50)">💾 Guardar</button>
-  </div>
-</div>
-</div>
-</div>
+<div class="fg"><label class="fl">Nombre *</label><input class="fi" id="fNm" placeholder="Mi Radio"></div>
+<div class="fg"><label class="fl">URL del Stream *</label><input class="fi" id="fUrl" placeholder="https://stream.ejemplo.com/radio.mp3"></div>
+<div class="fg"><label class="fl">País (opcional)</label><input class="fi" id="fPais" placeholder="Venezuela"></div>
+<div class="fg"><label class="fl">Género (opcional)</label><input class="fi" id="fGen" placeholder="Pop, Rock"></div>
+<div class="fact"><button class="fb sec" onclick="closeMdl('addMdl')">Cancelar</button><button class="fb pri" onclick="saveCustom();vib(50)">💾 Guardar</button></div>
+</div></div></div>
 
 <!-- SCHEDULE -->
-<div class="mbg" id="schMdl" onclick="maybeClose(event,'schMdl')">
-<div class="mdl">
-<div class="mdl-h">
-  <h2>📅 Grabación Programada</h2>
-  <button class="mdl-x" onclick="closeMdl('schMdl')">✕</button>
-</div>
+<div class="mbg" id="schMdl" onclick="maybeClose(event,'schMdl')"><div class="mdl">
+<div class="mdl-h"><h2>📅 Grabación Programada</h2><button class="mdl-x" onclick="closeMdl('schMdl')">✕</button></div>
 <div class="mdl-b">
-  <div class="sch-tabs">
-    <button class="sch-tab on" data-s="timed" onclick="swSchTab('timed');vib(30)">⏱ Temporizado</button>
-    <button class="sch-tab" data-s="sched" onclick="swSchTab('sched');vib(30)">📅 Horario</button>
-    <button class="sch-tab" data-s="recur" onclick="swSchTab('recur');vib(30)">🔁 Recurrente</button>
-  </div>
-
-  <!-- Temporizado -->
-  <div class="sch-pane on" id="spTimed">
-    <p style="font-size:13px;color:var(--tx3);margin-bottom:12px">Graba la emisora actual durante los minutos indicados:</p>
-    <div id="schTimedCur"></div>
-    <div class="fg">
-      <label class="fl">Duración (minutos)</label>
-      <input class="fi" id="schTimedMin" type="number" min="1" max="480" value="30">
-    </div>
-    <div class="fact">
-      <button class="fb pri" onclick="startTimedRec();vib([50,30,50])">⏺ Iniciar Grabación</button>
-    </div>
-  </div>
-
-  <!-- Horario -->
-  <div class="sch-pane" id="spSched">
-    <p style="font-size:13px;color:var(--tx3);margin-bottom:12px">Programa grabación para fecha y hora específica:</p>
-    <div id="schSchedCur"></div>
-    <div class="fg" id="schSchedStnWrap" style="display:none">
-      <label class="fl">Emisora (de favoritos)</label>
-      <select class="fi" id="schSchedStn"></select>
-    </div>
-    <div class="fg">
-      <label class="fl">Fecha</label>
-      <input class="fi" id="schSchedDate" type="date">
-    </div>
-    <div class="whl-grp">
-      <div class="whl-col">
-        <div class="whl-col-lab">Inicio</div>
-        <div class="whl-pair">
-          <div class="whl">
-            <div class="whl-btn" onpointerdown="whlD('wH1',1)">▲</div>
-            <div class="whl-val" id="wH1v">08</div>
-            <div class="whl-btn" onpointerdown="whlD('wH1',-1)">▼</div>
-          </div>
-          <span class="whl-sep">:</span>
-          <div class="whl">
-            <div class="whl-btn" onpointerdown="whlD('wM1',1)">▲</div>
-            <div class="whl-val" id="wM1v">00</div>
-            <div class="whl-btn" onpointerdown="whlD('wM1',-1)">▼</div>
-          </div>
-        </div>
-      </div>
-      <div class="whl-col">
-        <div class="whl-col-lab">Fin</div>
-        <div class="whl-pair">
-          <div class="whl">
-            <div class="whl-btn" onpointerdown="whlD('wH1e',1)">▲</div>
-            <div class="whl-val" id="wH1ev">09</div>
-            <div class="whl-btn" onpointerdown="whlD('wH1e',-1)">▼</div>
-          </div>
-          <span class="whl-sep">:</span>
-          <div class="whl">
-            <div class="whl-btn" onpointerdown="whlD('wM1e',1)">▲</div>
-            <div class="whl-val" id="wM1ev">00</div>
-            <div class="whl-btn" onpointerdown="whlD('wM1e',-1)">▼</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sch-dur" id="schDur1">⏱ Duración: 1h 00min</div>
-    <div class="fact">
-      <button class="fb pri" onclick="addSchedule('sched');vib(50)">📅 Programar</button>
-    </div>
-  </div>
-
-  <!-- Recurrente -->
-  <div class="sch-pane" id="spRecur">
-    <p style="font-size:13px;color:var(--tx3);margin-bottom:12px">Graba automáticamente cada semana en los días y hora indicados:</p>
-    <div id="schRecurCur"></div>
-    <div class="fg" id="schRecurStnWrap" style="display:none">
-      <label class="fl">Emisora (de favoritos)</label>
-      <select class="fi" id="schRecurStn"></select>
-    </div>
-    <div class="whl-grp">
-      <div class="whl-col">
-        <div class="whl-col-lab">Inicio</div>
-        <div class="whl-pair">
-          <div class="whl">
-            <div class="whl-btn" onpointerdown="whlD('wH2',1)">▲</div>
-            <div class="whl-val" id="wH2v">08</div>
-            <div class="whl-btn" onpointerdown="whlD('wH2',-1)">▼</div>
-          </div>
-          <span class="whl-sep">:</span>
-          <div class="whl">
-            <div class="whl-btn" onpointerdown="whlD('wM2',1)">▲</div>
-            <div class="whl-val" id="wM2v">00</div>
-            <div class="whl-btn" onpointerdown="whlD('wM2',-1)">▼</div>
-          </div>
-        </div>
-      </div>
-      <div class="whl-col">
-        <div class="whl-col-lab">Fin</div>
-        <div class="whl-pair">
-          <div class="whl">
-            <div class="whl-btn" onpointerdown="whlD('wH2e',1)">▲</div>
-            <div class="whl-val" id="wH2ev">09</div>
-            <div class="whl-btn" onpointerdown="whlD('wH2e',-1)">▼</div>
-          </div>
-          <span class="whl-sep">:</span>
-          <div class="whl">
-            <div class="whl-btn" onpointerdown="whlD('wM2e',1)">▲</div>
-            <div class="whl-val" id="wM2ev">00</div>
-            <div class="whl-btn" onpointerdown="whlD('wM2e',-1)">▼</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="sch-dur" id="schDur2">⏱ Duración: 1h 00min</div>
-    <div class="fl" style="text-align:center;margin:6px 0 4px">Días de la semana</div>
-    <div class="days-row" id="daysRow">
-      <button class="day-btn" data-d="1" onclick="togDay(this);vib(30)">Lu</button>
-      <button class="day-btn" data-d="2" onclick="togDay(this);vib(30)">Ma</button>
-      <button class="day-btn" data-d="3" onclick="togDay(this);vib(30)">Mi</button>
-      <button class="day-btn" data-d="4" onclick="togDay(this);vib(30)">Ju</button>
-      <button class="day-btn" data-d="5" onclick="togDay(this);vib(30)">Vi</button>
-      <button class="day-btn" data-d="6" onclick="togDay(this);vib(30)">Sa</button>
-      <button class="day-btn" data-d="0" onclick="togDay(this);vib(30)">Do</button>
-    </div>
-    <div class="fact">
-      <button class="fb pri" onclick="addSchedule('recur');vib(50)">🔁 Programar</button>
-    </div>
-  </div>
-
-  <div class="sch-list" id="schListW" style="display:none">
-    <div class="fl" style="margin-bottom:8px">Programaciones activas</div>
-    <div id="schList"></div>
-  </div>
-</div>
-</div>
+<div class="sch-tabs">
+<button class="sch-tab on" data-s="timed" onclick="swSchTab('timed');vib(30)">⏱ Temporizado</button>
+<button class="sch-tab" data-s="sched" onclick="swSchTab('sched');vib(30)">📅 Horario</button>
+<button class="sch-tab" data-s="recur" onclick="swSchTab('recur');vib(30)">🔁 Recurrente</button>
 </div>
 
-<!-- THEME EDITOR -->
-<div class="mbg" id="thmMdl" onclick="maybeClose(event,'thmMdl')">
-<div class="mdl">
-<div class="mdl-h">
-  <h2>🎨 Personalizar Tema</h2>
-  <button class="mdl-x" onclick="closeMdl('thmMdl')">✕</button>
+<div class="sch-pane on" id="spTimed">
+<p style="font-size:12px;color:var(--tx3);margin-bottom:12px">Graba la emisora que suena durante los minutos indicados:</p>
+<div class="fg"><label class="fl">Duración (minutos)</label><input class="fi" id="schTimedMin" type="number" min="1" max="480" value="30"></div>
+<div class="fact"><button class="fb pri" onclick="startTimedRec();vib([50,30,50])">⏺ Iniciar Grabación</button></div>
 </div>
-<div class="mdl-b">
 
-  <div class="thm-tabs">
-    <button class="thm-tab on" data-th="dark" onclick="swThmTab('dark');vib(30)">🌙 Tema Oscuro</button>
-    <button class="thm-tab" data-th="light" onclick="swThmTab('light');vib(30)">☀️ Tema Claro</button>
-  </div>
-
-  <!-- Dark Theme -->
-  <div class="thm-pane on" id="tpDark">
-    <div class="clr-row">
-      <span class="clr-icon">🖼️</span>
-      <span class="clr-label">Fondo principal</span>
-      <input type="color" class="clr-input" id="cDkBg" onchange="updThmClr('dark','bg',this.value)">
-      <label class="clr-preview" for="cDkBg" id="pDkBg"></label>
-      <span class="clr-hex" id="hDkBg">#050810</span>
-    </div>
-    <div class="clr-row">
-      <span class="clr-icon">📦</span>
-      <span class="clr-label">Fondo tarjetas</span>
-      <input type="color" class="clr-input" id="cDkCard" onchange="updThmClr('dark','card',this.value)">
-      <label class="clr-preview" for="cDkCard" id="pDkCard"></label>
-      <span class="clr-hex" id="hDkCard">#131b2d</span>
-    </div>
-    <div class="clr-row">
-      <span class="clr-icon">📝</span>
-      <span class="clr-label">Texto principal</span>
-      <input type="color" class="clr-input" id="cDkTx" onchange="updThmClr('dark','tx',this.value)">
-      <label class="clr-preview" for="cDkTx" id="pDkTx"></label>
-      <span class="clr-hex" id="hDkTx">#e0e7ff</span>
-    </div>
-    <div class="clr-row">
-      <span class="clr-icon">💬</span>
-      <span class="clr-label">Texto secundario</span>
-      <input type="color" class="clr-input" id="cDkTx2" onchange="updThmClr('dark','tx2',this.value)">
-      <label class="clr-preview" for="cDkTx2" id="pDkTx2"></label>
-      <span class="clr-hex" id="hDkTx2">#94a3b8</span>
-    </div>
-    <div class="clr-row">
-      <span class="clr-icon">🔵</span>
-      <span class="clr-label">Color primario</span>
-      <input type="color" class="clr-input" id="cDkPri" onchange="updThmClr('dark','pri',this.value)">
-      <label class="clr-preview" for="cDkPri" id="pDkPri"></label>
-      <span class="clr-hex" id="hDkPri">#00e5ff</span>
-    </div>
-    <div class="clr-row">
-      <span class="clr-icon">🟠</span>
-      <span class="clr-label">Color acento</span>
-      <input type="color" class="clr-input" id="cDkAcc" onchange="updThmClr('dark','acc',this.value)">
-      <label class="clr-preview" for="cDkAcc" id="pDkAcc"></label>
-      <span class="clr-hex" id="hDkAcc">#ff6d00</span>
-    </div>
-  </div>
-
-  <!-- Light Theme -->
-  <div class="thm-pane" id="tpLight">
-    <div class="clr-row">
-      <span class="clr-icon">🖼️</span>
-      <span class="clr-label">Fondo principal</span>
-      <input type="color" class="clr-input" id="cLtBg" onchange="updThmClr('light','bg',this.value)">
-      <label class="clr-preview" for="cLtBg" id="pLtBg"></label>
-      <span class="clr-hex" id="hLtBg">#d8dfe8</span>
-    </div>
-    <div class="clr-row">
-      <span class="clr-icon">📦</span>
-      <span class="clr-label">Fondo tarjetas</span>
-      <input type="color" class="clr-input" id="cLtCard" onchange="updThmClr('light','card',this.value)">
-      <label class="clr-preview" for="cLtCard" id="pLtCard"></label>
-      <span class="clr-hex" id="hLtCard">#ffffff</span>
-    </div>
-    <div class="clr-row">
-      <span class="clr-icon">📝</span>
-      <span class="clr-label">Texto principal</span>
-      <input type="color" class="clr-input" id="cLtTx" onchange="updThmClr('light','tx',this.value)">
-      <label class="clr-preview" for="cLtTx" id="pLtTx"></label>
-      <span class="clr-hex" id="hLtTx">#0f172a</span>
-    </div>
-    <div class="clr-row">
-      <span class="clr-icon">💬</span>
-      <span class="clr-label">Texto secundario</span>
-      <input type="color" class="clr-input" id="cLtTx2" onchange="updThmClr('light','tx2',this.value)">
-      <label class="clr-preview" for="cLtTx2" id="pLtTx2"></label>
-      <span class="clr-hex" id="hLtTx2">#475569</span>
-    </div>
-    <div class="clr-row">
-      <span class="clr-icon">🔵</span>
-      <span class="clr-label">Color primario</span>
-      <input type="color" class="clr-input" id="cLtPri" onchange="updThmClr('light','pri',this.value)">
-      <label class="clr-preview" for="cLtPri" id="pLtPri"></label>
-      <span class="clr-hex" id="hLtPri">#0270ad</span>
-    </div>
-    <div class="clr-row">
-      <span class="clr-icon">🟠</span>
-      <span class="clr-label">Color acento</span>
-      <input type="color" class="clr-input" id="cLtAcc" onchange="updThmClr('light','acc',this.value)">
-      <label class="clr-preview" for="cLtAcc" id="pLtAcc"></label>
-      <span class="clr-hex" id="hLtAcc">#c65a08</span>
-    </div>
-  </div>
-
-  <div class="thm-actions">
-    <button class="thm-btn" onclick="expTheme();vib(30)">📤 Exportar</button>
-    <button class="thm-btn" onclick="impTheme();vib(30)">📥 Importar</button>
-    <button class="thm-btn warn" onclick="resetTheme();vib(45)">🔄 Restablecer</button>
-    <button class="thm-btn pri" onclick="saveThmColors();vib(50)">💾 Guardar</button>
-  </div>
-
-  <div class="thm-info">Los colores se aplican en tiempo real. Pulsa "Guardar" para conservar los cambios.</div>
-
+<div class="sch-pane" id="spSched">
+<p style="font-size:12px;color:var(--tx3);margin-bottom:12px">Programa grabación para fecha y hora específica:</p>
+<div class="fg"><label class="fl">Emisora (de favoritos)</label><select class="fi" id="schSchedStn"></select></div>
+<div class="fg"><label class="fl">Fecha</label><input class="fi" id="schSchedDate" type="date"></div>
+<div class="whl-grp">
+<div class="whl-col"><div class="whl-col-lab">Inicio</div><div class="whl-pair">
+<div class="whl"><div class="whl-btn" onpointerdown="whlD('wH1',1)">▲</div><div class="whl-val" id="wH1v">08</div><div class="whl-btn" onpointerdown="whlD('wH1',-1)">▼</div></div>
+<span class="whl-sep">:</span>
+<div class="whl"><div class="whl-btn" onpointerdown="whlD('wM1',1)">▲</div><div class="whl-val" id="wM1v">00</div><div class="whl-btn" onpointerdown="whlD('wM1',-1)">▼</div></div>
+</div></div>
+<div class="whl-col"><div class="whl-col-lab">Fin</div><div class="whl-pair">
+<div class="whl"><div class="whl-btn" onpointerdown="whlD('wH1e',1)">▲</div><div class="whl-val" id="wH1ev">09</div><div class="whl-btn" onpointerdown="whlD('wH1e',-1)">▼</div></div>
+<span class="whl-sep">:</span>
+<div class="whl"><div class="whl-btn" onpointerdown="whlD('wM1e',1)">▲</div><div class="whl-val" id="wM1ev">00</div><div class="whl-btn" onpointerdown="whlD('wM1e',-1)">▼</div></div>
+</div></div>
 </div>
+<div class="sch-dur" id="schDur1">⏱ Duración: 1h 00min</div>
+<div class="fact"><button class="fb pri" onclick="addSchedule('sched');vib(50)">📅 Programar</button></div>
 </div>
+
+<div class="sch-pane" id="spRecur">
+<p style="font-size:12px;color:var(--tx3);margin-bottom:12px">Graba automáticamente cada semana en los días y hora indicados:</p>
+<div class="fg"><label class="fl">Emisora (de favoritos)</label><select class="fi" id="schRecurStn"></select></div>
+<div class="whl-grp">
+<div class="whl-col"><div class="whl-col-lab">Inicio</div><div class="whl-pair">
+<div class="whl"><div class="whl-btn" onpointerdown="whlD('wH2',1)">▲</div><div class="whl-val" id="wH2v">08</div><div class="whl-btn" onpointerdown="whlD('wH2',-1)">▼</div></div>
+<span class="whl-sep">:</span>
+<div class="whl"><div class="whl-btn" onpointerdown="whlD('wM2',1)">▲</div><div class="whl-val" id="wM2v">00</div><div class="whl-btn" onpointerdown="whlD('wM2',-1)">▼</div></div>
+</div></div>
+<div class="whl-col"><div class="whl-col-lab">Fin</div><div class="whl-pair">
+<div class="whl"><div class="whl-btn" onpointerdown="whlD('wH2e',1)">▲</div><div class="whl-val" id="wH2ev">09</div><div class="whl-btn" onpointerdown="whlD('wH2e',-1)">▼</div></div>
+<span class="whl-sep">:</span>
+<div class="whl"><div class="whl-btn" onpointerdown="whlD('wM2e',1)">▲</div><div class="whl-val" id="wM2ev">00</div><div class="whl-btn" onpointerdown="whlD('wM2e',-1)">▼</div></div>
+</div></div>
 </div>
+<div class="sch-dur" id="schDur2">⏱ Duración: 1h 00min</div>
+<div class="fl" style="text-align:center;margin:6px 0 4px">Días de la semana</div>
+<div class="days-row" id="daysRow">
+<button class="day-btn" data-d="1" onclick="togDay(this);vib(30)">Lu</button>
+<button class="day-btn" data-d="2" onclick="togDay(this);vib(30)">Ma</button>
+<button class="day-btn" data-d="3" onclick="togDay(this);vib(30)">Mi</button>
+<button class="day-btn" data-d="4" onclick="togDay(this);vib(30)">Ju</button>
+<button class="day-btn" data-d="5" onclick="togDay(this);vib(30)">Vi</button>
+<button class="day-btn" data-d="6" onclick="togDay(this);vib(30)">Sa</button>
+<button class="day-btn" data-d="0" onclick="togDay(this);vib(30)">Do</button>
+</div>
+<div class="fact"><button class="fb pri" onclick="addSchedule('recur');vib(50)">🔁 Programar</button></div>
+</div>
+
+<div class="sch-list" id="schListW" style="display:none"><div class="fl" style="margin-bottom:8px">Programaciones activas</div><div id="schList"></div></div>
+</div></div></div>
 
 <input type="file" id="fileIn" accept=".json" style="display:none" onchange="handleImp(event)">
-<input type="file" id="thmFileIn" accept=".json" style="display:none" onchange="handleThmImp(event)">
 <div class="toast" id="toast"></div>
-<footer class="ftr">
-  <p>WaveTuner FM v4.4.3 — <a href="https://www.radio-browser.info" target="_blank">Radio Browser API</a></p>
-</footer>
+<footer class="ftr"><p>WaveTuner FM v4.1.0 — <a href="https://www.radio-browser.info" target="_blank">Radio Browser API</a></p></footer>
+
 <script>
-// ═══════════════════════════════════════════════════════════════
-// CONSTANTES Y CONFIGURACIÓN
-// ═══════════════════════════════════════════════════════════════
-const SRVS = [
-  'https://de1.api.radio-browser.info',
-  'https://at1.api.radio-browser.info',
-  'https://nl1.api.radio-browser.info'
+const SRVS=['https://de1.api.radio-browser.info','https://at1.api.radio-browser.info','https://nl1.api.radio-browser.info'];
+const COUNTRIES=[
+{n:'España',c:'ES',f:'🇪🇸'},{n:'México',c:'MX',f:'🇲🇽'},{n:'Argentina',c:'AR',f:'🇦🇷'},
+{n:'Colombia',c:'CO',f:'🇨🇴'},{n:'Chile',c:'CL',f:'🇨🇱'},{n:'Perú',c:'PE',f:'🇵🇪'},
+{n:'Venezuela',c:'VE',f:'🇻🇪'},{n:'Ecuador',c:'EC',f:'🇪🇨'},
+{n:'R.Dominicana',c:'DO',f:'🇩🇴'},{n:'Costa Rica',c:'CR',f:'🇨🇷'},
+{n:'Panamá',c:'PA',f:'🇵🇦'},{n:'Uruguay',c:'UY',f:'🇺🇾'},
+{n:'Paraguay',c:'PY',f:'🇵🇾'},{n:'Bolivia',c:'BO',f:'🇧🇴'},
+{n:'Cuba',c:'CU',f:'🇨🇺'},{n:'Guatemala',c:'GT',f:'🇬🇹'},
+{n:'Honduras',c:'HN',f:'🇭🇳'},{n:'El Salvador',c:'SV',f:'🇸🇻'},
+{n:'Nicaragua',c:'NI',f:'🇳🇮'},{n:'Puerto Rico',c:'PR',f:'🇵🇷'},
+{n:'USA',c:'US',f:'🇺🇸'},{n:'Canadá',c:'CA',f:'🇨🇦'},
+{n:'UK',c:'GB',f:'🇬🇧'},{n:'Brasil',c:'BR',f:'🇧🇷'},
+{n:'Francia',c:'FR',f:'🇫🇷'},{n:'Alemania',c:'DE',f:'🇩🇪'},
+{n:'Italia',c:'IT',f:'🇮🇹'},{n:'Portugal',c:'PT',f:'🇵🇹'},
+{n:'Japón',c:'JP',f:'🇯🇵'},{n:'Corea',c:'KR',f:'🇰🇷'},
+{n:'Australia',c:'AU',f:'🇦🇺'},{n:'India',c:'IN',f:'🇮🇳'},
+{n:'Rusia',c:'RU',f:'🇷🇺'},{n:'China',c:'CN',f:'🇨🇳'}
 ];
-
-const CORS_PROXIES = [
-  'https://corsproxy.io/?',
-  'https://api.allorigins.win/raw?url='
+const GENRES=[
+{id:'pop',n:'Pop',i:'🎤'},{id:'rock',n:'Rock',i:'🎸'},{id:'jazz',n:'Jazz',i:'🎷'},
+{id:'classical',n:'Clásica',i:'🎻'},{id:'electronic',n:'Electrónica',i:'🎛️'},
+{id:'latin',n:'Latina',i:'💃'},{id:'hip hop',n:'Hip Hop',i:'🎤'},
+{id:'rnb',n:'R&B',i:'🎵'},{id:'country',n:'Country',i:'🤠'},
+{id:'reggae',n:'Reggae',i:'🟢'},{id:'metal',n:'Metal',i:'🤘'},
+{id:'blues',n:'Blues',i:'🎸'},{id:'folk',n:'Folk',i:'🪕'},
+{id:'soul',n:'Soul',i:'💜'},{id:'dance',n:'Dance',i:'🕺'},
+{id:'ambient',n:'Ambient',i:'🌊'},{id:'reggaeton',n:'Reggaetón',i:'🔥'},
+{id:'salsa',n:'Salsa',i:'💃'},{id:'tropical',n:'Tropical',i:'🌴'},
+{id:'80s',n:'80s',i:'📼'},{id:'90s',n:'90s',i:'💿'},
+{id:'oldies',n:'Oldies',i:'📻'},{id:'news',n:'Noticias',i:'📰'},
+{id:'talk',n:'Talk',i:'🎙️'},{id:'christian',n:'Cristiana',i:'✝️'},
+{id:'sports',n:'Deportes',i:'⚽'},{id:'lounge',n:'Lounge',i:'🍸'}
 ];
+const DEG=Math.PI/180;
+const DEFAULT_STN={stationuuid:'default_dinamica929',name:'Dinámica 92.9 FM',url:'https://guri.tepuyserver.net/8012/stream',url_resolved:'https://guri.tepuyserver.net/8012/stream',favicon:'',country:'Venezuela',countrycode:'VE',tags:'radio en vivo',codec:'MP3',bitrate:128,isCustom:false};
 
-const COUNTRIES = [
-  {n:'España',c:'ES',f:'🇪🇸'},{n:'México',c:'MX',f:'🇲🇽'},{n:'Argentina',c:'AR',f:'🇦🇷'},
-  {n:'Colombia',c:'CO',f:'🇨🇴'},{n:'Chile',c:'CL',f:'🇨🇱'},{n:'Perú',c:'PE',f:'🇵🇪'},
-  {n:'Venezuela',c:'VE',f:'🇻🇪'},{n:'Ecuador',c:'EC',f:'🇪🇨'},
-  {n:'R.Dominicana',c:'DO',f:'🇩🇴'},{n:'Costa Rica',c:'CR',f:'🇨🇷'},
-  {n:'Panamá',c:'PA',f:'🇵🇦'},{n:'Uruguay',c:'UY',f:'🇺🇾'},
-  {n:'Paraguay',c:'PY',f:'🇵🇾'},{n:'Bolivia',c:'BO',f:'🇧🇴'},
-  {n:'Cuba',c:'CU',f:'🇨🇺'},{n:'Guatemala',c:'GT',f:'🇬🇹'},
-  {n:'Honduras',c:'HN',f:'🇭🇳'},{n:'El Salvador',c:'SV',f:'🇸🇻'},
-  {n:'Nicaragua',c:'NI',f:'🇳🇮'},{n:'Puerto Rico',c:'PR',f:'🇵🇷'},
-  {n:'USA',c:'US',f:'🇺🇸'},{n:'Canadá',c:'CA',f:'🇨🇦'},
-  {n:'UK',c:'GB',f:'🇬🇧'},{n:'Brasil',c:'BR',f:'🇧🇷'},
-  {n:'Francia',c:'FR',f:'🇫🇷'},{n:'Alemania',c:'DE',f:'🇩🇪'},
-  {n:'Italia',c:'IT',f:'🇮🇹'},{n:'Portugal',c:'PT',f:'🇵🇹'},
-  {n:'Japón',c:'JP',f:'🇯🇵'},{n:'Corea',c:'KR',f:'🇰🇷'},
-  {n:'Australia',c:'AU',f:'🇦🇺'},{n:'India',c:'IN',f:'🇮🇳'},
-  {n:'Rusia',c:'RU',f:'🇷🇺'},{n:'China',c:'CN',f:'🇨🇳'}
-];
-
-const GENRES = [
-  {id:'pop',n:'Pop',i:'🎤'},{id:'rock',n:'Rock',i:'🎸'},{id:'jazz',n:'Jazz',i:'🎷'},
-  {id:'classical',n:'Clásica',i:'🎻'},{id:'electronic',n:'Electrónica',i:'🎛️'},
-  {id:'latin',n:'Latina',i:'💃'},{id:'hip hop',n:'Hip Hop',i:'🎤'},
-  {id:'rnb',n:'R&B',i:'🎵'},{id:'country',n:'Country',i:'🤠'},
-  {id:'reggae',n:'Reggae',i:'🟢'},{id:'metal',n:'Metal',i:'🤘'},
-  {id:'blues',n:'Blues',i:'🎸'},{id:'folk',n:'Folk',i:'🪕'},
-  {id:'soul',n:'Soul',i:'💜'},{id:'dance',n:'Dance',i:'🕺'},
-  {id:'ambient',n:'Ambient',i:'🌊'},{id:'reggaeton',n:'Reggaetón',i:'🔥'},
-  {id:'salsa',n:'Salsa',i:'💃'},{id:'tropical',n:'Tropical',i:'🌴'},
-  {id:'80s',n:'80s',i:'📼'},{id:'90s',n:'90s',i:'💿'},
-  {id:'oldies',n:'Oldies',i:'📻'},{id:'news',n:'Noticias',i:'📰'},
-  {id:'talk',n:'Talk',i:'🎙️'},{id:'christian',n:'Cristiana',i:'✝️'},
-  {id:'sports',n:'Deportes',i:'⚽'},{id:'lounge',n:'Lounge',i:'🍸'}
-];
-
-const DEG = Math.PI / 180;
-
-const DEFAULT_STN = {
-  stationuuid: 'default_dinamica929',
-  name: 'Dinámica 92.9 FM',
-  url: 'https://guri.tepuyserver.net/8012/stream',
-  url_resolved: 'https://guri.tepuyserver.net/8012/stream',
-  favicon: '',
-  country: 'Venezuela',
-  countrycode: 'VE',
-  tags: 'radio en vivo',
-  codec: 'MP3',
-  bitrate: 128,
-  isCustom: false
+// STATE
+const isFirstRun=localStorage.getItem('wtfm_favs')===null;
+const S={
+  srv:SRVS[0],list:[],cur:null,pb:'stopped',vol:80,muted:false,
+  favs:isFirstRun?[{...DEFAULT_STN}]:JP('wtfm_favs',[]),
+  custom:JP('wtfm_custom',[]),
+  tab:'top',sub:null,sq:'',loading:false,err:null,
+  theme:localStorage.getItem('wtfm_theme')||'dark',
+  quality:parseInt(localStorage.getItem('wtfm_q'))||128,
+  recActive:false,recReader:null,recChunks:[],recStart:0,recTimer:null,recMime:'',recMethod:null,recMR:null,recAutoStop:null,
+  recTotalSec:0,recSchId:null,
+  nL:0,nR:0,vL:0,vR:0,gaugeReady:false,af:null,
+  schedules:JP('wtfm_sch',[]),
+  wheels:{wH1:{v:8,min:0,max:23},wM1:{v:0,min:0,max:59},wH1e:{v:9,min:0,max:23},wM1e:{v:0,min:0,max:59},wH2:{v:8,min:0,max:23},wM2:{v:0,min:0,max:59},wH2e:{v:9,min:0,max:23},wM2e:{v:0,min:0,max:59}},
+  deferredPrompt:null
 };
-
-const DEFAULT_COLORS = {
-  dark: {
-    bg: '#050810',
-    card: '#131b2d',
-    tx: '#e0e7ff',
-    tx2: '#94a3b8',
-    pri: '#00e5ff',
-    acc: '#ff6d00'
-  },
-  light: {
-    bg: '#d8dfe8',
-    card: '#ffffff',
-    tx: '#0f172a',
-    tx2: '#475569',
-    pri: '#0270ad',
-    acc: '#c65a08'
-  }
-};
-
-// ═══════════════════════════════════════════════════════════════
-// ESTADO DE LA APLICACIÓN
-// ═══════════════════════════════════════════════════════════════
-const isFirstRun = localStorage.getItem('wtfm_favs') === null;
-
-const S = {
-  srv: SRVS[0],
-  list: [],
-  cur: null,
-  pb: 'stopped',
-  vol: 80,
-  muted: false,
-  favs: isFirstRun ? [{...DEFAULT_STN}] : JP('wtfm_favs', []),
-  custom: JP('wtfm_custom', []),
-  lastStation: JP('wtfm_last', null),
-  tab: 'top',
-  sub: null,
-  sq: '',
-  loading: false,
-  err: null,
-  theme: localStorage.getItem('wtfm_theme') || 'dark',
-  quality: parseInt(localStorage.getItem('wtfm_q')) || 128,
-  prefFormat: localStorage.getItem('wtfm_fmt') || 'mp3',
-  recActive: false,
-  recReader: null,
-  recChunks: [],
-  recStart: 0,
-  recTimer: null,
-  recMime: '',
-  recMethod: null,
-  recMR: null,
-  recAutoStop: null,
-  recAbort: null,
-  recTotalSec: 0,
-  recSchId: null,
-  recFormat: 'mp3',
-  recFallbackInterval: null,
-  nL: 0,
-  nR: 0,
-  vL: 0,
-  vR: 0,
-  gaugeReady: false,
-  af: null,
-  schedules: JP('wtfm_sch', []),
-  wheels: {
-    wH1: {v: 8, min: 0, max: 23},
-    wM1: {v: 0, min: 0, max: 59},
-    wH1e: {v: 9, min: 0, max: 23},
-    wM1e: {v: 0, min: 0, max: 59},
-    wH2: {v: 8, min: 0, max: 23},
-    wM2: {v: 0, min: 0, max: 59},
-    wH2e: {v: 9, min: 0, max: 23},
-    wM2e: {v: 0, min: 0, max: 59}
-  },
-  deferredPrompt: null,
-  customColors: JP('wtfm_colors', {
-    dark: {...DEFAULT_COLORS.dark},
-    light: {...DEFAULT_COLORS.light}
-  }),
-  reconnectAttempts: 0,
-  maxReconnects: 3,
-  schUseCurrent: {timed: true, sched: true, recur: true}
-};
-
-if (isFirstRun) saveFavs();
-
-// ═══════════════════════════════════════════════════════════════
-// UTILIDADES BASE
-// ═══════════════════════════════════════════════════════════════
-function JP(k, d) {
-  try {
-    return JSON.parse(localStorage.getItem(k)) || d;
-  } catch {
-    return d;
-  }
-}
-
-const $ = id => document.getElementById(id);
-const audio = $('audio');
-
-function vib(p) {
-  try {
-    if (navigator.vibrate) navigator.vibrate(p);
-  } catch {}
-}
-
-function tsNow() {
-  const d = new Date();
-  const dd = String(d.getDate()).padStart(2, '0');
-  const mm = String(d.getMonth() + 1).padStart(2, '0');
-  const aa = String(d.getFullYear()).slice(-2);
-  const hh = String(d.getHours()).padStart(2, '0');
-  const mi = String(d.getMinutes()).padStart(2, '0');
-  return `${dd}-${mm}-${aa}_${hh}-${mi}`;
-}
-
-function mkFlag(c) {
-  if (!c || c.length !== 2) return '🌐';
-  return String.fromCodePoint(
-    ...[...c.toUpperCase()].map(x => 0x1F1E6 + x.charCodeAt(0) - 65)
-  );
-}
-
-function esc(s) {
-  const d = document.createElement('div');
-  d.textContent = s || '';
-  return d.innerHTML;
-}
-
-function toast(m) {
-  const t = $('toast');
-  t.textContent = m;
-  t.classList.add('on');
-  clearTimeout(t._t);
-  t._t = setTimeout(() => t.classList.remove('on'), 2800);
-}
-
-// ═══════════════════════════════════════════════════════════════
-// SOPORTE M3U / M3U8 / PLS
-// ═══════════════════════════════════════════════════════════════
-function isPlaylistUrl(url) {
-  if (!url) return false;
-  const lower = url.toLowerCase();
-  return lower.endsWith('.m3u') || 
-         lower.endsWith('.m3u8') || 
-         lower.endsWith('.pls') || 
-         lower.includes('.m3u?') || 
-         lower.includes('.m3u8?') || 
-         lower.includes('.pls?');
-}
-
-async function resolvePlaylistUrl(url) {
-  if (!isPlaylistUrl(url)) return url;
-  console.log('🎵 Detectado archivo playlist:', url);
-  
-  let content = null;
-  
-  try {
-    const resp = await fetch(url, {mode: 'cors'});
-    if (resp.ok) content = await resp.text();
-  } catch (e) {
-    console.log('Fetch directo falló, probando proxies...');
-  }
-  
-  if (!content) {
-    for (const proxy of CORS_PROXIES) {
-      try {
-        const resp = await fetch(proxy + encodeURIComponent(url));
-        if (resp.ok) {
-          content = await resp.text();
-          break;
-        }
-      } catch {}
-    }
-  }
-  
-  if (!content) {
-    console.warn('⚠️ No se pudo obtener la playlist');
-    return url;
-  }
-  
-  const lower = url.toLowerCase();
-  let streamUrl = null;
-  
-  if (lower.includes('.pls')) {
-    const match = content.match(/File1\s*=\s*(.+)/i);
-    if (match) streamUrl = match[1].trim();
-  } else {
-    const lines = content.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#'));
-    if (lines.length > 0) streamUrl = lines[0];
-  }
-  
-  if (streamUrl) {
-    console.log('✅ Stream extraído:', streamUrl);
-    return streamUrl;
-  }
-  
-  return url;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// API DE RADIO BROWSER
-// ═══════════════════════════════════════════════════════════════
-async function api(ep) {
-  for (const sv of SRVS) {
-    try {
-      const c = new AbortController();
-      const t = setTimeout(() => c.abort(), 8000);
-      const r = await fetch(sv + ep, {signal: c.signal});
-      clearTimeout(t);
-      if (r.ok) {
-        S.srv = sv;
-        return r.json();
-      }
-    } catch {}
-  }
-  throw new Error('Sin conexión al servidor');
-}
-
-const apiTop = () => api('/json/stations/topvote?limit=80&hidebroken=true');
-const apiCountry = c => api(`/json/stations/bycountrycodeexact/${c}?limit=100&hidebroken=true&order=votes&reverse=true`);
-const apiTag = t => api(`/json/stations/bytag/${encodeURIComponent(t)}?limit=80&hidebroken=true&order=votes&reverse=true`);
-const apiSearch = q => api(`/json/stations/byname/${encodeURIComponent(q)}?limit=80&hidebroken=true&order=votes&reverse=true`);
-const apiClick = u => { try { fetch(`${S.srv}/json/url/${u}`) } catch {} };
-
-async function loadList(fn, label) {
-  S.loading = true;
-  S.err = null;
-  renderBox();
-  
-  try {
-    let d = await fn();
-    d = d.filter(s => s.url_resolved && s.name && s.name.trim());
-    
-    const seen = new Set();
-    d = d.filter(s => {
-      if (seen.has(s.url_resolved)) return false;
-      seen.add(s.url_resolved);
-      return true;
-    });
-    
-    S.list = d;
-    S.loading = false;
-    renderBox();
-    showLinf(true, label, d.length);
-  } catch (e) {
-    S.loading = false;
-    S.err = e.message;
-    S.list = [];
-    renderBox();
-    showLinf(false);
-  }
-}
-
-function showLinf(s, l, c) {
-  const e = $('linf');
-  if (s) {
-    e.classList.add('on');
-    $('lLab').textContent = l;
-    $('lCnt').textContent = c;
-  } else {
-    e.classList.remove('on');
-  }
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CONTROL DE AUDIO
-// ═══════════════════════════════════════════════════════════════
-audio.addEventListener('loadstart', () => {
-  if (S.cur) setPB('loading');
-});
-
-audio.addEventListener('waiting', () => {
-  if (S.cur) setPB('loading');
-});
-
-audio.addEventListener('playing', () => {
-  S.reconnectAttempts = 0;
-  setPB('playing');
-  updMedia();
-});
-
-audio.addEventListener('pause', () => {
-  if (!audio.src || audio.ended) setPB('stopped');
-});
-
-audio.addEventListener('error', () => {
-  if (S.cur) setPB('error');
-});
-
-audio.addEventListener('stalled', () => {
-  if (S.cur && S.pb === 'playing') {
-    console.log('⚠️ Stream estancado, intentando reconectar...');
-    tryReconnect();
-  }
-});
-
-audio.addEventListener('ended', () => {
-  if (S.cur && S.pb === 'playing') {
-    console.log('⚠️ Stream terminó, intentando reconectar...');
-    tryReconnect();
-  }
-});
-
-function tryReconnect() {
-  if (S.reconnectAttempts >= S.maxReconnects) {
-    toast('⚠️ Conexión perdida');
-    setPB('error');
-    return;
-  }
-  
-  S.reconnectAttempts++;
-  toast(`🔄 Reconectando... (${S.reconnectAttempts}/${S.maxReconnects})`);
-  
-  setTimeout(() => {
-    if (S.cur && S.pb !== 'stopped') {
-      audio.load();
-      audio.play().catch(() => setPB('error'));
-    }
-  }, 2000);
-}
-
-async function playStn(stn) {
-  vib(35);
-  S.cur = stn;
-  S.reconnectAttempts = 0;
-  setPB('loading');
-  showPly(true);
-  
-  let streamUrl = stn.url_resolved || stn.url;
-  
-  if (isPlaylistUrl(streamUrl)) {
-    toast('🔄 Resolviendo playlist...');
-    try {
-      streamUrl = await resolvePlaylistUrl(streamUrl);
-      stn.url_resolved = streamUrl;
-    } catch (e) {
-      console.warn('Error resolviendo playlist:', e);
-    }
-  }
-  
-  audio.src = streamUrl;
-  audio.volume = S.muted ? 0 : S.vol / 100;
-  audio.load();
-  
-  const p = audio.play();
-  if (p) p.catch(e => {
-    if (e.name !== 'AbortError') setPB('error');
-  });
-  
-  if (stn.stationuuid) apiClick(stn.stationuuid);
-  
-  updPlyInfo();
-  renderStnList();
-  saveLastStation(stn);
-  toast('📻 ' + stn.name);
-}
-
-function stopAudio() {
-  audio.pause();
-  audio.removeAttribute('src');
-  audio.load();
-  setPB('stopped');
-}
-
-function togglePlay() {
-  if (!S.cur) return;
-  (S.pb === 'playing' || S.pb === 'loading') ? stopAudio() : playStn(S.cur);
-}
-
-function setPB(s) {
-  S.pb = s;
-  updPlySt();
-  updHdr();
-  updPlayBtn();
-}
-
-function setVol(v) {
-  S.vol = v;
-  S.muted = false;
-  audio.volume = v / 100;
-  updVolUI();
-}
-
-function toggleMute() {
-  S.muted = !S.muted;
-  audio.volume = S.muted ? 0 : S.vol / 100;
-  updVolUI();
-}
-
-// ═══════════════════════════════════════════════════════════════
-// ÚLTIMA EMISORA ESCUCHADA
-// ═══════════════════════════════════════════════════════════════
-function saveLastStation(stn) {
-  S.lastStation = pickStn(stn);
-  localStorage.setItem('wtfm_last', JSON.stringify(S.lastStation));
-}
-
-function loadLastStation() {
-  if (S.lastStation) {
-    S.cur = S.lastStation;
-    showPly(true);
-    updPlyInfo();
-    updFavBtn();
-    toast('📻 ' + S.lastStation.name + ' lista');
-  }
-}
-// ═══════════════════════════════════════════════════════════════
-// SISTEMA DE GRABACIÓN v4.4.3 — VERIFICACIÓN ACTIVA 5 SEGUNDOS
-// ═══════════════════════════════════════════════════════════════
-async function toggleRec() {
-  if (S.recActive) {
-    stopRec();
-    return;
-  }
-  if (S.pb !== 'playing') {
-    toast('⚠️ Primero reproduce una emisora');
-    vib([60, 50, 60]);
-    return;
-  }
-  startRecording(0, null);
-}
-
-// Función para calcular bytes grabados
-function calcRecBytes() {
-  let bytes = 0;
-  S.recChunks.forEach(c => bytes += (c.byteLength || c.size || 0));
-  return bytes;
-}
-
-// Limpiar verificación de fallback
-function clearFallbackCheck() {
-  if (S.recFallbackInterval) {
-    clearInterval(S.recFallbackInterval);
-    S.recFallbackInterval = null;
-  }
-}
-
-// Iniciar verificación activa cada 1 segundo durante 5 segundos
-function startFallbackCheck() {
-  clearFallbackCheck();
-  let checks = 0;
-  
-  S.recFallbackInterval = setInterval(() => {
-    if (!S.recActive) {
-      clearFallbackCheck();
-      return;
-    }
-    
-    checks++;
-    const bytes = calcRecBytes();
-    console.log(`⏱ Verificación ${checks}/5: ${bytes} bytes`);
-    
-    if (bytes > 0) {
-      // Hay datos, MP3 funciona
-      clearFallbackCheck();
-      console.log('✅ MP3 funcionando correctamente');
-    } else if (checks >= 5) {
-      // 5 segundos sin datos, cambiar a WebM
-      clearFallbackCheck();
-      console.log('⚠️ 5 segundos sin datos, cambiando a WebM...');
-      switchToWebM();
-    }
-  }, 1000);
-}
-
-// Cambiar a WebM
-async function switchToWebM() {
-  // Detener fetch actual
-  if (S.recReader) {
-    try { S.recReader.cancel(); } catch {}
-  }
-  if (S.recAbort) {
-    try { S.recAbort.abort(); } catch {}
-  }
-  
-  S.recReader = null;
-  S.recAbort = null;
-  S.recMethod = null;
-  S.recChunks = [];
-  
-  try {
-    let stream;
-    if (audio.captureStream) {
-      stream = audio.captureStream();
-    } else if (audio.mozCaptureStream) {
-      stream = audio.mozCaptureStream();
-    }
-    
-    if (!stream || stream.getAudioTracks().length === 0) {
-      toast('⚠️ WebM no disponible');
-      stopRec();
-      return;
-    }
-    
-    const mime = MediaRecorder.isTypeSupported('audio/webm;codecs=opus') 
-      ? 'audio/webm;codecs=opus' 
-      : 'audio/webm';
-    
-    S.recMR = new MediaRecorder(stream, {
-      mimeType: mime,
-      audioBitsPerSecond: S.quality * 1000
-    });
-    
-    S.recMethod = 'capture';
-    S.recMime = mime;
-    S.recFormat = 'webm';
-    
-    S.recMR.ondataavailable = e => {
-      if (e.data && e.data.size > 0) S.recChunks.push(e.data);
-    };
-    
-    S.recMR.onerror = () => {
-      console.warn('MediaRecorder error');
-    };
-    
-    S.recMR.start(1000);
-    updRecFmt();
-    toast('🔄 Cambiado a WebM');
-    vib(30);
-  } catch (e) {
-    console.error('Error WebM:', e);
-    toast('⚠️ Error al cambiar formato');
-    stopRec();
-  }
-}
-
-async function startRecording(totalSec, schId) {
-  if (S.recActive) return;
-  
-  S.recActive = true;
-  S.recChunks = [];
-  S.recStart = Date.now();
-  S.recMethod = null;
-  S.recTotalSec = totalSec;
-  S.recSchId = schId;
-  S.recFormat = 'mp3';
-  
-  showRecUI(true);
-  
-  if (totalSec > 0) {
-    S.recAutoStop = setTimeout(() => {
-      stopRec();
-      toast('⏹ Grabación programada finalizada');
-      vib([50, 30, 50]);
-    }, totalSec * 1000);
-  }
-  
-  const url = S.cur.url_resolved || S.cur.url;
-  const preferMp3 = S.prefFormat === 'mp3';
-  
-  // MÉTODO 1: Fetch directo (produce MP3/AAC nativo)
-  const tryFetchDirect = async () => {
-    try {
-      const ctrl = new AbortController();
-      const timeoutId = setTimeout(() => ctrl.abort(), 5000);
-      
-      const resp = await fetch(url, {signal: ctrl.signal});
-      clearTimeout(timeoutId);
-      
-      if (!resp.ok || !resp.body) return false;
-      
-      S.recMethod = 'fetch';
-      S.recMime = resp.headers.get('content-type') || 'audio/mpeg';
-      S.recFormat = S.recMime.includes('aac') ? 'aac' : 'mp3';
-      S.recReader = resp.body.getReader();
-      
-      updRecFmt();
-      toast(`🔴 Grabando (${S.recFormat.toUpperCase()})`);
-      readStream();
-      startFallbackCheck();
-      return true;
-    } catch (e) {
-      console.log('Fetch directo falló:', e.name);
-      return false;
-    }
-  };
-  
-  // MÉTODO 2: Fetch con proxies CORS
-  const tryFetchProxy = async () => {
-    for (const proxy of CORS_PROXIES) {
-      try {
-        const ctrl = new AbortController();
-        const timeoutId = setTimeout(() => ctrl.abort(), 5000);
-        
-        const resp = await fetch(proxy + encodeURIComponent(url), {signal: ctrl.signal});
-        clearTimeout(timeoutId);
-        
-        if (!resp.ok || !resp.body) continue;
-        
-        S.recMethod = 'fetch';
-        S.recAbort = ctrl;
-        S.recMime = resp.headers.get('content-type') || 'audio/mpeg';
-        S.recFormat = S.recMime.includes('aac') ? 'aac' : 'mp3';
-        S.recReader = resp.body.getReader();
-        
-        updRecFmt();
-        toast(`🔴 Grabando (${S.recFormat.toUpperCase()} vía proxy)`);
-        readStream();
-        startFallbackCheck();
-        return true;
-      } catch {}
-    }
-    return false;
-  };
-  
-  // MÉTODO 3: MediaRecorder (produce WebM)
-  const tryMediaRecorder = async () => {
-    try {
-      let stream;
-      if (audio.captureStream) {
-        stream = audio.captureStream();
-      } else if (audio.mozCaptureStream) {
-        stream = audio.mozCaptureStream();
-      }
-      
-      if (!stream || stream.getAudioTracks().length === 0) return false;
-      
-      const mime = MediaRecorder.isTypeSupported('audio/webm;codecs=opus') 
-        ? 'audio/webm;codecs=opus' 
-        : 'audio/webm';
-      
-      S.recMR = new MediaRecorder(stream, {
-        mimeType: mime,
-        audioBitsPerSecond: S.quality * 1000
-      });
-      
-      S.recMethod = 'capture';
-      S.recMime = mime;
-      S.recFormat = 'webm';
-      
-      S.recMR.ondataavailable = e => {
-        if (e.data && e.data.size > 0) S.recChunks.push(e.data);
-      };
-      
-      S.recMR.onerror = () => {
-        console.warn('MediaRecorder error');
-      };
-      
-      S.recMR.start(1000);
-      updRecFmt();
-      toast('🔴 Grabando (WebM)');
-      return true;
-    } catch {
-      return false;
-    }
-  };
-  
-  // Intentar métodos según preferencia
-  if (preferMp3) {
-    if (await tryFetchDirect()) return;
-    if (await tryFetchProxy()) return;
-    if (await tryMediaRecorder()) return;
-  } else {
-    if (await tryMediaRecorder()) return;
-    if (await tryFetchDirect()) return;
-    if (await tryFetchProxy()) return;
-  }
-  
-  // Si ningún método funciona
-  S.recActive = false;
-  showRecUI(false);
-  toast('⚠️ Grabación no disponible');
-  vib([60, 50, 60, 50, 60]);
-}
-
-function readStream() {
-  (async () => {
-    try {
-      while (S.recActive && S.recReader) {
-        const {done, value} = await S.recReader.read();
-        if (done || !S.recActive) break;
-        S.recChunks.push(value);
-      }
-    } catch (e) {
-      console.log('Stream cerrado:', e);
-    }
-    try {
-      if (S.recReader) S.recReader.cancel();
-    } catch {}
-  })();
-}
-
-function stopRec() {
-  S.recActive = false;
-  clearInterval(S.recTimer);
-  clearFallbackCheck();
-  
-  if (S.recAutoStop) {
-    clearTimeout(S.recAutoStop);
-    S.recAutoStop = null;
-  }
-  
-  if (S.recMethod === 'fetch') {
-    try { if (S.recReader) S.recReader.cancel(); } catch {}
-    if (S.recAbort) try { S.recAbort.abort(); } catch {}
-    downloadRec();
-  } else if (S.recMethod === 'capture' && S.recMR) {
-    S.recMR.onstop = () => downloadRec();
-    try { S.recMR.stop(); } catch {}
-    S.recMR = null;
-  }
-  
-  showRecUI(false);
-  $('btnRc').classList.remove('rec-on');
-  updHdr();
-  
-  if (S.recSchId) {
-    const idx = S.schedules.findIndex(s => s.id === S.recSchId);
-    if (idx >= 0 && S.schedules[idx].type === 'sched') {
-      S.schedules.splice(idx, 1);
-      saveSch();
-      renderSchList();
-    }
-  }
-  
-  S.recSchId = null;
-  S.recTotalSec = 0;
-}
-
-function downloadRec() {
-  if (!S.recChunks.length) {
-    toast('⚠️ Sin audio grabado');
-    return;
-  }
-  
-  let blob, ext;
-  
-  if (S.recMethod === 'fetch') {
-    const m = S.recMime || 'audio/mpeg';
-    ext = S.recFormat || 'mp3';
-    blob = new Blob(S.recChunks, {type: m});
-  } else {
-    ext = 'webm';
-    blob = new Blob(S.recChunks, {type: S.recMime || 'audio/webm'});
-  }
-  
-  const nm = S.cur 
-    ? S.cur.name.replace(/[^a-zA-Z0-9áéíóúñÁÉÍÓÚÑ ]/gi, '').replace(/ +/g, '_') 
-    : 'Grabacion';
-  
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = `${nm}_${tsNow()}.${ext}`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(a.href);
-  
-  toast(`💾 ${(blob.size / 1048576).toFixed(1)}MB (.${ext.toUpperCase()})`);
-  S.recChunks = [];
-  S.recMethod = null;
-}
-
-function showRecUI(on) {
-  $('recBar').classList.toggle('on', on);
-  $('btnRc').classList.toggle('rec-on', on);
-  
-  if (on) {
-    S.recTimer = setInterval(updRecTm, 500);
-    updRecTm();
-    updRecFmt();
-  } else {
-    clearInterval(S.recTimer);
-  }
-  
-  updHdr();
-}
-
-function updRecTm() {
-  const elapsed = Math.floor((Date.now() - S.recStart) / 1000);
-  const em = Math.floor(elapsed / 60);
-  const es = elapsed % 60;
-  
-  let txt = `${String(em).padStart(2, '0')}:${String(es).padStart(2, '0')}`;
-  
-  if (S.recTotalSec > 0) {
-    const rem = Math.max(0, S.recTotalSec - elapsed);
-    const rm = Math.floor(rem / 60);
-    const rs = rem % 60;
-    txt += ` / ${String(rm).padStart(2, '0')}:${String(rs).padStart(2, '0')}`;
-  }
-  
-  $('recTm').textContent = txt;
-  
-  const kb = calcRecBytes() / 1024;
-  $('recSz').textContent = kb > 1024 
-    ? `${(kb / 1024).toFixed(1)} MB` 
-    : `${Math.round(kb)} KB`;
-}
-
-function updRecFmt() {
-  $('recFmt').textContent = S.recFormat.toUpperCase();
-}
-
-// ═══════════════════════════════════════════════════════════════
-// CALIDAD Y FORMATO DE GRABACIÓN
-// ═══════════════════════════════════════════════════════════════
-function setQuality(q) {
-  S.quality = q;
-  localStorage.setItem('wtfm_q', q);
-  updQualUI();
-  vib(30);
-  toast(`🎚️ Calidad: ${q}kbps`);
-}
-
-function setFormat(f) {
-  S.prefFormat = f;
-  localStorage.setItem('wtfm_fmt', f);
-  updFmtUI();
-  vib(30);
-  toast(`📀 Formato: ${f.toUpperCase()}`);
-}
-
-function updQualUI() {
-  [128, 192, 320].forEach(q => {
-    const b = $('sq' + q);
-    if (b) b.classList.toggle('on', S.quality === q);
-  });
-}
-
-function updFmtUI() {
-  $('sfMp3').classList.toggle('on', S.prefFormat === 'mp3');
-  $('sfWebm').classList.toggle('on', S.prefFormat === 'webm');
-}
-
-// ═══════════════════════════════════════════════════════════════
-// INTERFAZ DE USUARIO - REPRODUCTOR
-// ═══════════════════════════════════════════════════════════════
-function showPly(show) {
-  $('plyE').style.display = show ? 'none' : 'block';
-  $('plyC').style.display = show ? 'block' : 'none';
-  
-  if (show && !S.gaugeReady) {
-    requestAnimationFrame(() => requestAnimationFrame(() => {
-      resizeGauge();
-      S.gaugeReady = true;
-    }));
-  }
-}
-
-function updPlyInfo() {
-  const s = S.cur;
-  if (!s) return;
-  
-  $('plyNm').textContent = s.name;
-  
-  const p = [];
-  if (s.country) p.push(mkFlag(s.countrycode) + ' ' + s.country);
-  if (s.tags) {
-    const t = s.tags.split(',').slice(0, 2).map(x => x.trim()).filter(Boolean);
-    if (t.length) p.push(t.join(', '));
-  }
-  if (s.bitrate) p.push(s.bitrate + 'kbps');
-  if (s.codec) p.push(s.codec);
-  
-  $('plyMt').textContent = p.join(' · ') || 'Radio';
-  
-  const art = $('plyArt');
-  art.innerHTML = (s.favicon && s.favicon.trim()) 
-    ? `<img src="${s.favicon}" onerror="this.parentElement.innerHTML='📻'">` 
-    : '📻';
-  
-  const br = s.bitrate || 0;
-  $('gBdg').textContent = br >= 96 ? 'STEREO' : 'MONO';
-  $('gBdg').className = 'gauge-bdg ' + (br >= 96 ? 'st' : 'mn');
-  $('gKb').textContent = (s.codec && br) ? `${s.codec} ${br}kbps` : '';
-  
-  updFavBtn();
-}
-
-function updPlySt() {
-  const e = $('plySt');
-  const t = $('plyStT');
-  
-  e.className = 'ply-st ' + (
-    S.pb === 'loading' ? 'ld' : 
-    S.pb === 'playing' ? 'pl' : 
-    S.pb === 'error' ? 'er' : 'sp'
-  );
-  
-  t.textContent = 
-    S.pb === 'loading' ? 'Conectando...' : 
-    S.pb === 'playing' ? '▶ En vivo' : 
-    S.pb === 'error' ? 'Error de conexión' : 'Detenido';
-}
-
-function updPlayBtn() {
-  const b = $('btnPl');
-  const a = S.pb === 'playing' || S.pb === 'loading';
-  b.classList.toggle('on', S.pb === 'playing');
-  b.textContent = a ? '⏸' : '▶';
-}
-
-function updHdr() {
-  const d = $('hDot');
-  const t = $('hSt');
-  
-  d.className = 'hdr-dot';
-  d.style.background = '';
-  
-  if (S.pb === 'playing') {
-    if (S.recActive) {
-      d.className = 'hdr-dot rec';
-    } else {
-      d.className = 'hdr-dot on';
-    }
-    t.textContent = 'En vivo';
-  } else if (S.pb === 'loading') {
-    d.className = 'hdr-dot wrn';
-    t.textContent = 'Conectando...';
-  } else {
-    t.textContent = S.pb === 'error' ? 'Error' : 'Offline';
-  }
-}
-
-function updVolUI() {
-  $('volR').value = S.vol;
-  $('volV').textContent = S.muted ? '🔇' : S.vol;
-  $('volI').textContent = S.muted ? '🔇' : S.vol > 50 ? '🔊' : S.vol > 0 ? '🔉' : '🔈';
-}
-
-function updFavBtn() {
-  if (!S.cur) return;
-  const is = S.favs.some(f => sameStn(f, S.cur));
-  $('btnFv').textContent = is ? '★' : '☆';
-  $('btnFv').classList.toggle('fav-on', is);
-}
-
-function sameStn(a, b) {
-  return (a.url_resolved && a.url_resolved === b.url_resolved) || 
-         (a.stationuuid && a.stationuuid === b.stationuuid);
-}
-
-// ═══════════════════════════════════════════════════════════════
-// GALVANÓMETRO VU
-// ═══════════════════════════════════════════════════════════════
-const gCv = $('gaugeCv');
-const gCtx = gCv.getContext('2d');
-
-function resizeGauge() {
-  const r = $('gaugeW').getBoundingClientRect();
-  if (r.width > 0) {
-    gCv.width = Math.floor(r.width * 2);
-    gCv.height = 240;
-  }
-}
-
-new ResizeObserver(() => {
-  if ($('plyC').style.display !== 'none') resizeGauge();
-}).observe($('gaugeW'));
-
-function calcLvl(now, ch, vol) {
-  if (S.pb !== 'playing' || S.muted) {
-    return S.pb === 'loading' ? .05 + Math.sin(now / 300) * .03 : .01;
-  }
-  
-  const v = Math.max(.15, vol);
-  const bl = 500;
-  const bp = (now % bl) / bl;
-  
-  const kick = Math.exp(-bp * 7) * .32;
-  const snp = ((now + bl) % (bl * 2)) / (bl * 2);
-  const snare = Math.exp(-snp * 9) * .22;
-  const hhp = (now % (bl / 2)) / (bl / 2);
-  const hh = Math.exp(-hhp * 14) * .08;
-  const bass = (Math.sin(now / 900 + ch * .7) * .5 + .5) * .18;
-  const mid = Math.abs(Math.sin(now / 210 + ch * 2.3)) * .12;
-  const hi = Math.abs(Math.sin(now / 55 + ch * 4.1)) * .04;
-  const swell = (Math.sin(now / 5000) * .5 + .5) * .08;
-  const trans = Math.random() < .012 ? Math.random() * .22 : 0;
-  const st = Math.sin(now / 1600 + ch * Math.PI) * .04;
-  
-  return Math.max(0, Math.min(1, (kick + snare + hh + bass + mid + hi + swell + trans + st) * v));
-}
-
-function startGauge() {
-  function frame(now) {
-    const W = gCv.width;
-    const H = gCv.height;
-    
-    if (W < 10) {
-      S.af = requestAnimationFrame(frame);
-      return;
-    }
-    
-    gCtx.clearRect(0, 0, W, H);
-    
-    const vol = S.vol / 100;
-    const tL = calcLvl(now, 0, vol);
-    const tR = calcLvl(now, 1, vol);
-    
-    const sp = .08;
-    const dm = .72;
-    
-    S.vL += (tL - S.nL) * sp;
-    S.vL *= dm;
-    S.nL += S.vL;
-    S.nL = Math.max(-.02, Math.min(1.06, S.nL));
-    
-    S.vR += (tR - S.nR) * sp;
-    S.vR *= dm;
-    S.nR += S.vR;
-    S.nR = Math.max(-.02, Math.min(1.06, S.nR));
-    
-    const gw = W / 2;
-    drawG(gCtx, gw * .5, H * .88, Math.min(gw * .42, H * .72), S.nL, 'L');
-    drawG(gCtx, gw * 1.5, H * .88, Math.min(gw * .42, H * .72), S.nR, 'R');
-    
-    S.af = requestAnimationFrame(frame);
-  }
-  
-  S.af = requestAnimationFrame(frame);
-}
-
-function drawG(ctx, cx, cy, r, val, label) {
-  const dk = document.documentElement.dataset.theme !== 'light';
-  const minA = -55 * DEG;
-  const maxA = 55 * DEG;
-  const sweep = maxA - minA;
-  const nA = minA + Math.max(0, Math.min(1.05, val)) * sweep;
-  
-  ctx.save();
-  
-  // Fondo
-  ctx.fillStyle = dk ? 'rgba(12,20,38,.7)' : 'rgba(232,236,242,.8)';
-  ctx.beginPath();
-  rr(ctx, cx - r * 1.12, cy - r * 1.18, r * 2.24, r * 1.25, r * .12);
-  ctx.fill();
-  
-  ctx.strokeStyle = dk ? 'rgba(0,229,255,.06)' : 'rgba(0,0,0,.08)';
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  rr(ctx, cx - r * 1.12, cy - r * 1.18, r * 2.24, r * 1.25, r * .12);
-  ctx.stroke();
-  
-  // Arcos de color
-  const ar = r * .92;
-  [
-    {s: 0, e: .5, c: dk ? '#00e676' : '#16a34a'},
-    {s: .5, e: .78, c: dk ? '#ffd600' : '#ca8a04'},
-    {s: .78, e: 1, c: dk ? '#ff1744' : '#dc2626'}
-  ].forEach(z => {
-    ctx.beginPath();
-    ctx.arc(cx, cy, ar, -Math.PI / 2 + minA + z.s * sweep, -Math.PI / 2 + minA + z.e * sweep);
-    ctx.strokeStyle = z.c;
-    ctx.lineWidth = r * .06;
-    ctx.globalAlpha = .35;
-    ctx.stroke();
-    ctx.globalAlpha = 1;
-  });
-  
-  // Marcas y números
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  
-  [
-    {p: 0, l: '-20'},
-    {p: .18, l: '-12'},
-    {p: .36, l: '-6'},
-    {p: .55, l: '-3'},
-    {p: .78, l: '0'},
-    {p: 1, l: '+3'}
-  ].forEach(m => {
-    const a = -Math.PI / 2 + minA + m.p * sweep;
-    const ox = Math.cos(a);
-    const oy = Math.sin(a);
-    
-    ctx.beginPath();
-    ctx.moveTo(cx + ox * (r * .82), cy + oy * (r * .82));
-    ctx.lineTo(cx + ox * (r * .96), cy + oy * (r * .96));
-    ctx.strokeStyle = dk ? 'rgba(255,255,255,.4)' : 'rgba(0,0,0,.35)';
-    ctx.lineWidth = m.p >= .78 ? 2 : 1.5;
-    ctx.stroke();
-    
-    ctx.font = `600 ${r * .1}px Orbitron,monospace`;
-    ctx.fillStyle = m.p >= .78 
-      ? (dk ? 'rgba(255,60,80,.7)' : 'rgba(180,30,30,.7)') 
-      : (dk ? 'rgba(255,255,255,.45)' : 'rgba(0,0,0,.45)');
-    ctx.fillText(m.l, cx + ox * (r * .7), cy + oy * (r * .7));
-  });
-  
-  // Marcas menores
-  for (let i = 0; i <= 20; i++) {
-    const p = i / 20;
-    const a = -Math.PI / 2 + minA + p * sweep;
-    const ox = Math.cos(a);
-    const oy = Math.sin(a);
-    
-    ctx.beginPath();
-    ctx.moveTo(cx + ox * (r * .88), cy + oy * (r * .88));
-    ctx.lineTo(cx + ox * (r * .93), cy + oy * (r * .93));
-    ctx.strokeStyle = dk ? 'rgba(255,255,255,.15)' : 'rgba(0,0,0,.12)';
-    ctx.lineWidth = 1;
-    ctx.stroke();
-  }
-  
-  // Texto VU
-  ctx.font = `700 ${r * .13}px Orbitron,monospace`;
-  ctx.fillStyle = dk ? 'rgba(255,255,255,.12)' : 'rgba(0,0,0,.1)';
-  ctx.fillText('VU', cx, cy - r * .35);
-  
-  // Sombra de la aguja
-  const sA = -Math.PI / 2 + nA;
-  ctx.beginPath();
-  ctx.moveTo(cx + 2, cy + 2);
-  ctx.lineTo(cx + Math.cos(sA) * (r * .86) + 2, cy + Math.sin(sA) * (r * .86) + 2);
-  ctx.strokeStyle = 'rgba(0,0,0,.25)';
-  ctx.lineWidth = 2.5;
-  ctx.stroke();
-  
-  // Aguja
-  const na = -Math.PI / 2 + nA;
-  const nx = Math.cos(na);
-  const ny = Math.sin(na);
-  const perpX = -ny;
-  const perpY = nx;
-  const tipX = cx + nx * (r * .86);
-  const tipY = cy + ny * (r * .86);
-  const bw = r * .02;
-  const nColor = dk ? '#00e5ff' : '#0270ad';
-  
-  ctx.beginPath();
-  ctx.moveTo(cx + perpX * bw, cy + perpY * bw);
-  ctx.lineTo(tipX, tipY);
-  ctx.lineTo(cx - perpX * bw, cy - perpY * bw);
-  ctx.fillStyle = nColor;
-  ctx.fill();
-  
-  ctx.beginPath();
-  ctx.moveTo(cx, cy);
-  ctx.lineTo(tipX, tipY);
-  ctx.strokeStyle = dk ? 'rgba(0,229,255,.3)' : 'rgba(2,112,173,.2)';
-  ctx.lineWidth = 4;
-  ctx.stroke();
-  
-  // Pivote
-  const pg = ctx.createRadialGradient(cx - r * .02, cy - r * .02, 0, cx, cy, r * .08);
-  pg.addColorStop(0, dk ? '#5a6a7e' : '#aabbcc');
-  pg.addColorStop(1, dk ? '#1a2535' : '#556677');
-  
-  ctx.beginPath();
-  ctx.arc(cx, cy, r * .07, 0, Math.PI * 2);
-  ctx.fillStyle = pg;
-  ctx.fill();
-  
-  ctx.beginPath();
-  ctx.arc(cx, cy, r * .07, 0, Math.PI * 2);
-  ctx.strokeStyle = dk ? 'rgba(255,255,255,.15)' : 'rgba(0,0,0,.15)';
-  ctx.lineWidth = 1;
-  ctx.stroke();
-  
-  // Label L/R
-  ctx.font = `700 ${r * .12}px Orbitron,monospace`;
-  ctx.fillStyle = dk ? 'rgba(0,229,255,.5)' : 'rgba(2,112,173,.5)';
-  ctx.fillText(label, cx, cy - r * .12);
-  
-  ctx.restore();
-}
-
-function rr(ctx, x, y, w, h, r) {
-  ctx.moveTo(x + r, y);
-  ctx.lineTo(x + w - r, y);
-  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
-  ctx.lineTo(x + w, y + h - r);
-  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
-  ctx.lineTo(x + r, y + h);
-  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
-  ctx.lineTo(x, y + r);
-  ctx.quadraticCurveTo(x, y, x + r, y);
-}
-// ═══════════════════════════════════════════════════════════════
-// RENDERIZADO DE LISTAS
-// ═══════════════════════════════════════════════════════════════
-function renderBox() {
-  const c = $('sBox');
-  
-  if (S.loading) {
-    c.innerHTML = '<div class="ldg"><div class="ldg-s"></div><p>Buscando emisoras...</p></div>';
-    return;
-  }
-  
-  if (S.err) {
-    c.innerHTML = `<div class="emt"><i>⚠️</i><p>${S.err}</p><button class="btn-rt" onclick="retryLoad()">Reintentar</button></div>`;
-    return;
-  }
-  
-  if (!S.list.length) {
-    if (S.tab === 'favs') {
-      c.innerHTML = '<div class="emt"><i>⭐</i><p>No tienes favoritos.</p></div>';
-    } else if (S.tab === 'custom') {
-      c.innerHTML = `<div class="emt"><i>📌</i><p>Sin emisoras personalizadas.</p><br><button class="btn-rt" onclick="openMdl('addMdl')">＋ Agregar</button></div>`;
-    } else {
-      c.innerHTML = '<div class="emt"><i>📡</i><p>No se encontraron emisoras.</p></div>';
-    }
-    return;
-  }
-  
-  renderStnList();
-}
-
-function renderStnList() {
-  let h = '';
-  
-  S.list.forEach((s, i) => {
-    const on = S.cur && sameStn(S.cur, s);
-    const fv = S.favs.some(f => sameStn(f, s));
-    const tg = s.tags ? s.tags.split(',').slice(0, 2).map(x => x.trim()).filter(Boolean) : [];
-    
-    h += `<div class="stn${on ? ' on' : ''}" onclick="playStn(S.list[${i}])">
-      <div class="stn-a">${s.favicon && s.favicon.trim() ? `<img src="${s.favicon}" onerror="this.parentElement.innerHTML='📻'" loading="lazy">` : '📻'}</div>
-      <div class="stn-i">
-        <div class="stn-n">${esc(s.name)}</div>
-        <div class="stn-d">${mkFlag(s.countrycode)} ${esc(s.country || '')}${s.bitrate ? ' · ' + s.bitrate + 'kbps' : ''}</div>
-        <div class="stn-bg">${s.codec ? `<span class="stn-b cd">${s.codec}</span>` : ''}${tg.map(t => `<span class="stn-b">${esc(t)}</span>`).join('')}</div>
-      </div>
-      <div class="stn-r">
-        <button class="stn-f${fv ? ' on' : ''}" onclick="event.stopPropagation();togFav(${i});vib(30)">${fv ? '★' : '☆'}</button>
-        ${on && S.pb === 'playing' ? '<span class="stn-pi">🔊</span>' : ''}
-      </div>
-    </div>`;
-  });
-  
-  $('sBox').innerHTML = `<div class="stns">${h}</div>`;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// TABS Y NAVEGACIÓN
-// ═══════════════════════════════════════════════════════════════
-function swTab(tab) {
-  S.tab = tab;
-  S.sub = null;
-  S.sq = '';
-  $('srchIn').value = '';
-  $('srchX').classList.remove('on');
-  
-  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t.dataset.t === tab));
-  
-  const sc = $('scats');
-  
-  if (tab === 'country') {
-    sc.classList.add('on');
-    sc.innerHTML = COUNTRIES.map(c => 
-      `<button class="scat" data-v="${c.c}" onclick="selSub('country','${c.c}');vib(30)">${c.f} ${c.n}</button>`
-    ).join('');
-    $('sBox').innerHTML = '<div class="emt"><i>🌎</i><p>Selecciona un país</p></div>';
-    showLinf(false);
-  } else if (tab === 'genre') {
-    sc.classList.add('on');
-    sc.innerHTML = GENRES.map(g => 
-      `<button class="scat" data-v="${g.id}" onclick="selSub('genre','${g.id}');vib(30)">${g.i} ${g.n}</button>`
-    ).join('');
-    $('sBox').innerHTML = '<div class="emt"><i>🎵</i><p>Selecciona un género</p></div>';
-    showLinf(false);
-  } else {
-    sc.classList.remove('on');
-    if (tab === 'top') loadList(apiTop, '🔥 Populares');
-    else if (tab === 'favs') loadFavs();
-    else if (tab === 'custom') loadCustom();
-  }
-}
-
-function selSub(type, val) {
-  S.sub = val;
-  document.querySelectorAll('.scat').forEach(s => s.classList.toggle('on', s.dataset.v === val));
-  
-  if (type === 'country') {
-    const c = COUNTRIES.find(x => x.c === val);
-    loadList(() => apiCountry(val), c ? c.f + ' ' + c.n : val);
-  } else {
-    const g = GENRES.find(x => x.id === val);
-    loadList(() => apiTag(val), g ? g.i + ' ' + g.n : val);
-  }
-}
-
-// ═══════════════════════════════════════════════════════════════
-// BÚSQUEDA
-// ═══════════════════════════════════════════════════════════════
-let srchTm;
-
-$('srchIn').addEventListener('input', e => {
-  const q = e.target.value.trim();
-  $('srchX').classList.toggle('on', q.length > 0);
-  clearTimeout(srchTm);
-  
-  if (q.length >= 2) {
-    srchTm = setTimeout(() => {
-      S.sq = q;
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('on'));
-      $('scats').classList.remove('on');
-      loadList(() => apiSearch(q), '🔍 "' + q + '"');
-    }, 400);
-  } else if (!q.length) {
-    swTab(S.tab);
-  }
-});
-
-function clrSearch() {
-  $('srchIn').value = '';
-  $('srchX').classList.remove('on');
-  S.sq = '';
-  swTab(S.tab);
-}
-
-// ═══════════════════════════════════════════════════════════════
-// FAVORITOS
-// ═══════════════════════════════════════════════════════════════
-function togFav(i) {
-  const s = S.list[i];
-  if (!s) return;
-  
-  const idx = S.favs.findIndex(f => sameStn(f, s));
-  
-  if (idx >= 0) {
-    S.favs.splice(idx, 1);
-    toast('✕ Eliminada de favoritos');
-  } else {
-    S.favs.push(pickStn(s));
-    toast('⭐ Agregada a favoritos');
-  }
-  
-  saveFavs();
-  renderStnList();
-  updFavBtn();
-  
-  if (S.tab === 'favs') loadFavs();
-}
-
-function toggleFavCur() {
-  if (!S.cur) return;
-  
-  const idx = S.favs.findIndex(f => sameStn(f, S.cur));
-  
-  if (idx >= 0) {
-    S.favs.splice(idx, 1);
-    toast('✕ Eliminada de favoritos');
-  } else {
-    S.favs.push(pickStn(S.cur));
-    toast('⭐ Agregada a favoritos');
-  }
-  
-  saveFavs();
-  updFavBtn();
-  renderStnList();
-  
-  if (S.tab === 'favs') loadFavs();
-}
-
-function pickStn(s) {
-  return {
-    stationuuid: s.stationuuid || '',
-    name: s.name,
-    url: s.url || '',
-    url_resolved: s.url_resolved || s.url || '',
-    favicon: s.favicon || '',
-    country: s.country || '',
-    countrycode: s.countrycode || '',
-    tags: s.tags || '',
-    codec: s.codec || '',
-    bitrate: s.bitrate || 0,
-    isCustom: s.isCustom || false
-  };
-}
-
-function loadFavs() {
-  S.list = [...S.favs];
-  S.loading = false;
-  S.err = null;
-  renderBox();
-  showLinf(S.list.length > 0, '⭐ Favoritos', S.list.length);
-}
-
-function saveFavs() {
-  localStorage.setItem('wtfm_favs', JSON.stringify(S.favs));
-}
-
-// ═══════════════════════════════════════════════════════════════
-// EMISORAS PERSONALIZADAS
-// ═══════════════════════════════════════════════════════════════
-async function saveCustom() {
-  const nm = $('fNm').value.trim();
-  let url = $('fUrl').value.trim();
-  const pais = $('fPais').value.trim();
-  const gen = $('fGen').value.trim();
-  
-  if (!nm || !url) {
-    toast('⚠️ Nombre y URL obligatorios');
-    vib([60, 50, 60]);
-    return;
-  }
-  
-  if (!url.startsWith('http')) {
-    toast('⚠️ URL debe empezar con http');
-    return;
-  }
-  
-  if (isPlaylistUrl(url)) {
-    toast('🔄 Resolviendo playlist...');
-    try {
-      url = await resolvePlaylistUrl(url);
-    } catch {}
-  }
-  
-  S.custom.push({
-    stationuuid: 'c_' + Date.now(),
-    name: nm,
-    url,
-    url_resolved: url,
-    favicon: '',
-    country: pais,
-    countrycode: '',
-    tags: gen,
-    codec: '',
-    bitrate: 0,
-    isCustom: true
-  });
-  
-  localStorage.setItem('wtfm_custom', JSON.stringify(S.custom));
-  closeMdl('addMdl');
-  toast('📌 Emisora guardada');
-  
-  ['fNm', 'fUrl', 'fPais', 'fGen'].forEach(id => $(id).value = '');
-  
-  if (S.tab === 'custom') loadCustom();
-}
-
-function loadCustom() {
-  S.list = [...S.custom];
-  S.loading = false;
-  S.err = null;
-  renderBox();
-  showLinf(S.list.length > 0, '📌 Mis Emisoras', S.list.length);
-}
-
-function retryLoad() {
-  if (S.sq) loadList(() => apiSearch(S.sq), '🔍');
-  else if (S.tab === 'top') loadList(apiTop, '🔥');
-  else if (S.sub) selSub(S.tab === 'country' ? 'country' : 'genre', S.sub);
-}
-
-// ═══════════════════════════════════════════════════════════════
-// TEMA
-// ═══════════════════════════════════════════════════════════════
-function setTheme(t) {
-  S.theme = t;
-  localStorage.setItem('wtfm_theme', t);
-  applyTheme();
-  updThUI();
-}
-
-function applyTheme() {
-  let th = S.theme;
-  if (th === 'auto') {
-    th = matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
-  }
-  document.documentElement.dataset.theme = th;
-  $('metaTheme').content = th === 'dark' ? '#060910' : '#d8dfe8';
-  applyCustomColors();
-}
-
-function updThUI() {
-  ['Dk', 'Lt', 'At'].forEach((x, i) => {
-    const b = $('sg' + x);
-    if (b) b.classList.toggle('on', S.theme === ['dark', 'light', 'auto'][i]);
-  });
-}
-
-matchMedia('(prefers-color-scheme:light)').addEventListener('change', () => {
-  if (S.theme === 'auto') applyTheme();
-});
-
-// ═══════════════════════════════════════════════════════════════
-// EDITOR DE TEMAS
-// ═══════════════════════════════════════════════════════════════
-function swThmTab(t) {
-  document.querySelectorAll('.thm-tab').forEach(b => b.classList.toggle('on', b.dataset.th === t));
-  $('tpDark').classList.toggle('on', t === 'dark');
-  $('tpLight').classList.toggle('on', t === 'light');
-}
-
-function loadThmEditorUI() {
-  ['dark', 'light'].forEach(th => {
-    const c = S.customColors[th];
-    const pre = th === 'dark' ? 'Dk' : 'Lt';
-    
-    ['bg', 'card', 'tx', 'tx2', 'pri', 'acc'].forEach(k => {
-      const kName = k === 'bg' ? 'Bg' : k === 'card' ? 'Card' : k === 'tx' ? 'Tx' : k === 'tx2' ? 'Tx2' : k === 'pri' ? 'Pri' : 'Acc';
-      $('c' + pre + kName).value = c[k];
-      $('p' + pre + kName).style.background = c[k];
-      $('h' + pre + kName).textContent = c[k];
-    });
-  });
-}
-
-function updThmClr(theme, key, value) {
-  S.customColors[theme][key] = value;
-  
-  const pre = theme === 'dark' ? 'Dk' : 'Lt';
-  const keyMap = {bg: 'Bg', card: 'Card', tx: 'Tx', tx2: 'Tx2', pri: 'Pri', acc: 'Acc'};
-  const k = keyMap[key];
-  
-  $('p' + pre + k).style.background = value;
-  $('h' + pre + k).textContent = value;
-  
-  let currentTheme = S.theme;
-  if (currentTheme === 'auto') {
-    currentTheme = matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
-  }
-  
-  if (theme === currentTheme) applyCustomColors();
-}
-
-function applyCustomColors() {
-  let th = S.theme;
-  if (th === 'auto') {
-    th = matchMedia('(prefers-color-scheme:light)').matches ? 'light' : 'dark';
-  }
-  
-  const c = S.customColors[th];
-  const r = document.documentElement;
-  
-  r.style.setProperty('--bg', c.bg);
-  r.style.setProperty('--card', c.card);
-  r.style.setProperty('--tx', c.tx);
-  r.style.setProperty('--tx2', c.tx2);
-  r.style.setProperty('--pri', c.pri);
-  r.style.setProperty('--acc', c.acc);
-  
-  r.style.setProperty('--prib', c.pri + '18');
-  r.style.setProperty('--pribd', c.pri + '4D');
-  r.style.setProperty('--prid', adjustColor(c.pri, -20));
-  r.style.setProperty('--accb', c.acc + '18');
-  r.style.setProperty('--accbd', c.acc + '4D');
-}
-
-function adjustColor(hex, amt) {
-  let r = parseInt(hex.slice(1, 3), 16);
-  let g = parseInt(hex.slice(3, 5), 16);
-  let b = parseInt(hex.slice(5, 7), 16);
-  
-  r = Math.max(0, Math.min(255, r + amt));
-  g = Math.max(0, Math.min(255, g + amt));
-  b = Math.max(0, Math.min(255, b + amt));
-  
-  return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
-}
-
-function saveThmColors() {
-  localStorage.setItem('wtfm_colors', JSON.stringify(S.customColors));
-  applyCustomColors();
-  toast('🎨 Tema guardado');
-  closeMdl('thmMdl');
-}
-
-function resetTheme() {
-  const active = document.querySelector('.thm-tab.on').dataset.th;
-  S.customColors[active] = {...DEFAULT_COLORS[active]};
-  loadThmEditorUI();
-  applyCustomColors();
-  toast('🔄 Colores restablecidos');
-  vib(30);
-}
-
-function expTheme() {
-  const d = {
-    version: '4.4.3',
-    type: 'theme',
-    date: new Date().toISOString(),
-    colors: S.customColors
-  };
-  
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([JSON.stringify(d, null, 2)], {type: 'application/json'}));
-  a.download = `WaveTuner_Tema_${tsNow()}.json`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  toast('📤 Tema exportado');
-}
-
-function impTheme() {
-  $('thmFileIn').click();
-}
-
-function handleThmImp(e) {
-  const f = e.target.files[0];
-  if (!f) return;
-  
-  const rd = new FileReader();
-  rd.onload = ev => {
-    try {
-      const d = JSON.parse(ev.target.result);
-      if (d.type !== 'theme' || !d.colors) throw new Error('Formato inválido');
-      
-      if (d.colors.dark) S.customColors.dark = {...DEFAULT_COLORS.dark, ...d.colors.dark};
-      if (d.colors.light) S.customColors.light = {...DEFAULT_COLORS.light, ...d.colors.light};
-      
-      localStorage.setItem('wtfm_colors', JSON.stringify(S.customColors));
-      loadThmEditorUI();
-      applyCustomColors();
-      toast('📥 Tema importado');
-    } catch {
-      toast('⚠️ Archivo de tema no válido');
-      vib([60, 50, 60]);
-    }
-  };
-  rd.readAsText(f);
-  e.target.value = '';
-}
-
-// ═══════════════════════════════════════════════════════════════
-// ACORDEÓN
-// ═══════════════════════════════════════════════════════════════
-function togAcc(el) {
-  const isOpen = el.classList.toggle('op');
-  el.nextElementSibling.classList.toggle('op', isOpen);
-  const acc = el.parentElement;
-  acc.classList.toggle('open', isOpen);
-}
-
-// ═══════════════════════════════════════════════════════════════
-// RUEDAS DE TIEMPO
-// ═══════════════════════════════════════════════════════════════
-let whlTm, whlIv;
-
-function whlD(id, dir) {
-  whlStep(id, dir);
-  whlTm = setTimeout(() => {
-    whlIv = setInterval(() => whlStep(id, dir), 80);
-  }, 350);
-  
-  const up = () => {
-    clearTimeout(whlTm);
-    clearInterval(whlIv);
-    window.removeEventListener('pointerup', up);
-    window.removeEventListener('pointercancel', up);
-  };
-  
-  window.addEventListener('pointerup', up);
-  window.addEventListener('pointercancel', up);
-}
-
-function whlStep(id, dir) {
-  const w = S.wheels[id];
-  if (!w) return;
-  
-  w.v += dir;
-  if (w.v > w.max) w.v = w.min;
-  if (w.v < w.min) w.v = w.max;
-  
-  $(id + 'v').textContent = String(w.v).padStart(2, '0');
-  vib(25);
-  updDurDisp();
-}
-
-function calcMin(sh, sm, eh, em) {
-  let s = sh * 60 + sm;
-  let e = eh * 60 + em;
-  if (e <= s) e += 1440;
-  return e - s;
-}
-
-function fmtDur(m) {
-  const h = Math.floor(m / 60);
-  const mm = m % 60;
-  return h > 0 ? (mm > 0 ? `${h}h ${mm}min` : `${h}h`) : `${mm}min`;
-}
-
-function updDurDisp() {
-  const d1 = calcMin(S.wheels.wH1.v, S.wheels.wM1.v, S.wheels.wH1e.v, S.wheels.wM1e.v);
-  $('schDur1').textContent = `⏱ Duración: ${fmtDur(d1)}`;
-  
-  const d2 = calcMin(S.wheels.wH2.v, S.wheels.wM2.v, S.wheels.wH2e.v, S.wheels.wM2e.v);
-  $('schDur2').textContent = `⏱ Duración: ${fmtDur(d2)}`;
-}
-
-// ═══════════════════════════════════════════════════════════════
-// PROGRAMACIÓN DE GRABACIONES
-// ═══════════════════════════════════════════════════════════════
-function swSchTab(t) {
-  document.querySelectorAll('.sch-tab').forEach(b => b.classList.toggle('on', b.dataset.s === t));
-  ['Timed', 'Sched', 'Recur'].forEach(p => {
-    const el = $('sp' + p);
-    if (el) el.classList.toggle('on', p.toLowerCase() === t);
-  });
-  updSchCurUI();
-}
-
-function togDay(el) {
-  el.classList.toggle('on');
-  vib(30);
-}
-
-function renderCurStnBox(containerId, type) {
-  const c = $(containerId);
-  if (!c) return;
-  
-  if (S.cur && S.schUseCurrent[type]) {
-    c.innerHTML = `<div class="sch-cur">
-      <span class="sch-cur-ico">📻</span>
-      <div class="sch-cur-info">
-        <div class="sch-cur-nm">${esc(S.cur.name)}</div>
-        <div class="sch-cur-lbl">Emisora actual</div>
-      </div>
-      <span class="sch-cur-chg" onclick="toggleSchStn('${type}')">Cambiar</span>
-    </div>`;
-  } else if (!S.cur) {
-    c.innerHTML = `<div class="sg-info" style="margin-bottom:12px">⚠️ No hay emisora reproduciéndose. Selecciona una de favoritos.</div>`;
-    S.schUseCurrent[type] = false;
-  } else {
-    c.innerHTML = `<div class="sch-cur" style="opacity:.6">
-      <span class="sch-cur-ico">📻</span>
-      <div class="sch-cur-info">
-        <div class="sch-cur-nm">${esc(S.cur.name)}</div>
-        <div class="sch-cur-lbl">Usar emisora actual</div>
-      </div>
-      <span class="sch-cur-chg" onclick="toggleSchStn('${type}')">Usar</span>
-    </div>`;
-  }
-}
-
-function toggleSchStn(type) {
-  S.schUseCurrent[type] = !S.schUseCurrent[type];
-  updSchCurUI();
-  vib(30);
-}
-
-function updSchCurUI() {
-  renderCurStnBox('schTimedCur', 'timed');
-  renderCurStnBox('schSchedCur', 'sched');
-  renderCurStnBox('schRecurCur', 'recur');
-  
-  $('schSchedStnWrap').style.display = S.schUseCurrent.sched && S.cur ? 'none' : 'block';
-  $('schRecurStnWrap').style.display = S.schUseCurrent.recur && S.cur ? 'none' : 'block';
-}
-
-function populateFavSel() {
-  const opts = S.favs.length 
-    ? S.favs.map((f, i) => `<option value="${i}">${f.name}</option>`).join('') 
-    : '';
-  const empty = S.favs.length ? '' : '<option value="">— Agrega emisoras a favoritos primero —</option>';
-  
-  $('schSchedStn').innerHTML = `<option value="">Seleccionar emisora...</option>${empty}${opts}`;
-  $('schRecurStn').innerHTML = `<option value="">Seleccionar emisora...</option>${empty}${opts}`;
-}
-
-function startTimedRec() {
-  const min = parseInt($('schTimedMin').value);
-  
-  if (!min || min < 1) {
-    toast('⚠️ Ingresa duración válida');
-    vib([60, 50, 60]);
-    return;
-  }
-  
-  if (S.pb !== 'playing') {
-    toast('⚠️ Primero reproduce una emisora');
-    vib([60, 50, 60]);
-    return;
-  }
-  
-  closeMdl('schMdl');
-  startRecording(min * 60, null);
-  toast(`⏱ Grabando ${min} minutos`);
-}
-
-function addSchedule(type) {
-  let stn, dur;
-  
-  if (type === 'sched') {
-    if (S.schUseCurrent.sched && S.cur) {
-      stn = S.cur;
-    } else {
-      const stnIdx = parseInt($('schSchedStn').value);
-      if (isNaN(stnIdx) || !S.favs[stnIdx]) {
-        toast('⚠️ Selecciona una emisora');
-        vib([60, 50, 60]);
-        return;
-      }
-      stn = S.favs[stnIdx];
-    }
-    
-    const date = $('schSchedDate').value;
-    if (!date) {
-      toast('⚠️ Selecciona fecha');
-      vib([60, 50, 60]);
-      return;
-    }
-    
-    dur = calcMin(S.wheels.wH1.v, S.wheels.wM1.v, S.wheels.wH1e.v, S.wheels.wM1e.v);
-    
-    const sch = {
-      id: 's_' + Date.now(),
-      type: 'sched',
-      station: pickStn(stn),
-      active: true,
-      lastTriggered: 0,
-      date,
-      startH: S.wheels.wH1.v,
-      startM: S.wheels.wM1.v,
-      endH: S.wheels.wH1e.v,
-      endM: S.wheels.wM1e.v,
-      duration: dur
-    };
-    
-    S.schedules.push(sch);
-    saveSch();
-    renderSchList();
-    
-    const sh = String(sch.startH).padStart(2, '0');
-    const sm = String(sch.startM).padStart(2, '0');
-    const eh = String(sch.endH).padStart(2, '0');
-    const em = String(sch.endM).padStart(2, '0');
+if(isFirstRun)saveFavs();
+function JP(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch{return d}}
+const $=id=>document.getElementById(id);
+const audio=$('audio');
+
+// VIBRATION
+function vib(p){try{if(navigator.vibrate)navigator.vibrate(p)}catch{}}
+
+// TIMESTAMP
+function tsNow(){const d=new Date(),dd=String(d.getDate()).padStart(2,'0'),mm=String(d.getMonth()+1).padStart(2,'0'),aa=String(d.getFullYear()).slice(-2),hh=String(d.getHours()).padStart(2,'0'),mi=String(d.getMinutes()).padStart(2,'0');return`${dd}-${mm}-${aa}_${hh}-${mi}`}
+
+// API
+async function api(ep){for(const sv of SRVS){try{const c=new AbortController(),t=setTimeout(()=>c.abort(),8000);const r=await fetch(sv+ep,{signal:c.signal});clearTimeout(t);if(r.ok){S.srv=sv;return r.json()}}catch{}}throw new Error('Sin conexión al servidor')}
+const apiTop=()=>api('/json/stations/topvote?limit=80&hidebroken=true');
+const apiCountry=c=>api(`/json/stations/bycountrycodeexact/${c}?limit=100&hidebroken=true&order=votes&reverse=true`);
+const apiTag=t=>api(`/json/stations/bytag/${encodeURIComponent(t)}?limit=80&hidebroken=true&order=votes&reverse=true`);
+const apiSearch=q=>api(`/json/stations/byname/${encodeURIComponent(q)}?limit=80&hidebroken=true&order=votes&reverse=true`);
+const apiClick=u=>{try{fetch(`${S.srv}/json/url/${u}`)}catch{}};
+
+async function loadList(fn,label){S.loading=true;S.err=null;renderBox();try{let d=await fn();d=d.filter(s=>s.url_resolved&&s.name&&s.name.trim());const seen=new Set();d=d.filter(s=>{if(seen.has(s.url_resolved))return false;seen.add(s.url_resolved);return true});S.list=d;S.loading=false;renderBox();showLinf(true,label,d.length)}catch(e){S.loading=false;S.err=e.message;S.list=[];renderBox();showLinf(false)}}
+function showLinf(s,l,c){const e=$('linf');if(s){e.classList.add('on');$('lLab').textContent=l;$('lCnt').textContent=c}else e.classList.remove('on')}
+
+// AUDIO
+audio.addEventListener('loadstart',()=>{if(S.cur)setPB('loading')});
+audio.addEventListener('waiting',()=>{if(S.cur)setPB('loading')});
+audio.addEventListener('playing',()=>{setPB('playing');updMedia()});
+audio.addEventListener('pause',()=>{if(!audio.src||audio.ended)setPB('stopped')});
+audio.addEventListener('error',()=>{if(S.cur)setPB('error')});
+
+function playStn(stn){vib(35);S.cur=stn;setPB('loading');showPly(true);audio.src=stn.url_resolved||stn.url;audio.volume=S.muted?0:S.vol/100;audio.load();const p=audio.play();if(p)p.catch(e=>{if(e.name!=='AbortError')setPB('error')});if(stn.stationuuid)apiClick(stn.stationuuid);updPlyInfo();renderStnList();toast('📻 '+stn.name)}
+function stopAudio(){audio.pause();audio.removeAttribute('src');audio.load();setPB('stopped')}
+function togglePlay(){if(!S.cur)return;(S.pb==='playing'||S.pb==='loading')?stopAudio():playStn(S.cur)}
+function setPB(s){S.pb=s;updPlySt();updHdr();updPlayBtn()}
+function setVol(v){S.vol=v;S.muted=false;audio.volume=v/100;updVolUI()}
+function toggleMute(){S.muted=!S.muted;audio.volume=S.muted?0:S.vol/100;updVolUI()}
+
+// RECORDING
+async function toggleRec(){if(S.recActive){stopRec();return}if(S.pb!=='playing'){toast('⚠️ Primero reproduce una emisora');vib([60,50,60]);return}startRecording(0,null)}
+async function startRecording(totalSec,schId){
+  if(S.recActive)return;S.recActive=true;S.recChunks=[];S.recStart=Date.now();S.recMethod=null;S.recTotalSec=totalSec;S.recSchId=schId;showRecUI(true);
+  if(totalSec>0){S.recAutoStop=setTimeout(()=>{stopRec();toast('⏹ Grabación programada finalizada');vib([50,30,50])},totalSec*1000)}
+  try{const url=S.cur.url_resolved||S.cur.url;const resp=await fetch(url);if(!resp.ok||!resp.body)throw new Error('no');S.recMethod='fetch';S.recMime=resp.headers.get('content-type')||'audio/mpeg';S.recReader=resp.body.getReader();toast('🔴 Grabando (MP3 directo)');(async()=>{try{while(S.recActive){const{done,value}=await S.recReader.read();if(done||!S.recActive)break;S.recChunks.push(value)}}catch{}try{S.recReader.cancel()}catch{}})();return}catch{}
+  try{let stream;if(audio.captureStream)stream=audio.captureStream();else if(audio.mozCaptureStream)stream=audio.mozCaptureStream();if(!stream)throw new Error('no');const mime=MediaRecorder.isTypeSupported('audio/webm;codecs=opus')?'audio/webm;codecs=opus':'audio/webm';S.recMR=new MediaRecorder(stream,{mimeType:mime,audioBitsPerSecond:S.quality*1000});S.recMethod='capture';S.recMime=mime;S.recMR.ondataavailable=e=>{if(e.data&&e.data.size>0)S.recChunks.push(e.data)};S.recMR.start(1000);toast('🔴 Grabando');return}catch{}
+  S.recActive=false;showRecUI(false);toast('⚠️ Grabación no disponible');vib([60,50,60,50,60]);
+}
+function stopRec(){
+  S.recActive=false;clearInterval(S.recTimer);if(S.recAutoStop){clearTimeout(S.recAutoStop);S.recAutoStop=null}
+  if(S.recMethod==='fetch'){try{S.recReader.cancel()}catch{}downloadRec()}
+  else if(S.recMethod==='capture'&&S.recMR){S.recMR.onstop=()=>downloadRec();try{S.recMR.stop()}catch{};S.recMR=null}
+  showRecUI(false);$('btnRc').classList.remove('rec-on');
+  // Auto-delete completed 'sched' type
+  if(S.recSchId){const idx=S.schedules.findIndex(s=>s.id===S.recSchId);if(idx>=0&&S.schedules[idx].type==='sched'){S.schedules.splice(idx,1);saveSch();renderSchList()}}
+  S.recSchId=null;S.recTotalSec=0;
+}
+function downloadRec(){
+  if(!S.recChunks.length){toast('⚠️ Sin audio');return}
+  let blob,ext;if(S.recMethod==='fetch'){const m=S.recMime||'audio/mpeg';ext=m.includes('aac')?'aac':m.includes('ogg')?'ogg':'mp3';blob=new Blob(S.recChunks,{type:m})}else{ext='webm';blob=new Blob(S.recChunks,{type:S.recMime||'audio/webm'})}
+  const nm=S.cur?S.cur.name.replace(/[^a-zA-Z0-9áéíóúñÁÉÍÓÚÑ ]/gi,'').replace(/ +/g,'_'):'Grabacion';
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download=`${nm}_${tsNow()}.${ext}`;
+  document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(a.href);
+  toast(`💾 ${(blob.size/1048576).toFixed(1)}MB (.${ext})`);S.recChunks=[];S.recMethod=null;
+}
+function showRecUI(on){$('recBar').classList.toggle('on',on);$('btnRc').classList.toggle('rec-on',on);if(on){S.recTimer=setInterval(updRecTm,500);updRecTm()}else clearInterval(S.recTimer)}
+function updRecTm(){
+  const elapsed=Math.floor((Date.now()-S.recStart)/1000),em=Math.floor(elapsed/60),es=elapsed%60;
+  let txt=`${String(em).padStart(2,'0')}:${String(es).padStart(2,'0')}`;
+  if(S.recTotalSec>0){const rem=Math.max(0,S.recTotalSec-elapsed),rm=Math.floor(rem/60),rs=rem%60;txt+=` - Restan ${String(rm).padStart(2,'0')}:${String(rs).padStart(2,'0')}`}
+  $('recTm').textContent=txt;
+  let b=0;S.recChunks.forEach(c=>b+=(c.byteLength||c.size||0));const kb=b/1024;
+  $('recSz').textContent=kb>1024?`${(kb/1024).toFixed(1)} MB`:`${Math.round(kb)} KB`;
+}
+
+// QUALITY
+function setQuality(q){S.quality=q;localStorage.setItem('wtfm_q',q);updQualUI();vib(30);toast(`🎚️ Calidad: ${q}kbps`)}
+function updQualUI(){[128,192,320].forEach(q=>{const b=$('sq'+q);if(b)b.classList.toggle('on',S.quality===q)})}
+
+// UI
+function showPly(show){$('plyE').style.display=show?'none':'block';$('plyC').style.display=show?'block':'none';if(show&&!S.gaugeReady){requestAnimationFrame(()=>requestAnimationFrame(()=>{resizeGauge();S.gaugeReady=true}))}}
+function updPlyInfo(){const s=S.cur;if(!s)return;$('plyNm').textContent=s.name;const p=[];if(s.country)p.push(mkFlag(s.countrycode)+' '+s.country);if(s.tags){const t=s.tags.split(',').slice(0,2).map(x=>x.trim()).filter(Boolean);if(t.length)p.push(t.join(', '))}if(s.bitrate)p.push(s.bitrate+'kbps');if(s.codec)p.push(s.codec);$('plyMt').textContent=p.join(' · ')||'Radio';const art=$('plyArt');art.innerHTML=(s.favicon&&s.favicon.trim())?`<img src="${s.favicon}" onerror="this.parentElement.innerHTML='📻'">`:'📻';const br=s.bitrate||0;$('gBdg').textContent=br>=96?'STEREO':'MONO';$('gBdg').className='gauge-bdg '+(br>=96?'st':'mn');$('gKb').textContent=(s.codec&&br)?`${s.codec} ${br}kbps`:'';updFavBtn()}
+function updPlySt(){const e=$('plySt'),t=$('plyStT');e.className='ply-st '+(S.pb==='loading'?'ld':S.pb==='playing'?'pl':S.pb==='error'?'er':'sp');t.textContent=S.pb==='loading'?'Conectando...':S.pb==='playing'?'▶ En vivo':S.pb==='error'?'Error':'Detenido'}
+function updPlayBtn(){const b=$('btnPl'),a=S.pb==='playing'||S.pb==='loading';b.classList.toggle('on',S.pb==='playing');b.textContent=a?'⏸':'▶'}
+function updHdr(){const d=$('hDot'),t=$('hSt');if(S.pb==='playing'){d.className='hdr-dot on';t.textContent='En vivo'}else if(S.pb==='loading'){d.className='hdr-dot';d.style.background='var(--wrn)';t.textContent='Conectando...'}else{d.className='hdr-dot';d.style.background='';t.textContent=S.pb==='error'?'Error':'Offline'}}
+function updVolUI(){$('volR').value=S.vol;$('volV').textContent=S.muted?'🔇':S.vol;$('volI').textContent=S.muted?'🔇':S.vol>50?'🔊':S.vol>0?'🔉':'🔈'}
+function updFavBtn(){if(!S.cur)return;const is=S.favs.some(f=>sameStn(f,S.cur));$('btnFv').textContent=is?'★':'☆';$('btnFv').classList.toggle('fav-on',is)}
+function sameStn(a,b){return(a.url_resolved&&a.url_resolved===b.url_resolved)||(a.stationuuid&&a.stationuuid===b.stationuuid)}
+
+// GALVANOMETER
+const gCv=$('gaugeCv'),gCtx=gCv.getContext('2d');
+function resizeGauge(){const r=$('gaugeW').getBoundingClientRect();if(r.width>0){gCv.width=Math.floor(r.width*2);gCv.height=240}}
+new ResizeObserver(()=>{if($('plyC').style.display!=='none')resizeGauge()}).observe($('gaugeW'));
+function calcLvl(now,ch,vol){
+  if(S.pb!=='playing'||S.muted)return S.pb==='loading'?.05+Math.sin(now/300)*.03:.01;
+  const v=Math.max(.15,vol),bl=500,bp=(now%bl)/bl,kick=Math.exp(-bp*7)*.32,snp=((now+bl)%(bl*2))/(bl*2),snare=Math.exp(-snp*9)*.22,hhp=(now%(bl/2))/(bl/2),hh=Math.exp(-hhp*14)*.08,bass=(Math.sin(now/900+ch*.7)*.5+.5)*.18,mid=Math.abs(Math.sin(now/210+ch*2.3))*.12,hi=Math.abs(Math.sin(now/55+ch*4.1))*.04,swell=(Math.sin(now/5000)*.5+.5)*.08,trans=Math.random()<.012?Math.random()*.22:0,st=Math.sin(now/1600+ch*Math.PI)*.04;
+  return Math.max(0,Math.min(1,(kick+snare+hh+bass+mid+hi+swell+trans+st)*v));
+}
+function startGauge(){function frame(now){const W=gCv.width,H=gCv.height;if(W<10){S.af=requestAnimationFrame(frame);return}gCtx.clearRect(0,0,W,H);const vol=S.vol/100,tL=calcLvl(now,0,vol),tR=calcLvl(now,1,vol),sp=.08,dm=.72;S.vL+=(tL-S.nL)*sp;S.vL*=dm;S.nL+=S.vL;S.nL=Math.max(-.02,Math.min(1.06,S.nL));S.vR+=(tR-S.nR)*sp;S.vR*=dm;S.nR+=S.vR;S.nR=Math.max(-.02,Math.min(1.06,S.nR));const gw=W/2;drawG(gCtx,gw*.5,H*.88,Math.min(gw*.42,H*.72),S.nL,'L');drawG(gCtx,gw*1.5,H*.88,Math.min(gw*.42,H*.72),S.nR,'R');S.af=requestAnimationFrame(frame)}S.af=requestAnimationFrame(frame)}
+function drawG(ctx,cx,cy,r,val,label){const dk=document.documentElement.dataset.theme!=='light',minA=-55*DEG,maxA=55*DEG,sweep=maxA-minA,nA=minA+Math.max(0,Math.min(1.05,val))*sweep;ctx.save();ctx.fillStyle=dk?'rgba(12,20,38,.7)':'rgba(232,236,242,.8)';ctx.beginPath();rr(ctx,cx-r*1.12,cy-r*1.18,r*2.24,r*1.25,r*.12);ctx.fill();ctx.strokeStyle=dk?'rgba(0,229,255,.06)':'rgba(0,0,0,.08)';ctx.lineWidth=1;ctx.beginPath();rr(ctx,cx-r*1.12,cy-r*1.18,r*2.24,r*1.25,r*.12);ctx.stroke();const ar=r*.92;[{s:0,e:.5,c:dk?'#00e676':'#16a34a'},{s:.5,e:.78,c:dk?'#ffd600':'#ca8a04'},{s:.78,e:1,c:dk?'#ff1744':'#dc2626'}].forEach(z=>{ctx.beginPath();ctx.arc(cx,cy,ar,-Math.PI/2+minA+z.s*sweep,-Math.PI/2+minA+z.e*sweep);ctx.strokeStyle=z.c;ctx.lineWidth=r*.06;ctx.globalAlpha=.35;ctx.stroke();ctx.globalAlpha=1});ctx.textAlign='center';ctx.textBaseline='middle';[{p:0,l:'-20'},{p:.18,l:'-12'},{p:.36,l:'-6'},{p:.55,l:'-3'},{p:.78,l:'0'},{p:1,l:'+3'}].forEach(m=>{const a=-Math.PI/2+minA+m.p*sweep,ox=Math.cos(a),oy=Math.sin(a);ctx.beginPath();ctx.moveTo(cx+ox*(r*.82),cy+oy*(r*.82));ctx.lineTo(cx+ox*(r*.96),cy+oy*(r*.96));ctx.strokeStyle=dk?'rgba(255,255,255,.4)':'rgba(0,0,0,.35)';ctx.lineWidth=m.p>=.78?2:1.5;ctx.stroke();ctx.font=`600 ${r*.1}px Orbitron,monospace`;ctx.fillStyle=m.p>=.78?(dk?'rgba(255,60,80,.7)':'rgba(180,30,30,.7)'):(dk?'rgba(255,255,255,.45)':'rgba(0,0,0,.45)');ctx.fillText(m.l,cx+ox*(r*.7),cy+oy*(r*.7))});for(let i=0;i<=20;i++){const p=i/20,a=-Math.PI/2+minA+p*sweep,ox=Math.cos(a),oy=Math.sin(a);ctx.beginPath();ctx.moveTo(cx+ox*(r*.88),cy+oy*(r*.88));ctx.lineTo(cx+ox*(r*.93),cy+oy*(r*.93));ctx.strokeStyle=dk?'rgba(255,255,255,.15)':'rgba(0,0,0,.12)';ctx.lineWidth=1;ctx.stroke()}ctx.font=`700 ${r*.13}px Orbitron,monospace`;ctx.fillStyle=dk?'rgba(255,255,255,.12)':'rgba(0,0,0,.1)';ctx.fillText('VU',cx,cy-r*.35);const sA=-Math.PI/2+nA;ctx.beginPath();ctx.moveTo(cx+2,cy+2);ctx.lineTo(cx+Math.cos(sA)*(r*.86)+2,cy+Math.sin(sA)*(r*.86)+2);ctx.strokeStyle='rgba(0,0,0,.25)';ctx.lineWidth=2.5;ctx.stroke();const na=-Math.PI/2+nA,nx=Math.cos(na),ny=Math.sin(na),perpX=-ny,perpY=nx,tipX=cx+nx*(r*.86),tipY=cy+ny*(r*.86),bw=r*.02,nColor=dk?'#00e5ff':'#0270ad';ctx.beginPath();ctx.moveTo(cx+perpX*bw,cy+perpY*bw);ctx.lineTo(tipX,tipY);ctx.lineTo(cx-perpX*bw,cy-perpY*bw);ctx.fillStyle=nColor;ctx.fill();ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(tipX,tipY);ctx.strokeStyle=dk?'rgba(0,229,255,.3)':'rgba(2,112,173,.2)';ctx.lineWidth=4;ctx.stroke();const pg=ctx.createRadialGradient(cx-r*.02,cy-r*.02,0,cx,cy,r*.08);pg.addColorStop(0,dk?'#5a6a7e':'#aabbcc');pg.addColorStop(1,dk?'#1a2535':'#556677');ctx.beginPath();ctx.arc(cx,cy,r*.07,0,Math.PI*2);ctx.fillStyle=pg;ctx.fill();ctx.beginPath();ctx.arc(cx,cy,r*.07,0,Math.PI*2);ctx.strokeStyle=dk?'rgba(255,255,255,.15)':'rgba(0,0,0,.15)';ctx.lineWidth=1;ctx.stroke();ctx.font=`700 ${r*.12}px Orbitron,monospace`;ctx.fillStyle=dk?'rgba(0,229,255,.5)':'rgba(2,112,173,.5)';ctx.fillText(label,cx,cy-r*.12);ctx.restore()}
+function rr(ctx,x,y,w,h,r){ctx.moveTo(x+r,y);ctx.lineTo(x+w-r,y);ctx.quadraticCurveTo(x+w,y,x+w,y+r);ctx.lineTo(x+w,y+h-r);ctx.quadraticCurveTo(x+w,y+h,x+w-r,y+h);ctx.lineTo(x+r,y+h);ctx.quadraticCurveTo(x,y+h,x,y+h-r);ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y)}
+
+// RENDER
+function renderBox(){const c=$('sBox');if(S.loading){c.innerHTML='<div class="ldg"><div class="ldg-s"></div><p>Buscando emisoras...</p></div>';return}if(S.err){c.innerHTML=`<div class="erx"><i>⚠️</i><p>${S.err}</p><button class="btn-rt" onclick="retryLoad()">Reintentar</button></div>`;return}if(!S.list.length){if(S.tab==='favs')c.innerHTML='<div class="emt"><i>⭐</i><p>No tienes favoritos.</p></div>';else if(S.tab==='custom')c.innerHTML=`<div class="emt"><i>📌</i><p>Sin emisoras personalizadas.</p><br><button class="btn-rt" onclick="openMdl(\'addMdl\')">＋ Agregar</button></div>`;else c.innerHTML='<div class="emt"><i>📡</i><p>No se encontraron emisoras.</p></div>';return}renderStnList()}
+function renderStnList(){let h='';S.list.forEach((s,i)=>{const on=S.cur&&sameStn(S.cur,s),fv=S.favs.some(f=>sameStn(f,s)),tg=s.tags?s.tags.split(',').slice(0,2).map(x=>x.trim()).filter(Boolean):[];h+=`<div class="stn${on?' on':''}" onclick="playStn(S.list[${i}])"><div class="stn-a">${s.favicon&&s.favicon.trim()?`<img src="${s.favicon}" onerror="this.parentElement.innerHTML='📻'" loading="lazy">`:'📻'}</div><div class="stn-i"><div class="stn-n">${esc(s.name)}</div><div class="stn-d">${mkFlag(s.countrycode)} ${esc(s.country||'')}${s.bitrate?' · '+s.bitrate+'kbps':''}</div><div class="stn-bg">${s.codec?`<span class="stn-b cd">${s.codec}</span>`:''}${tg.map(t=>`<span class="stn-b">${esc(t)}</span>`).join('')}</div></div><div class="stn-r"><button class="stn-f${fv?' on':''}" onclick="event.stopPropagation();togFav(${i});vib(30)">${fv?'★':'☆'}</button>${on&&S.pb==='playing'?'<span class="stn-pi">🔊</span>':''}</div></div>`});$('sBox').innerHTML=`<div class="stns">${h}</div>`}
+
+// TABS
+function swTab(tab){S.tab=tab;S.sub=null;S.sq='';$('srchIn').value='';$('srchX').classList.remove('on');document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.t===tab));const sc=$('scats');if(tab==='country'){sc.classList.add('on');sc.innerHTML=COUNTRIES.map(c=>`<button class="scat" data-v="${c.c}" onclick="selSub('country','${c.c}');vib(30)">${c.f} ${c.n}</button>`).join('');$('sBox').innerHTML='<div class="emt"><i>🌎</i><p>Selecciona un país</p></div>';showLinf(false)}else if(tab==='genre'){sc.classList.add('on');sc.innerHTML=GENRES.map(g=>`<button class="scat" data-v="${g.id}" onclick="selSub('genre','${g.id}');vib(30)">${g.i} ${g.n}</button>`).join('');$('sBox').innerHTML='<div class="emt"><i>🎵</i><p>Selecciona un género</p></div>';showLinf(false)}else{sc.classList.remove('on');if(tab==='top')loadList(apiTop,'🔥 Populares');else if(tab==='favs')loadFavs();else if(tab==='custom')loadCustom()}}
+function selSub(type,val){S.sub=val;document.querySelectorAll('.scat').forEach(s=>s.classList.toggle('on',s.dataset.v===val));if(type==='country'){const c=COUNTRIES.find(x=>x.c===val);loadList(()=>apiCountry(val),c?c.f+' '+c.n:val)}else{const g=GENRES.find(x=>x.id===val);loadList(()=>apiTag(val),g?g.i+' '+g.n:val)}}
+
+// SEARCH
+let srchTm;$('srchIn').addEventListener('input',e=>{const q=e.target.value.trim();$('srchX').classList.toggle('on',q.length>0);clearTimeout(srchTm);if(q.length>=2)srchTm=setTimeout(()=>{S.sq=q;document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));$('scats').classList.remove('on');loadList(()=>apiSearch(q),'🔍 "'+q+'"')},400);else if(!q.length)swTab(S.tab)});
+function clrSearch(){$('srchIn').value='';$('srchX').classList.remove('on');S.sq='';swTab(S.tab)}
+
+// FAVORITES
+function togFav(i){const s=S.list[i];if(!s)return;const idx=S.favs.findIndex(f=>sameStn(f,s));if(idx>=0){S.favs.splice(idx,1);toast('✕ Eliminada')}else{S.favs.push(pickStn(s));toast('⭐ Favorito')};saveFavs();renderStnList();updFavBtn();if(S.tab==='favs')loadFavs()}
+function toggleFavCur(){if(!S.cur)return;const idx=S.favs.findIndex(f=>sameStn(f,S.cur));if(idx>=0){S.favs.splice(idx,1);toast('✕ Eliminada')}else{S.favs.push(pickStn(S.cur));toast('⭐ Favorito')};saveFavs();updFavBtn();renderStnList();if(S.tab==='favs')loadFavs()}
+function pickStn(s){return{stationuuid:s.stationuuid||'',name:s.name,url:s.url||'',url_resolved:s.url_resolved||s.url||'',favicon:s.favicon||'',country:s.country||'',countrycode:s.countrycode||'',tags:s.tags||'',codec:s.codec||'',bitrate:s.bitrate||0,isCustom:s.isCustom||false}}
+function loadFavs(){S.list=[...S.favs];S.loading=false;S.err=null;renderBox();showLinf(S.list.length>0,'⭐ Favoritos',S.list.length)}
+function saveFavs(){localStorage.setItem('wtfm_favs',JSON.stringify(S.favs))}
+
+// CUSTOM
+function saveCustom(){const nm=$('fNm').value.trim(),url=$('fUrl').value.trim(),pais=$('fPais').value.trim(),gen=$('fGen').value.trim();if(!nm||!url){toast('⚠️ Nombre y URL obligatorios');vib([60,50,60]);return}if(!url.startsWith('http')){toast('⚠️ URL debe empezar con http');return};S.custom.push({stationuuid:'c_'+Date.now(),name:nm,url,url_resolved:url,favicon:'',country:pais,countrycode:'',tags:gen,codec:'',bitrate:0,isCustom:true});localStorage.setItem('wtfm_custom',JSON.stringify(S.custom));closeMdl('addMdl');toast('📌 Guardada');['fNm','fUrl','fPais','fGen'].forEach(id=>$(id).value='');if(S.tab==='custom')loadCustom()}
+function loadCustom(){S.list=[...S.custom];S.loading=false;S.err=null;renderBox();showLinf(S.list.length>0,'📌 Mis Emisoras',S.list.length)}
+function retryLoad(){if(S.sq)loadList(()=>apiSearch(S.sq),'🔍');else if(S.tab==='top')loadList(apiTop,'🔥');else if(S.sub)selSub(S.tab==='country'?'country':'genre',S.sub)}
+
+// THEME
+function setTheme(t){S.theme=t;localStorage.setItem('wtfm_theme',t);applyTheme();updThUI()}
+function toggleTheme(){setTheme(S.theme==='dark'?'light':S.theme==='light'?'dark':'dark')}
+function applyTheme(){let th=S.theme;if(th==='auto')th=matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';document.documentElement.dataset.theme=th;$('metaTheme').content=th==='dark'?'#060910':'#d8dfe8';$('btnThm').textContent=th==='dark'?'🌙':'☀️'}
+function updThUI(){['Dk','Lt','At'].forEach((x,i)=>{const b=$('sg'+x);if(b)b.classList.toggle('on',S.theme===['dark','light','auto'][i])})}
+matchMedia('(prefers-color-scheme:light)').addEventListener('change',()=>{if(S.theme==='auto')applyTheme()});
+
+// ACCORDION
+function togAcc(el){el.classList.toggle('op');el.nextElementSibling.classList.toggle('op')}
+
+// WHEELS
+let whlTm,whlIv;
+function whlD(id,dir){whlStep(id,dir);whlTm=setTimeout(()=>{whlIv=setInterval(()=>whlStep(id,dir),80)},350);const up=()=>{clearTimeout(whlTm);clearInterval(whlIv);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',up)};window.addEventListener('pointerup',up);window.addEventListener('pointercancel',up)}
+function whlStep(id,dir){const w=S.wheels[id];if(!w)return;w.v+=dir;if(w.v>w.max)w.v=w.min;if(w.v<w.min)w.v=w.max;$(id+'v').textContent=String(w.v).padStart(2,'0');vib(25);updDurDisp()}
+function calcMin(sh,sm,eh,em){let s=sh*60+sm,e=eh*60+em;if(e<=s)e+=1440;return e-s}
+function fmtDur(m){const h=Math.floor(m/60),mm=m%60;return h>0?(mm>0?`${h}h ${mm}min`:`${h}h`):`${mm}min`}
+function updDurDisp(){
+  const d1=calcMin(S.wheels.wH1.v,S.wheels.wM1.v,S.wheels.wH1e.v,S.wheels.wM1e.v);
+  $('schDur1').textContent=`⏱ Duración: ${fmtDur(d1)}`;
+  const d2=calcMin(S.wheels.wH2.v,S.wheels.wM2.v,S.wheels.wH2e.v,S.wheels.wM2e.v);
+  $('schDur2').textContent=`⏱ Duración: ${fmtDur(d2)}`;
+}
+
+// SCHEDULE
+function swSchTab(t){document.querySelectorAll('.sch-tab').forEach(b=>b.classList.toggle('on',b.dataset.s===t));['Timed','Sched','Recur'].forEach(p=>{const el=$('sp'+p);if(el)el.classList.toggle('on',p.toLowerCase()===t)})}
+function togDay(el){el.classList.toggle('on');vib(30)}
+function populateFavSel(){
+  const opts=S.favs.length?S.favs.map((f,i)=>`<option value="${i}">${f.name}</option>`).join(''):'';
+  const empty=S.favs.length?'':'<option value="">— Agrega emisoras a favoritos primero —</option>';
+  $('schSchedStn').innerHTML=`<option value="">Seleccionar emisora...</option>${empty}${opts}`;
+  $('schRecurStn').innerHTML=`<option value="">Seleccionar emisora...</option>${empty}${opts}`;
+}
+function startTimedRec(){
+  const min=parseInt($('schTimedMin').value);if(!min||min<1){toast('⚠️ Ingresa duración válida');vib([60,50,60]);return}
+  if(S.pb!=='playing'){toast('⚠️ Primero reproduce una emisora');vib([60,50,60]);return}
+  closeMdl('schMdl');startRecording(min*60,null);toast(`⏱ Grabando ${min} minutos`);
+}
+function addSchedule(type){
+  let stnIdx,stn,dur;
+  if(type==='sched'){
+    stnIdx=parseInt($('schSchedStn').value);if(isNaN(stnIdx)||!S.favs[stnIdx]){toast('⚠️ Selecciona una emisora');vib([60,50,60]);return}
+    stn=S.favs[stnIdx];const date=$('schSchedDate').value;if(!date){toast('⚠️ Selecciona fecha');vib([60,50,60]);return}
+    dur=calcMin(S.wheels.wH1.v,S.wheels.wM1.v,S.wheels.wH1e.v,S.wheels.wM1e.v);
+    const sch={id:'s_'+Date.now(),type:'sched',station:pickStn(stn),active:true,lastTriggered:0,date,startH:S.wheels.wH1.v,startM:S.wheels.wM1.v,endH:S.wheels.wH1e.v,endM:S.wheels.wM1e.v,duration:dur};
+    S.schedules.push(sch);saveSch();renderSchList();
+    const sh=String(sch.startH).padStart(2,'0'),sm=String(sch.startM).padStart(2,'0'),eh=String(sch.endH).padStart(2,'0'),em=String(sch.endM).padStart(2,'0');
     toast(`📅 ${date} ${sh}:${sm}-${eh}:${em}`);
-  } else {
-    if (S.schUseCurrent.recur && S.cur) {
-      stn = S.cur;
-    } else {
-      const stnIdx = parseInt($('schRecurStn').value);
-      if (isNaN(stnIdx) || !S.favs[stnIdx]) {
-        toast('⚠️ Selecciona una emisora');
-        vib([60, 50, 60]);
-        return;
-      }
-      stn = S.favs[stnIdx];
-    }
-    
-    const days = [];
-    document.querySelectorAll('#daysRow .day-btn.on').forEach(b => days.push(parseInt(b.dataset.d)));
-    
-    if (!days.length) {
-      toast('⚠️ Selecciona al menos un día');
-      vib([60, 50, 60]);
-      return;
-    }
-    
-    dur = calcMin(S.wheels.wH2.v, S.wheels.wM2.v, S.wheels.wH2e.v, S.wheels.wM2e.v);
-    
-    const sch = {
-      id: 's_' + Date.now(),
-      type: 'recur',
-      station: pickStn(stn),
-      active: true,
-      lastTriggered: 0,
-      days,
-      startH: S.wheels.wH2.v,
-      startM: S.wheels.wM2.v,
-      endH: S.wheels.wH2e.v,
-      endM: S.wheels.wM2e.v,
-      duration: dur
-    };
-    
-    S.schedules.push(sch);
-    saveSch();
-    renderSchList();
-    
-    const dn = ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'];
-    toast(`🔁 ${days.map(d => dn[d]).join(',')} ${String(sch.startH).padStart(2, '0')}:${String(sch.startM).padStart(2, '0')}`);
+  }else{
+    stnIdx=parseInt($('schRecurStn').value);if(isNaN(stnIdx)||!S.favs[stnIdx]){toast('⚠️ Selecciona una emisora');vib([60,50,60]);return}
+    stn=S.favs[stnIdx];const days=[];document.querySelectorAll('#daysRow .day-btn.on').forEach(b=>days.push(parseInt(b.dataset.d)));
+    if(!days.length){toast('⚠️ Selecciona al menos un día');vib([60,50,60]);return}
+    dur=calcMin(S.wheels.wH2.v,S.wheels.wM2.v,S.wheels.wH2e.v,S.wheels.wM2e.v);
+    const sch={id:'s_'+Date.now(),type:'recur',station:pickStn(stn),active:true,lastTriggered:0,days,startH:S.wheels.wH2.v,startM:S.wheels.wM2.v,endH:S.wheels.wH2e.v,endM:S.wheels.wM2e.v,duration:dur};
+    S.schedules.push(sch);saveSch();renderSchList();
+    const dn=['Do','Lu','Ma','Mi','Ju','Vi','Sa'];
+    toast(`🔁 ${days.map(d=>dn[d]).join(',')} ${String(sch.startH).padStart(2,'0')}:${String(sch.startM).padStart(2,'0')}`);
   }
 }
-
-function delSchedule(id) {
-  S.schedules = S.schedules.filter(s => s.id !== id);
-  saveSch();
-  renderSchList();
-  toast('🗑️ Programación eliminada');
-  vib(45);
+function delSchedule(id){S.schedules=S.schedules.filter(s=>s.id!==id);saveSch();renderSchList();toast('🗑️ Eliminada');vib(45)}
+function saveSch(){localStorage.setItem('wtfm_sch',JSON.stringify(S.schedules))}
+function renderSchList(){
+  const wrap=$('schListW'),list=$('schList');
+  if(!S.schedules.length){wrap.style.display='none';return}wrap.style.display='block';
+  const dn=['Do','Lu','Ma','Mi','Ju','Vi','Sa'];
+  list.innerHTML=S.schedules.map(s=>{
+    const sh=String(s.startH).padStart(2,'0'),sm=String(s.startM).padStart(2,'0'),eh=String(s.endH).padStart(2,'0'),em=String(s.endM).padStart(2,'0');
+    let desc=s.type==='sched'?`📅 ${s.date} · ${sh}:${sm}-${eh}:${em}`:`🔁 ${s.days.map(d=>dn[d]).join(', ')} · ${sh}:${sm}-${eh}:${em}`;
+    return`<div class="sch-item"><div class="sch-item-info"><div class="sch-item-t">${esc(s.station.name)}</div><div class="sch-item-d">${desc} · ${fmtDur(s.duration)}</div></div><button class="sch-item-del" onclick="delSchedule('${s.id}');vib(45)">✕</button></div>`}).join('');
 }
-
-function saveSch() {
-  localStorage.setItem('wtfm_sch', JSON.stringify(S.schedules));
-}
-
-function renderSchList() {
-  const wrap = $('schListW');
-  const list = $('schList');
-  
-  if (!S.schedules.length) {
-    wrap.style.display = 'none';
-    return;
-  }
-  
-  wrap.style.display = 'block';
-  const dn = ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'];
-  
-  list.innerHTML = S.schedules.map(s => {
-    const sh = String(s.startH).padStart(2, '0');
-    const sm = String(s.startM).padStart(2, '0');
-    const eh = String(s.endH).padStart(2, '0');
-    const em = String(s.endM).padStart(2, '0');
-    
-    let desc = s.type === 'sched' 
-      ? `📅 ${s.date} · ${sh}:${sm}-${eh}:${em}` 
-      : `🔁 ${s.days.map(d => dn[d]).join(', ')} · ${sh}:${sm}-${eh}:${em}`;
-    
-    return `<div class="sch-item">
-      <div class="sch-item-info">
-        <div class="sch-item-t">${esc(s.station.name)}</div>
-        <div class="sch-item-d">${desc} · ${fmtDur(s.duration)}</div>
-      </div>
-      <button class="sch-item-del" onclick="delSchedule('${s.id}');vib(45)">✕</button>
-    </div>`;
-  }).join('');
-}
-
-function checkSchedules() {
-  const now = new Date();
-  const ms = now.getTime();
-  
-  S.schedules.forEach(sch => {
-    if (!sch.active || S.recActive) return;
-    if (ms - sch.lastTriggered < 120000) return;
-    
-    if (sch.type === 'sched') {
-      const d = new Date(sch.date + 'T' + String(sch.startH).padStart(2, '0') + ':' + String(sch.startM).padStart(2, '0'));
-      if (Math.abs(ms - d.getTime()) < 60000) triggerSch(sch);
-    } else if (sch.type === 'recur') {
-      const day = now.getDay();
-      if (sch.days.includes(day) && now.getHours() === sch.startH && now.getMinutes() === sch.startM) {
-        triggerSch(sch);
-      }
-    }
+function checkSchedules(){
+  const now=new Date(),ms=now.getTime();
+  S.schedules.forEach(sch=>{
+    if(!sch.active||S.recActive)return;if(ms-sch.lastTriggered<120000)return;
+    if(sch.type==='sched'){const d=new Date(sch.date+'T'+String(sch.startH).padStart(2,'0')+':'+String(sch.startM).padStart(2,'0'));if(Math.abs(ms-d.getTime())<60000)triggerSch(sch)}
+    else if(sch.type==='recur'){const day=now.getDay();if(sch.days.includes(day)&&now.getHours()===sch.startH&&now.getMinutes()===sch.startM)triggerSch(sch)}
   });
 }
-
-function triggerSch(sch) {
-  sch.lastTriggered = Date.now();
-  saveSch();
+function triggerSch(sch){
+  sch.lastTriggered=Date.now();saveSch();
   playStn(sch.station);
-  
-  const durSec = sch.duration * 60;
-  setTimeout(() => {
-    if (S.pb === 'playing') startRecording(durSec, sch.id);
-  }, 3000);
-  
-  toast(`📅 Grabación programada: ${sch.station.name}`);
-  vib([50, 100, 50]);
+  const durSec=sch.duration*60;
+  setTimeout(()=>{if(S.pb==='playing')startRecording(durSec,sch.id)},3000);
+  toast(`📅 Grabación programada: ${sch.station.name}`);vib([50,100,50]);
 }
 
-// ═══════════════════════════════════════════════════════════════
-// EXPORTAR / IMPORTAR DATOS
-// ═══════════════════════════════════════════════════════════════
-function expData() {
-  const d = {
-    version: '4.4.3',
-    date: new Date().toISOString(),
-    favorites: S.favs,
-    customStations: S.custom,
-    schedules: S.schedules,
-    theme: S.theme,
-    quality: S.quality,
-    prefFormat: S.prefFormat,
-    lastStation: S.lastStation,
-    customColors: S.customColors
-  };
-  
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([JSON.stringify(d, null, 2)], {type: 'application/json'}));
-  a.download = `Backup_WaveTunerFM_${tsNow()}.json`;
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  toast('📤 Datos exportados');
-}
+// EXPORT/IMPORT
+function expData(){const d={version:'4.1.0',date:new Date().toISOString(),favorites:S.favs,customStations:S.custom,schedules:S.schedules,theme:S.theme,quality:S.quality};const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(d,null,2)],{type:'application/json'}));a.download=`Backup_WaveTunerFM_${tsNow()}.json`;document.body.appendChild(a);a.click();document.body.removeChild(a);toast('📤 Exportado')}
+function impData(){$('fileIn').click()}
+function handleImp(e){const f=e.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=ev=>{try{const d=JSON.parse(ev.target.result);let nf=0,nc=0;if(d.favorites){const nw=d.favorites.filter(x=>!S.favs.some(e=>sameStn(e,x)));S.favs.push(...nw);saveFavs();nf=nw.length}if(d.customStations){const nw=d.customStations.filter(x=>!S.custom.some(e=>(e.url_resolved||e.url)===(x.url_resolved||x.url)));S.custom.push(...nw);localStorage.setItem('wtfm_custom',JSON.stringify(S.custom));nc=nw.length}if(d.schedules){d.schedules.forEach(ns=>{if(!S.schedules.some(es=>es.id===ns.id)){S.schedules.push(ns)}});saveSch();renderSchList()}if(d.theme)setTheme(d.theme);if(d.quality)setQuality(d.quality);toast(`📥 +${nf} favs, +${nc} emisoras`);if(S.tab==='favs')loadFavs();if(S.tab==='custom')loadCustom()}catch{toast('⚠️ Archivo no válido');vib([60,50,60])}};rd.readAsText(f);e.target.value=''}
 
-function impData() {
-  $('fileIn').click();
-}
+// MODALS
+function openMdl(id){$(id).classList.add('on');updThUI();updQualUI();renderSchList();populateFavSel();$('schSchedDate').value=new Date().toISOString().slice(0,10);updDurDisp()}
+function closeMdl(id){$(id).classList.remove('on')}
+function maybeClose(e,id){if(e.target.id===id)closeMdl(id)}
 
-function handleImp(e) {
-  const f = e.target.files[0];
-  if (!f) return;
-  
-  const rd = new FileReader();
-  rd.onload = ev => {
-    try {
-      const d = JSON.parse(ev.target.result);
-      let nf = 0, nc = 0;
-      
-      if (d.favorites) {
-        const nw = d.favorites.filter(x => !S.favs.some(e => sameStn(e, x)));
-        S.favs.push(...nw);
-        saveFavs();
-        nf = nw.length;
-      }
-      
-      if (d.customStations) {
-        const nw = d.customStations.filter(x => !S.custom.some(e => (e.url_resolved || e.url) === (x.url_resolved || x.url)));
-        S.custom.push(...nw);
-        localStorage.setItem('wtfm_custom', JSON.stringify(S.custom));
-        nc = nw.length;
-      }
-      
-      if (d.schedules) {
-        d.schedules.forEach(ns => {
-          if (!S.schedules.some(es => es.id === ns.id)) {
-            S.schedules.push(ns);
-          }
-        });
-        saveSch();
-        renderSchList();
-      }
-      
-      if (d.customColors) {
-        S.customColors = d.customColors;
-        localStorage.setItem('wtfm_colors', JSON.stringify(S.customColors));
-        applyCustomColors();
-      }
-      
-      if (d.lastStation) {
-        S.lastStation = d.lastStation;
-        localStorage.setItem('wtfm_last', JSON.stringify(S.lastStation));
-      }
-      
-      if (d.theme) setTheme(d.theme);
-      if (d.quality) setQuality(d.quality);
-      if (d.prefFormat) setFormat(d.prefFormat);
-      
-      toast(`📥 +${nf} favs, +${nc} emisoras`);
-      
-      if (S.tab === 'favs') loadFavs();
-      if (S.tab === 'custom') loadCustom();
-    } catch {
-      toast('⚠️ Archivo no válido');
-      vib([60, 50, 60]);
-    }
-  };
-  rd.readAsText(f);
-  e.target.value = '';
+// PWA
+function setupPWA(){
+  const sizes=[192,512];const icons=[];
+  sizes.forEach(s=>{const cv=document.createElement('canvas');cv.width=cv.height=s;const x=cv.getContext('2d');const g=x.createLinearGradient(0,0,s,s);g.addColorStop(0,'#00e5ff');g.addColorStop(1,'#0091ea');x.fillStyle=g;x.beginPath();x.roundRect(0,0,s,s,s*.2);x.fill();x.font=`${s*.45}px serif`;x.textAlign='center';x.textBaseline='middle';x.fillText('📻',s/2,s/2);const url=cv.toDataURL('image/png');icons.push({src:url,sizes:`${s}x${s}`,type:'image/png',purpose:'any maskable'});if(s===192){$('favIco').href=url;$('applIco').href=url}});
+  const mf={name:'WaveTuner FM',short_name:'WaveTuner',description:'Internet Radio Player',id:'wavetuner-fm',start_url:'.',scope:'.',display:'standalone',background_color:'#060910',theme_color:'#060910',orientation:'portrait',categories:['music','entertainment'],icons};
+  const lnk=document.createElement('link');lnk.rel='manifest';lnk.href=URL.createObjectURL(new Blob([JSON.stringify(mf)],{type:'application/json'}));document.head.appendChild(lnk);
+  window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();S.deferredPrompt=e;$('pwaI').textContent='¡Disponible para instalar!';$('btnInst').classList.add('on')});
+  if('serviceWorker'in navigator&&location.protocol==='https:'){const sw=`const CN='wtfm-v4';self.addEventListener('install',e=>{e.waitUntil(caches.open(CN).then(c=>c.addAll(['./',])));self.skipWaiting()});self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CN).map(k=>caches.delete(k)))));self.clients.claim()});self.addEventListener('fetch',e=>{e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)))});`;navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw],{type:'application/javascript'}))).catch(()=>{})}
 }
+function installPWA(){if(S.deferredPrompt){S.deferredPrompt.prompt();S.deferredPrompt.userChoice.then(r=>{toast(r.outcome==='accepted'?'📲 Instalada':'Cancelado');S.deferredPrompt=null})}else toast('ℹ️ Necesita servidor HTTPS')}
 
-// ═══════════════════════════════════════════════════════════════
-// MODALES
-// ═══════════════════════════════════════════════════════════════
-function openMdl(id) {
-  $(id).classList.add('on');
-  updThUI();
-  updQualUI();
-  updFmtUI();
-  renderSchList();
-  populateFavSel();
-  $('schSchedDate').value = new Date().toISOString().slice(0, 10);
-  updDurDisp();
-  updSchCurUI();
-  if (id === 'thmMdl') loadThmEditorUI();
-}
-
-function closeMdl(id) {
-  $(id).classList.remove('on');
-}
-
-function maybeClose(e, id) {
-  if (e.target.id === id) closeMdl(id);
-}
-
-// ═══════════════════════════════════════════════════════════════
-// PWA v4.4.3 — RESTAURADA DE v4.4.0 (FUNCIONABA)
-// ═══════════════════════════════════════════════════════════════
-function setupPWA() {
-  const sizes = [192, 512];
-  const icons = [];
-  
-  sizes.forEach(s => {
-    const cv = document.createElement('canvas');
-    cv.width = cv.height = s;
-    const x = cv.getContext('2d');
-    
-    const g = x.createLinearGradient(0, 0, s, s);
-    g.addColorStop(0, '#00e5ff');
-    g.addColorStop(1, '#0091ea');
-    x.fillStyle = g;
-    
-    x.beginPath();
-    x.roundRect(0, 0, s, s, s * .2);
-    x.fill();
-    
-    x.font = `${s * .45}px serif`;
-    x.textAlign = 'center';
-    x.textBaseline = 'middle';
-    x.fillText('📻', s / 2, s / 2);
-    
-    const url = cv.toDataURL('image/png');
-    icons.push({
-      src: url,
-      sizes: `${s}x${s}`,
-      type: 'image/png',
-      purpose: 'any maskable'
-    });
-    
-    if (s === 192) {
-      $('favIco').href = url;
-      $('applIco').href = url;
-    }
-  });
-  
-  const mf = {
-    name: 'WaveTuner FM',
-    short_name: 'WaveTuner',
-    description: 'Internet Radio Player',
-    id: 'wavetuner-fm',
-    start_url: '.',
-    scope: '.',
-    display: 'standalone',
-    background_color: '#060910',
-    theme_color: '#060910',
-    orientation: 'portrait',
-    categories: ['music', 'entertainment'],
-    icons
-  };
-  
-  const lnk = document.createElement('link');
-  lnk.rel = 'manifest';
-  lnk.href = URL.createObjectURL(new Blob([JSON.stringify(mf)], {type: 'application/json'}));
-  document.head.appendChild(lnk);
-  
-  window.addEventListener('beforeinstallprompt', e => {
-    e.preventDefault();
-    S.deferredPrompt = e;
-    $('pwaI').textContent = '¡Disponible para instalar!';
-    $('btnInst').classList.add('on');
-  });
-  
-  if ('serviceWorker' in navigator && location.protocol === 'https:') {
-    const sw = `const CN='wtfm-v443';
-self.addEventListener('install',e=>{e.waitUntil(caches.open(CN).then(c=>c.addAll(['./',])));self.skipWaiting()});
-self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CN).map(k=>caches.delete(k)))));self.clients.claim()});
-self.addEventListener('fetch',e=>{e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)))});`;
-    navigator.serviceWorker.register(
-      URL.createObjectURL(new Blob([sw], {type: 'application/javascript'}))
-    ).catch(() => {});
-  }
-}
-
-function installPWA() {
-  if (S.deferredPrompt) {
-    S.deferredPrompt.prompt();
-    S.deferredPrompt.userChoice.then(r => {
-      toast(r.outcome === 'accepted' ? '📲 App instalada' : 'Instalación cancelada');
-      S.deferredPrompt = null;
-    });
-  } else {
-    toast('ℹ️ Requiere servidor HTTPS (GitHub Pages)');
-  }
-}
-
-// ═══════════════════════════════════════════════════════════════
 // MEDIA SESSION
-// ═══════════════════════════════════════════════════════════════
-function updMedia() {
-  if (!('mediaSession' in navigator) || !S.cur) return;
-  
-  navigator.mediaSession.metadata = new MediaMetadata({
-    title: S.cur.name,
-    artist: S.cur.country || 'Radio',
-    album: 'WaveTuner FM',
-    artwork: S.cur.favicon ? [{src: S.cur.favicon, sizes: '512x512', type: 'image/png'}] : []
-  });
-  
-  navigator.mediaSession.setActionHandler('play', togglePlay);
-  navigator.mediaSession.setActionHandler('pause', togglePlay);
-  navigator.mediaSession.setActionHandler('stop', stopAudio);
-}
+function updMedia(){if(!('mediaSession'in navigator)||!S.cur)return;navigator.mediaSession.metadata=new MediaMetadata({title:S.cur.name,artist:S.cur.country||'Radio',album:'WaveTuner FM',artwork:S.cur.favicon?[{src:S.cur.favicon,sizes:'512x512',type:'image/png'}]:[]});navigator.mediaSession.setActionHandler('play',togglePlay);navigator.mediaSession.setActionHandler('pause',togglePlay);navigator.mediaSession.setActionHandler('stop',stopAudio)}
 
-// ═══════════════════════════════════════════════════════════════
-// ATAJOS DE TECLADO
-// ═══════════════════════════════════════════════════════════════
-document.addEventListener('keydown', e => {
-  if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
-  
-  switch (e.key) {
-    case ' ':
-      e.preventDefault();
-      togglePlay();
-      vib(50);
-      break;
-    case 'ArrowUp':
-      e.preventDefault();
-      setVol(Math.min(100, S.vol + 5));
-      break;
-    case 'ArrowDown':
-      e.preventDefault();
-      setVol(Math.max(0, S.vol - 5));
-      break;
-    case 'm':
-      toggleMute();
-      vib(30);
-      break;
-    case 'f':
-      if (S.cur) {
-        toggleFavCur();
-        vib([40, 60, 40]);
-      }
-      break;
-    case 'r':
-      toggleRec();
-      break;
-  }
-});
+// KEYBOARD
+document.addEventListener('keydown',e=>{if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT')return;switch(e.key){case' ':e.preventDefault();togglePlay();vib(50);break;case'ArrowUp':e.preventDefault();setVol(Math.min(100,S.vol+5));break;case'ArrowDown':e.preventDefault();setVol(Math.max(0,S.vol-5));break;case'm':toggleMute();vib(30);break;case'f':if(S.cur){toggleFavCur();vib([40,60,40])}break;case'r':toggleRec();break}});
 
-// ═══════════════════════════════════════════════════════════════
-// EVENTO VOLUMEN
-// ═══════════════════════════════════════════════════════════════
-$('volR').addEventListener('input', e => setVol(parseInt(e.target.value)));
+// UTILS
+function mkFlag(c){if(!c||c.length!==2)return'🌐';return String.fromCodePoint(...[...c.toUpperCase()].map(x=>0x1F1E6+x.charCodeAt(0)-65))}
+function esc(s){const d=document.createElement('div');d.textContent=s||'';return d.innerHTML}
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('on');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('on'),2800)}
+$('volR').addEventListener('input',e=>setVol(parseInt(e.target.value)));
 
-// ═══════════════════════════════════════════════════════════════
-// INICIALIZACIÓN
-// ═══════════════════════════════════════════════════════════════
-(function init() {
-  applyTheme();
-  updVolUI();
-  updQualUI();
-  updFmtUI();
-  loadLastStation();
-  swTab('top');
-  startGauge();
-  setupPWA();
-  renderSchList();
-  setInterval(checkSchedules, 30000);
-  $('schSchedDate').value = new Date().toISOString().slice(0, 10);
-  updDurDisp();
-  console.log('📻 WaveTuner FM v4.4.3 - 17 de Febrero de 2026');
-})();
+// INIT
+(function(){applyTheme();updVolUI();updQualUI();swTab('top');startGauge();setupPWA();renderSchList();setInterval(checkSchedules,30000);$('schSchedDate').value=new Date().toISOString().slice(0,10);updDurDisp()})();
 </script>
 </body>
 </html>
