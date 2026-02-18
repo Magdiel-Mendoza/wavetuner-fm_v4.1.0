@@ -467,7 +467,7 @@ select.fi{appearance:auto;-webkit-appearance:auto}
           <strong style="font-family:Orbitron,monospace;font-size:18px;color:var(--pri)">WaveTuner FM</strong>
         </div>
         <table class="about-tbl">
-          <tr><td>Versión:</td><td><strong>4.4.3</strong></td></tr>
+          <tr><td>Versión:</td><td><strong>4.4.2</strong></td></tr>
           <tr><td>Fecha:</td><td>17 de Febrero de 2026</td></tr>
           <tr><td>Desarrollador:</td><td>Magdiel Mendoza</td></tr>
           <tr><td>Asistente IA:</td><td>Claude (Anthropic)</td></tr>
@@ -788,7 +788,7 @@ select.fi{appearance:auto;-webkit-appearance:auto}
 <input type="file" id="thmFileIn" accept=".json" style="display:none" onchange="handleThmImp(event)">
 <div class="toast" id="toast"></div>
 <footer class="ftr">
-  <p>WaveTuner FM v4.4.3 — <a href="https://www.radio-browser.info" target="_blank">Radio Browser API</a></p>
+  <p>WaveTuner FM v4.4.2 — <a href="https://www.radio-browser.info" target="_blank">Radio Browser API</a></p>
 </footer>
 <script>
 // ═══════════════════════════════════════════════════════════════
@@ -1263,7 +1263,7 @@ function loadLastStation() {
   }
 }
 // ═══════════════════════════════════════════════════════════════
-// SISTEMA DE GRABACIÓN v4.4.3 — VERIFICACIÓN ACTIVA 5 SEGUNDOS
+// SISTEMA DE GRABACIÓN v4.4.2 — VERIFICACIÓN ACTIVA 5 SEGUNDOS
 // ═══════════════════════════════════════════════════════════════
 async function toggleRec() {
   if (S.recActive) {
@@ -2420,7 +2420,7 @@ function resetTheme() {
 
 function expTheme() {
   const d = {
-    version: '4.4.3',
+    version: '4.4.2',
     type: 'theme',
     date: new Date().toISOString(),
     colors: S.customColors
@@ -2799,7 +2799,7 @@ function triggerSch(sch) {
 // ═══════════════════════════════════════════════════════════════
 function expData() {
   const d = {
-    version: '4.4.3',
+    version: '4.4.2',
     date: new Date().toISOString(),
     favorites: S.favs,
     customStations: S.custom,
@@ -2911,81 +2911,83 @@ function maybeClose(e, id) {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// PWA v4.4.3 — RESTAURADA DE v4.4.0 (FUNCIONABA)
+// PWA v4.4.2 — CORREGIDA CON ICONOS BASE64
 // ═══════════════════════════════════════════════════════════════
 function setupPWA() {
-  const sizes = [192, 512];
-  const icons = [];
-  
-  sizes.forEach(s => {
+  // Generar icono como base64
+  function genIcon(size) {
     const cv = document.createElement('canvas');
-    cv.width = cv.height = s;
+    cv.width = cv.height = size;
     const x = cv.getContext('2d');
     
-    const g = x.createLinearGradient(0, 0, s, s);
+    // Gradiente de fondo
+    const g = x.createLinearGradient(0, 0, size, size);
     g.addColorStop(0, '#00e5ff');
     g.addColorStop(1, '#0091ea');
     x.fillStyle = g;
     
+    // Rectángulo redondeado
+    const r = size * .18;
     x.beginPath();
-    x.roundRect(0, 0, s, s, s * .2);
+    x.moveTo(r, 0);
+    x.lineTo(size - r, 0);
+    x.quadraticCurveTo(size, 0, size, r);
+    x.lineTo(size, size - r);
+    x.quadraticCurveTo(size, size, size - r, size);
+    x.lineTo(r, size);
+    x.quadraticCurveTo(0, size, 0, size - r);
+    x.lineTo(0, r);
+    x.quadraticCurveTo(0, 0, r, 0);
+    x.closePath();
     x.fill();
     
-    x.font = `${s * .45}px serif`;
+    // Emoji de radio
+    x.font = `${size * .5}px serif`;
     x.textAlign = 'center';
     x.textBaseline = 'middle';
-    x.fillText('📻', s / 2, s / 2);
+    x.fillText('📻', size / 2, size / 2);
     
-    const url = cv.toDataURL('image/png');
-    icons.push({
-      src: url,
-      sizes: `${s}x${s}`,
-      type: 'image/png',
-      purpose: 'any maskable'
-    });
-    
-    if (s === 192) {
-      $('favIco').href = url;
-      $('applIco').href = url;
-    }
-  });
+    return cv.toDataURL('image/png');
+  }
   
-  const mf = {
+  const icon192 = genIcon(192);
+  const icon512 = genIcon(512);
+  
+  // Establecer favicons
+  $('favIco').href = icon192;
+  $('applIco').href = icon192;
+  
+  // Manifest como data URL con iconos base64 embebidos
+  const manifest = {
     name: 'WaveTuner FM',
     short_name: 'WaveTuner',
-    description: 'Internet Radio Player',
-    id: 'wavetuner-fm',
-    start_url: '.',
-    scope: '.',
+    description: 'Reproductor de Radio por Internet',
+    start_url: './',
     display: 'standalone',
     background_color: '#060910',
-    theme_color: '#060910',
+    theme_color: '#00e5ff',
     orientation: 'portrait',
-    categories: ['music', 'entertainment'],
-    icons
+    icons: [
+      {src: icon192, sizes: '192x192', type: 'image/png', purpose: 'any maskable'},
+      {src: icon512, sizes: '512x512', type: 'image/png', purpose: 'any maskable'}
+    ]
   };
   
-  const lnk = document.createElement('link');
-  lnk.rel = 'manifest';
-  lnk.href = URL.createObjectURL(new Blob([JSON.stringify(mf)], {type: 'application/json'}));
-  document.head.appendChild(lnk);
+  // Crear manifest como data URL base64
+  const manifestStr = JSON.stringify(manifest);
+  const manifestB64 = 'data:application/json;base64,' + btoa(unescape(encodeURIComponent(manifestStr)));
   
+  const link = document.createElement('link');
+  link.rel = 'manifest';
+  link.href = manifestB64;
+  document.head.appendChild(link);
+  
+  // Evento de instalación
   window.addEventListener('beforeinstallprompt', e => {
     e.preventDefault();
     S.deferredPrompt = e;
-    $('pwaI').textContent = '¡Disponible para instalar!';
-    $('btnInst').classList.add('on');
+    $('pwaI').textContent = '¡Listo para instalar!';
   });
-  
-  if ('serviceWorker' in navigator && location.protocol === 'https:') {
-    const sw = `const CN='wtfm-v443';
-self.addEventListener('install',e=>{e.waitUntil(caches.open(CN).then(c=>c.addAll(['./',])));self.skipWaiting()});
-self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CN).map(k=>caches.delete(k)))));self.clients.claim()});
-self.addEventListener('fetch',e=>{e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)))});`;
-    navigator.serviceWorker.register(
-      URL.createObjectURL(new Blob([sw], {type: 'application/javascript'}))
-    ).catch(() => {});
-  }
 }
 
 function installPWA() {
@@ -2996,7 +2998,7 @@ function installPWA() {
       S.deferredPrompt = null;
     });
   } else {
-    toast('ℹ️ Requiere servidor HTTPS (GitHub Pages)');
+    toast('ℹ️ Abre desde HTTPS para instalar (GitHub Pages)');
   }
 }
 
@@ -3075,7 +3077,7 @@ $('volR').addEventListener('input', e => setVol(parseInt(e.target.value)));
   setInterval(checkSchedules, 30000);
   $('schSchedDate').value = new Date().toISOString().slice(0, 10);
   updDurDisp();
-  console.log('📻 WaveTuner FM v4.4.3 - 17 de Febrero de 2026');
+  console.log('📻 WaveTuner FM v4.4.2 - 17 de Febrero de 2026');
 })();
 </script>
 </body>
