@@ -9,7 +9,6 @@
 <link rel="manifest" href="./manifest.json">
 <link rel="icon" type="image/png" href="./icon-192.png">
 <link rel="apple-touch-icon" href="./icon-192.png">
-<link rel="apple-touch-icon" id="applIco" href="">
 <title>WaveTuner FM</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
@@ -1831,29 +1830,20 @@ function maybeClose(e,id) { if(e.target.id===id) closeMdl(id); }
 // PWA v4.5.0
 // ═══════════════════════════════════════════════════════════════
 function setupPWA() {
-  const sizes=[192,512], icons=[];
-  sizes.forEach(s=>{
-    const cv=document.createElement('canvas'); cv.width=cv.height=s;
-    const x=cv.getContext('2d');
-    const g=x.createLinearGradient(0,0,s,s); g.addColorStop(0,'#00e5ff'); g.addColorStop(1,'#0091ea');
-    x.fillStyle=g; x.beginPath(); x.roundRect(0,0,s,s,s*.2); x.fill();
-    x.font=`${s*.45}px serif`; x.textAlign='center'; x.textBaseline='middle'; x.fillText('📻',s/2,s/2);
-    const url=cv.toDataURL('image/png');
-    icons.push({src:url,sizes:`${s}x${s}`,type:'image/png',purpose:'any maskable'});
-    if(s===192){ $('favIco').href=url; $('applIco').href=url; }
-  });
-  const mf={name:'WaveTuner FM',short_name:'WaveTuner',description:'Internet Radio Player',id:'wavetuner-fm',start_url:'.',scope:'.',display:'standalone',background_color:'#060910',theme_color:'#060910',orientation:'portrait',categories:['music','entertainment'],icons};
-  const lnk=document.createElement('link'); lnk.rel='manifest';
-  lnk.href=URL.createObjectURL(new Blob([JSON.stringify(mf)],{type:'application/json'}));
-  document.head.appendChild(lnk);
-  window.addEventListener('beforeinstallprompt',e=>{ e.preventDefault(); S.deferredPrompt=e; $('pwaI').textContent='¡Disponible para instalar!'; $('btnInst').classList.add('on'); });
-  if('serviceWorker'in navigator&&location.protocol==='https:'){
-    const sw=`const CN='wtfm-v450';
-self.addEventListener('install',e=>{e.waitUntil(caches.open(CN).then(c=>c.addAll(['./',])));self.skipWaiting()});
-self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CN).map(k=>caches.delete(k)))));self.clients.claim()});
-self.addEventListener('fetch',e=>{e.respondWith(fetch(e.request).catch(()=>caches.match(e.request)))});`;
-    navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw],{type:'application/javascript'}))).catch(()=>{});
+  // SW externo — registro estático
+  if ('serviceWorker' in navigator && location.protocol === 'https:') {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => console.log('SW registrado:', reg.scope))
+      .catch(err => console.log('SW error:', err));
   }
+
+  // Evento de instalación PWA
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    S.deferredPrompt = e;
+    $('pwaI').textContent = '¡Disponible para instalar!';
+    $('btnInst').classList.add('on');
+  });
 }
 
 function installPWA() {
@@ -1904,4 +1894,3 @@ $('volR').addEventListener('input',e=>setVol(parseInt(e.target.value)));
 </script>
 </body>
 </html>
-
